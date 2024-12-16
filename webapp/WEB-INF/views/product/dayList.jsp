@@ -214,7 +214,7 @@
 					<div class="row_bottom" style="margin-top:1%;">			
 						<button style="margin-left:0;" id="endSaltBtn">SALT추출</button>
 
-						<button id="forcingStartBtn">출고 요청</button>
+						<button id="outBtn">출고 요청</button>
 						<button id="excelBtn">엑셀</button>
 					</div>
 				</div>
@@ -270,12 +270,12 @@
 	});
 	
 	// 출고요청
-	$("#forcingStartBtn").on("click", function() {
+	$("#outBtn").on("click", function() {
 	    var lotNo = localStorage.getItem("lotNo");
 	    var pumbun = localStorage.getItem("pumbun");
 
 	    // 팝업창 열기
-	    window.open("http://localhost:8080/transys/product/dayList/popup", "popupWindow", "width=800,height=600,scrollbars=yes");
+	    window.open("/transys/product/dayList/popup", "popupWindow", "width=800,height=600,scrollbars=yes");
 
 	   
 	});

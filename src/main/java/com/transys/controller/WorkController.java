@@ -412,6 +412,7 @@ public class WorkController {
         return workService.workMonthList(work);
     }
     
+    
     //작업연보 조회
     @RequestMapping(value = "/work/workYear/list", method = RequestMethod.POST)
     @ResponseBody
@@ -568,7 +569,7 @@ public class WorkController {
                 cell.setCellStyle(styleCenter);
 
                 // 디바이스 코드 출력
-                System.out.println("DeviceCode: " + workList.get(i).getDevicecode());
+               // System.out.println("DeviceCode: " + workList.get(i).getDevicecode());
             }
 
             workbook.setForceFormulaRecalculation(true);
@@ -599,15 +600,15 @@ public class WorkController {
     public Map<String, Object> workMonthExcelDownload(@RequestParam String date,
                                                       @RequestParam String placename,
                                                       HttpServletRequest request) {
-        System.out.println("Received date parameter: " + date);
-        System.out.println("Received placename parameter: " + placename);
+       // System.out.println("Received date parameter: " + date);
+       //System.out.println("Received placename parameter: " + placename);
 
         Map<String, Object> rtnMap = new HashMap<>();
         Work work = new Work();
         work.setDevicecode(placename);
         work.setKeymonth(date.substring(0, 6));
 
-        System.out.println("Set keymonth in Work object: " + work.getKeymonth());
+       // System.out.println("Set keymonth in Work object: " + work.getKeymonth());
 
         SimpleDateFormat format = new SimpleDateFormat("yyMMdd_HHmmss");
         Date time = new Date();
@@ -622,12 +623,12 @@ public class WorkController {
 
         // workList가 null인지 확인
         if (workList == null || workList.isEmpty()) {
-            System.out.println("workList is null or empty");
+           // System.out.println("workList is null or empty");
         } else {
-            System.out.println("workList size: " + workList.size());
+          //  System.out.println("workList size: " + workList.size());
         }
 
-        System.out.println("작업 월보 데이터 리스트:");
+        //System.out.println("작업 월보 데이터 리스트:");
         for (int i = 0; i < workList.size(); i++) {
             Work w = workList.get(i);
             // 디버깅 출력 필요 시 추가
@@ -745,25 +746,10 @@ public class WorkController {
         String savePath = request.getServletContext().getRealPath("/WEB-INF/resources/uploads/");
 
         List<Work> workList = workService.workYearList(work);  
-        System.out.println("작업 년보 데이터 리스트:");
+       // System.out.println("작업 년보 데이터 리스트:");
         for (int i = 0; i < workList.size(); i++) {
             Work w = workList.get(i);
-            System.out.println("순번: " + (i + 1));
-            System.out.println("pumname: " + w.getPumname());
-            System.out.println("getPumcode: " + w.getPumcode());
-            System.out.println("getDevicecode: " + w.getDevicecode());
-            System.out.println("m01: " + w.getM01());
-            System.out.println("m02: " + w.getM02());
-            System.out.println("m03: " + w.getM03());
-            System.out.println("m04: " + w.getM04());
-            System.out.println("m05: " + w.getM05());
-            System.out.println("m06: " + w.getM06());
-            System.out.println("m07: " + w.getM07());
-            System.out.println("m08: " + w.getM08());
-            System.out.println("m09: " + w.getM09());
-            System.out.println("m10: " + w.getM10());
-            System.out.println("m11: " + w.getM11());
-            System.out.println("m12: " + w.getM12());
+           
         }
 
         try {

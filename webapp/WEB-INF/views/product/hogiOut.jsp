@@ -86,77 +86,74 @@
 
 	
 	
-	
-	
-	
-	$("#hogi1_out").on("click", function() {
-	    // 1호기 출고요청
+		
+		$("#hogi1_out").on("click", function() {
 	    $.ajax({
 	        url: "/transys/product/dayList/popup/insert",
 	        type: "post",
-	        dataType: "json",
-	        data: { "device_code": "1" }, // device_code를 문자열로 설정
+	        dataType: "text",
+	        data: { "device_code": "1" },
 	        success: function(result) {
-	            console.log("1호기 출고 요청 성공:", result); // 성공 여부 및 데이터 출력
+	            alert("1호기 출고 요청 성공");
 	            window.close();
 	        },
 	        error: function(xhr, status, error) {
-	            console.error("1호기 출고 요청 실패:", status, error); // 실패 시 오류 출력
+	            console.error("1호기 출고 요청 실패:", status, error);
+	            alert("1호기 출고 요청 실패: " + error);
 	        }
 	    });
 	});
 	
 	$("#hogi2_out").on("click", function() {
-	    // 2호기 출고요청
 	    $.ajax({
 	        url: "/transys/product/dayList/popup/insert",
 	        type: "post",
-	        dataType: "json",
-	        data: { "device_code": "2" }, // device_code를 문자열로 설정
+	        dataType: "text",
+	        data: { "device_code": "2" },
 	        success: function(result) {
-	            console.log("2호기 출고 요청 성공:", result); // 성공 여부 및 데이터 출력
+	            alert("2호기 출고 요청 성공");
 	            window.close();
 	        },
 	        error: function(xhr, status, error) {
-	            console.error("2호기 출고 요청 실패:", status, error); // 실패 시 오류 출력
+	            console.error("2호기 출고 요청 실패:", status, error);
+	            alert("2호기 출고 요청 실패: " + error);
 	        }
 	    });
 	});
 	
 	$("#hogi3_out").on("click", function() {
-	    // 3호기 출고요청
 	    $.ajax({
 	        url: "/transys/product/dayList/popup/insert",
 	        type: "post",
-	        dataType: "json",
-	        data: { "device_code": "3" }, // device_code를 문자열로 설정
+	        dataType: "text",
+	        data: { "device_code": "3" },
 	        success: function(result) {
-	            console.log("3호기 출고 요청 성공:", result); // 성공 여부 및 데이터 출력
+	            alert("3호기 출고 요청 성공");
 	            window.close();
 	        },
 	        error: function(xhr, status, error) {
-	            console.error("3호기 출고 요청 실패:", status, error); // 실패 시 오류 출력
+	            console.error("3호기 출고 요청 실패:", status, error);
+	            alert("3호기 출고 요청 실패: " + error);
 	        }
 	    });
 	});
 	
 	$("#hogi4_out").on("click", function() {
-	    // 4호기 출고요청
 	    $.ajax({
 	        url: "/transys/product/dayList/popup/insert",
 	        type: "post",
-	        dataType: "json",
-	        data: { "device_code": "4" }, // device_code를 문자열로 설정
+	        dataType: "text",
+	        data: { "device_code": "4" },
 	        success: function(result) {
-	            console.log("4호기 출고 요청 성공:", result); // 성공 여부 및 데이터 출력
+	            alert("4호기 출고 요청 성공");
 	            window.close();
 	        },
 	        error: function(xhr, status, error) {
-	            console.error("4호기 출고 요청 실패:", status, error); // 실패 시 오류 출력
+	            console.error("4호기 출고 요청 실패:", status, error);
+	            alert("4호기 출고 요청 실패: " + error);
 	        }
 	    });
 	});
-
 
 	</script>
 

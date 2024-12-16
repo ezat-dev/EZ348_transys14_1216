@@ -140,9 +140,9 @@ public class ProductController {
             @RequestParam String p_date
     ) {
         // 요청 파라미터 로그 출력
-        System.out.println("Received request:");
-        System.out.println("Device Code: " + p_devicecode);
-        System.out.println("Date: " + p_date);
+       // System.out.println("Received request:");
+      //  System.out.println("Device Code: " + p_devicecode);
+       // System.out.println("Date: " + p_date);
 
         // 반환할 Map 생성
         Map<String, Object> rtnMap = new HashMap<>();
@@ -158,7 +158,7 @@ public class ProductController {
             List<PlcWrite> productList = productService.getWaitPlayList(plcWrite);
 
             // 제품 리스트 크기 로그 출력
-            System.out.println("Product List Size: " + productList.size());
+         //   System.out.println("Product List Size: " + productList.size());
 
             // 성공 시 데이터 반환
             rtnMap.put("status", "success");
@@ -166,7 +166,7 @@ public class ProductController {
             rtnMap.put("data", productList);
         } catch (Exception e) {
             // 에러 발생 시 에러 메시지 반환
-            System.out.println("Error occurred: " + e.getMessage());
+          //  System.out.println("Error occurred: " + e.getMessage());
             rtnMap.put("status", "error");
             rtnMap.put("message", e.getMessage());
         }
@@ -343,15 +343,15 @@ public class ProductController {
     @RequestMapping(value = "/product/productModify/data/save", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<Map<String, String>> updateProduct(@RequestBody Product product) {
-        System.out.println("업데이트 요청 수신: " + product);
+      //  System.out.println("업데이트 요청 수신: " + product);
         Map<String, String> response = new HashMap<>();
 
         try {
             productService.updateProduct(product);
-            System.out.println("제품 업데이트 성공: " + product.getDobun());
+           // System.out.println("제품 업데이트 성공: " + product.getDobun());
             response.put("status", "OK");
         } catch (Exception e) {
-            System.out.println("업데이트 실패: " + e.getMessage());
+          //  System.out.println("업데이트 실패: " + e.getMessage());
             response.put("status", "FAIL");
             
         }
@@ -361,14 +361,9 @@ public class ProductController {
     @RequestMapping(value = "/product/dayList/popup/insert", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<String> insertOutputTab(@RequestParam("device_code") String deviceCode) {
-        try {
-        	
-        	System.out.println("devicecode : "+deviceCode);
-        	
+        try {        	
         	OutPut outPut = new OutPut();
         	outPut.setFireno(deviceCode);
-        	
-        	System.out.println("devicecode2 : "+outPut.getFireno());
         	
         	outPutDao.setOutPutSend(outPut);
             return ResponseEntity.ok("Insert successful");

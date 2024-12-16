@@ -50,7 +50,7 @@
 	<!-- 알람DB(SQLite) -->
 	<bean id="dataSourceSQLite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="org.sqlite.JDBC" /> 
-		<property name="url" value="jdbc:sqlite:C:\Users\트랜시스\Desktop\새 폴더\Transys_AlarmData.db" />
+		<property name="url" value="jdbc:sqlite:D:\AutonicsProject\20241216_오토닉스\20241216_오토닉스\Transys\Data\Alarm\Transys_AlarmData.db" />
 	</bean>
 
 	<tx:annotation-driven/>
