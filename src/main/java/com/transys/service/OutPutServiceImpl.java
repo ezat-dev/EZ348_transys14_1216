@@ -68,9 +68,10 @@ public class OutPutServiceImpl implements OutPutService{
 		String hogi2Prd = "0";
 		String hogi3Prd = "0";
 		String hogi4Prd = "0";
+		String outputCancel = "false";
 		
 		//창고 출고가능 요구신호
-		int outContinue = 0;
+		String outContinue = "false";
 		
 		//각 설비별 출고요청가능 신호 받기
 		OpcDataMap opcData = new OpcDataMap();
@@ -79,12 +80,16 @@ public class OutPutServiceImpl implements OutPutService{
 		Map<String, Object> hogi2Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI2");
 		Map<String, Object> hogi3Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI3");
 		Map<String, Object> hogi4Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI4");
+		
+		//창고 출고요청취소 신호
+		Map<String, Object> outputCancelMap = opcData.getOpcData("Transys.OUTPUT.CM01.OUTPUT_CANCEL");
 		Thread.sleep(300);
 		
 		hogi1 = hogi1Map.get("value").toString();
 		hogi2 = hogi2Map.get("value").toString();
 		hogi3 = hogi3Map.get("value").toString();
 		hogi4 = hogi4Map.get("value").toString();
+		outputCancel = outputCancelMap.get("value").toString();
 
 		//
 		Map<String, Object> hogi1PrdMap = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI1_PRD");
@@ -102,12 +107,18 @@ public class OutPutServiceImpl implements OutPutService{
 		desc.append("hogi1 : "+hogi1+"// hogi2 : "+hogi2+"// hogi3 : "+hogi3+"// hogi4 : "+hogi4);
 		desc.append("hogi1Prd : "+hogi1Prd+"// hogi2Prd : "+hogi2Prd+"// hogi3Prd : "+hogi3Prd+"// hogi4Prd : "+hogi4Prd);
 		
-		Map<String, Object> outContinueMap = opcData.getOpcData("Transys.PLCWRITE.CM01.DEVICECODE");
+		Map<String, Object> outContinueMap = opcData.getOpcData("Transys.OUTPUT.CM01.OUTPUT_CHK");
 		
-		outContinue = Integer.parseInt(outContinueMap.get("value").toString());
+		outContinue = outContinueMap.get("value").toString();
 		desc.append("outContinue : "+outContinue+"// ");
 //		logger.info("OUTPUT {}",desc.toString());
 		//출고요청신호 확인시 1이면
+		
+		//출고요청취소 신호 들어올경우
+		if("true".equals(outputCancel)) {
+			outPutDao.outputCancel();
+			opcData.setOpcData("Transys.OUTPUT.CM01.OUTPUT_CANCEL", false);
+		}
 		
 		//1호기
 		if("true".equals(hogi1)) {
@@ -117,7 +128,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi1Prd)) {
 				desc.append("hogi1Prd : "+hogi1Prd+"// ");				
 				//PLCWRITE의 설비값이 0일때
-				if(outContinue == 0) {
+				if("false".equals(outContinue)) {
 					desc.append("outContinue : "+outContinue+"// ");
 					desc.append("MainController.outPutChk1 : "+MainController.outPutChk1+"// ");
 					
@@ -138,7 +149,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi2Prd)) {
 
 				//PLCWRITE의 설비값이 0일때
-				if(outContinue == 0) {
+				if("false".equals(outContinue)) {
 
 					if(!MainController.outPutChk2) {
 
@@ -153,7 +164,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi3Prd)){
 				//PLCWRITE의 설비값이 0일때
-				if(outContinue == 0) {
+				if("false".equals(outContinue)) {
 					if(!MainController.outPutChk3) {
 						outPut(3);
 					}
@@ -166,7 +177,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi4Prd)) {
 				//PLCWRITE의 설비값이 0일때
-				if(outContinue == 0) {
+				if("false".equals(outContinue)) {
 					if(!MainController.outPutChk4) {
 						outPut(4);
 					}

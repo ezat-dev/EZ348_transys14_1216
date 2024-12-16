@@ -28,4 +28,9 @@ public class OutPutDaoImpl implements OutPutDao{
 		sqlSessionOracle.insert("outPut.setOutPutSend", outPut);
 	}
 
+	@Override
+	public void outputCancel() {
+		sqlSessionOracle.delete("outPut.outputCancel");
+	}
+
 }

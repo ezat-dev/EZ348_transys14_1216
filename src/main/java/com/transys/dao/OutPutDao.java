@@ -8,4 +8,6 @@ public interface OutPutDao {
 
 	void setOutPutSend(OutPut outPut);
 
+	void outputCancel();
+
 }

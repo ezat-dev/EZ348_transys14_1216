@@ -19,6 +19,8 @@
 	    (#{value}, NOW(), '0')
 	</insert>
 
-
+	<delete id="outputCancel">
+		DELETE FROM OUTPUT_TAB
+	</delete>
 
 </mapper>
