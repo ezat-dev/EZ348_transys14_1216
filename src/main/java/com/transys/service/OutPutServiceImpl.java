@@ -128,7 +128,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi1Prd)) {
 				desc.append("hogi1Prd : "+hogi1Prd+"// ");				
 				//PLCWRITE의 설비값이 0일때
-				if("false".equals(outContinue)) {
+				if("true".equals(outContinue)) {
 					desc.append("outContinue : "+outContinue+"// ");
 					desc.append("MainController.outPutChk1 : "+MainController.outPutChk1+"// ");
 					
@@ -149,7 +149,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi2Prd)) {
 
 				//PLCWRITE의 설비값이 0일때
-				if("false".equals(outContinue)) {
+				if("true".equals(outContinue)) {
 
 					if(!MainController.outPutChk2) {
 
@@ -164,7 +164,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi3Prd)){
 				//PLCWRITE의 설비값이 0일때
-				if("false".equals(outContinue)) {
+				if("true".equals(outContinue)) {
 					if(!MainController.outPutChk3) {
 						outPut(3);
 					}
@@ -177,7 +177,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi4Prd)) {
 				//PLCWRITE의 설비값이 0일때
-				if("false".equals(outContinue)) {
+				if("true".equals(outContinue)) {
 					if(!MainController.outPutChk4) {
 						outPut(4);
 					}

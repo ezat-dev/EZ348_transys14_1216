@@ -47,7 +47,22 @@
        </div>
        <div class="t-group-3">
     <img class="_3-3-1" src="/transys/image/cm/_3-3-10.png" />
-    <div class="textName">CM #02</div>
+    <div class="textName">공통설비2호기</div>
+    <div class="background-1"></div>
+    <div class="background-2"></div>
+    <div class="background-3"></div>
+    <div class="background-4"></div>
+    <div class="background-5"></div>
+    <img class="elevator-1" src="/transys/image/cm/elevator-10.png" />
+    <img class="elevator-on-1" src="/transys/image/cm/elevator-on-10.png" />
+    <img class="elevator-on-2" src="/transys/image/cm/elevator-on-20.png" />
+    <img class="elevator-off-1" src="/transys/image/cm/elevator-off-10.png" />
+    <img class="elevator-off-2" src="/transys/image/cm/elevator-off-20.png" />
+    <img class="elevator-2" src="/transys/image/cm/elevator-20.png" />
+    <img class="elevator-on-3" src="/transys/image/cm/elevator-on-30.png" />
+    <img class="elevator-on-4" src="/transys/image/cm/elevator-on-40.png" />
+    <img class="elevator-off-3" src="/transys/image/cm/elevator-off-30.png" />
+    <img class="elevator-off-4" src="/transys/image/cm/elevator-off-40.png" />
     <img class="tong-0" src="/transys/image/cm/tong-00.png" />
     <div class="v-0-tong-1"></div>
     <div class="v-0-tong-2"></div>
@@ -162,7 +177,6 @@
     <div class="v-27-tong-1"></div>
     <div class="v-27-tong-2"></div>
     <div class="v-27-tong-3"></div>
-    <img class="wahser-1" src="/transys/image/cm/wahser-10.png" />
     <img class="tong-28" src="/transys/image/cm/tong-280.png" />
     <div class="v-28-tong-1"></div>
     <div class="v-28-tong-2"></div>
@@ -467,10 +481,6 @@
     <div class="door-green-11"></div>
     <div class="door-red-12"></div>
     <div class="door-green-12"></div>
-    <div class="door-red-13"></div>
-	<div class="door-red-14"></div>
-	<div class="door-red-15"></div>
-	<div class="door-red-16"></div>
     <img class="lamp-green-1" src="/transys/image/cm/lamp-green-10.png" />
     <img class="pen-rol-1" src="/transys/image/cm/pen-rol-10.png" />
     <img class="lamp-green-2" src="/transys/image/cm/lamp-green-20.png" />
@@ -553,6 +563,10 @@
     <div class="sensor-pen-1"></div>
   	<div class="sensor-pen-2"></div>
   	<div class="sensor-pen-3"></div>
+  	<img class="wash-1" src="/transys/image/cm/wash-10.png" />
+	<img class="wash-2" src="/transys/image/cm/wash-20.png" />
+	<img class="wash-3" src="/transys/image/cm/wash-30.png" />
+	<img class="wash-4" src="/transys/image/cm/wash-40.png" />
   </div>
 </div>
 <script>

@@ -7,12 +7,172 @@
   left: 102px;
   top: 123px;
 }
+.wash-1 {
+  width: 68px;
+  height: 32px;
+  position: absolute;
+  left: 1410px;
+  top: 128px;
+  object-fit: cover;
+}
+.wash-2 {
+  width: 68px;
+  height: 32px;
+  position: absolute;
+  left: 1497px;
+  top: 128px;
+  object-fit: cover;
+}
+.wash-3 {
+  width: 68px;
+  height: 32px;
+  position: absolute;
+  left: 1411px;
+  top: 366px;
+  object-fit: cover;
+}
+.wash-4 {
+  width: 68px;
+  height: 32px;
+  position: absolute;
+  left: 1499px;
+  top: 366px;
+  object-fit: cover;
+}
 ._3-3-1 {
   width: 1788px;
   height: 492px;
   position: absolute;
   left: 86px;
   top: 63px;
+  object-fit: cover;
+}
+.background-1 {
+  background: #ffffff;
+  width: 66px;
+  height: 107px;
+  position: absolute;
+  left: 545px;
+  top: 222px;
+}
+.background-2 {
+  background: #ffffff;
+  width: 69px;
+  height: 88px;
+  position: absolute;
+  left: 755px;
+  top: 243px;
+}
+.background-3 {
+  background: #ffffff;
+  width: 69px;
+  height: 57px;
+  position: absolute;
+  left: 1254px;
+  top: 390px;
+}
+.background-4 {
+  background: #ffffff;
+  width: 151px;
+  height: 70px;
+  position: absolute;
+  left: 1254px;
+  top: 235px;
+}
+.background-5 {
+  background: #ffffff;
+  width: 73px;
+  height: 70px;
+  position: absolute;
+  left: 1254px;
+  top: 282px;
+}
+.elevator-1 {
+  width: 103px;
+  height: 200px;
+  position: absolute;
+  left: 524px;
+  top: 131px;
+  object-fit: cover;
+}
+.elevator-on-1 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 521px;
+  top: 191px;
+  object-fit: cover;
+}
+.elevator-on-2 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 636px;
+  top: 191px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  object-fit: cover;
+}
+.elevator-off-1 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 521px;
+  top: 191px;
+  object-fit: cover;
+}
+.elevator-off-2 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 636px;
+  top: 191px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  object-fit: cover;
+}
+.elevator-2 {
+  width: 103px;
+  height: 200px;
+  position: absolute;
+  left: 726px;
+  top: 133px;
+  object-fit: cover;
+}
+.elevator-on-3 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 723px;
+  top: 193px;
+  object-fit: cover;
+}
+.elevator-on-4 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 838px;
+  top: 193px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  object-fit: cover;
+}
+.elevator-off-3 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 723px;
+  top: 193px;
+  object-fit: cover;
+}
+.elevator-off-4 {
+  width: 20px;
+  height: 105px;
+  position: absolute;
+  left: 838px;
+  top: 193px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
 }
 .tong-0 {
@@ -275,7 +435,7 @@
   width: 39px;
   height: 39px;
   position: absolute;
-  left: 557px;
+  left: 568px;
   top: 291px;
   object-fit: cover;
 }
@@ -284,7 +444,7 @@
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 558px;
+  left: 569px;
   top: 292px;
 }
 .v-7-tong-2 {
@@ -292,7 +452,7 @@
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 581px;
+  left: 592px;
   top: 292px;
 }
 .v-7-tong-3 {
@@ -300,15 +460,15 @@
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 569px;
+  left: 581px;
   top: 312px;
 }
 .tong-8 {
   width: 39px;
   height: 39px;
   position: absolute;
-  left: 557px;
-  top: 261px;
+  left: 568px;
+  top: 230px;
   object-fit: cover;
 }
 .v-8-tong-1 {
@@ -316,24 +476,24 @@
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 558px;
-  top: 262px;
+  left: 569px;
+  top: 230px;
 }
 .v-8-tong-2 {
   background: #d9d9d9;
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 581px;
-  top: 262px;
+  left: 592px;
+  top: 230px;
 }
 .v-8-tong-3 {
   background: #d9d9d9;
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 569px;
-  top: 282px;
+  left: 581px;
+  top: 252px;
 }
 
 .tong-9 {
@@ -405,7 +565,7 @@
   height: 39px;
   position: absolute;
   left: 771px;
-  top: 261px;
+  top: 230px;
   object-fit: cover;
 }
 .v-11-tong-1 {
@@ -414,7 +574,7 @@
   height: 17px;
   position: absolute;
   left: 772px;
-  top: 262px;
+  top: 230px;
 }
 .v-11-tong-2 {
   background: #d9d9d9;
@@ -422,7 +582,7 @@
   height: 17px;
   position: absolute;
   left: 795px;
-  top: 262px;
+  top: 230px;
 }
 .v-11-tong-3 {
   background: #d9d9d9;
@@ -430,7 +590,7 @@
   height: 17px;
   position: absolute;
   left: 783px;
-  top: 282px;
+  top: 252px;
 }
 
 .tong-12 {
