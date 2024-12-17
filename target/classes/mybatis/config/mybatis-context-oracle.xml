@@ -10,5 +10,6 @@
    <mapper resource="mybatis/mapper-oracle/plcWrite.xml"/>
    <mapper resource="mybatis/mapper-oracle/mchInput.xml"/>
    <mapper resource="mybatis/mapper-oracle/outPut.xml"/>
+   <mapper resource="mybatis/mapper-oracle/arrivedTab.xml"/>   
   </mappers>
 </configuration>

@@ -25,13 +25,14 @@ public class PlcWriteServiceImpl implements PlcWriteService{
 	public void plcWrite() throws InterruptedException, ExecutionException {
 //		System.out.println("PLCWRITE ");
 		OpcDataMap opcData = new OpcDataMap();
-
+		StringBuffer desc = new StringBuffer();
 		//DB데이터 조회 (t_waitlist)
 		PlcWrite plcWrite = plcWriteDao.getPlcWriteWorkData();
 //		System.out.println(plcWrite.getList_year());
 		Thread.sleep(500);
 		short resetValue = 1;
-		
+		desc.append("");
+		logger.info("PLCWRITE 조회중 {}", desc.toString());
 		//가져온 행의 값이 있을때만
 		String list_year = "";
 //		System.out.println("list_year 11 : "+list_year);
@@ -41,7 +42,7 @@ public class PlcWriteServiceImpl implements PlcWriteService{
 	//			System.out.println("list_year 22 : "+list_year);
 				//OPC값 쓰기
 				//outData1, outData2, outData3, outData4, outData5
-				StringBuffer desc = new StringBuffer();
+				
 				desc.append("CYCLENO : "+plcWrite.getCycleno()+"// ");
 				desc.append("PUMBUN : "+plcWrite.getPumbun()+"// ");
 				desc.append("AGITATE_RPM : "+plcWrite.getAgitate_rpm()+"// ");
@@ -96,12 +97,13 @@ public class PlcWriteServiceImpl implements PlcWriteService{
 	public void plcWriteTimer() throws InterruptedException, ExecutionException {
 		String output_chk = "false";
 		OpcDataMap opcData = new OpcDataMap();
-		
+		StringBuffer desc = new StringBuffer();
 		//창고출고가능요구 1이면
 		Map<String, Object> outputMap = opcData.getOpcData("Transys.PLCWRITE.CM01.OUTPUT_CHK");	//DB18.X41.5
 		
 		output_chk = outputMap.get("value").toString();
-		
+		desc.append("창고출고가능요구 신호 : "+output_chk);
+		logger.info("PLCWRITE - {}",desc.toString());
 		if("true".equals(output_chk)) {
 			
 			plcWrite();

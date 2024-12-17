@@ -71,7 +71,7 @@ public class OutPutServiceImpl implements OutPutService{
 		String outputCancel = "false";
 		
 		//창고 출고가능 요구신호
-		String outContinue = "false";
+		int outContinue = 0;
 		
 		//각 설비별 출고요청가능 신호 받기
 		OpcDataMap opcData = new OpcDataMap();
@@ -107,9 +107,9 @@ public class OutPutServiceImpl implements OutPutService{
 		desc.append("hogi1 : "+hogi1+"// hogi2 : "+hogi2+"// hogi3 : "+hogi3+"// hogi4 : "+hogi4);
 		desc.append("hogi1Prd : "+hogi1Prd+"// hogi2Prd : "+hogi2Prd+"// hogi3Prd : "+hogi3Prd+"// hogi4Prd : "+hogi4Prd);
 		
-		Map<String, Object> outContinueMap = opcData.getOpcData("Transys.OUTPUT.CM01.OUTPUT_CHK");
+		Map<String, Object> outContinueMap = opcData.getOpcData("Transys.PLCWRITE.CM01.DEVICECODE");
 		
-		outContinue = outContinueMap.get("value").toString();
+		outContinue = Integer.parseInt(outContinueMap.get("value").toString());
 		desc.append("outContinue : "+outContinue+"// ");
 //		logger.info("OUTPUT {}",desc.toString());
 		//출고요청신호 확인시 1이면
@@ -128,7 +128,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi1Prd)) {
 				desc.append("hogi1Prd : "+hogi1Prd+"// ");				
 				//PLCWRITE의 설비값이 0일때
-				if("true".equals(outContinue)) {
+				if(outContinue == 0) {
 					desc.append("outContinue : "+outContinue+"// ");
 					desc.append("MainController.outPutChk1 : "+MainController.outPutChk1+"// ");
 					
@@ -149,7 +149,7 @@ public class OutPutServiceImpl implements OutPutService{
 			if("0".equals(hogi2Prd)) {
 
 				//PLCWRITE의 설비값이 0일때
-				if("true".equals(outContinue)) {
+				if(outContinue == 0) {
 
 					if(!MainController.outPutChk2) {
 
@@ -164,7 +164,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi3Prd)){
 				//PLCWRITE의 설비값이 0일때
-				if("true".equals(outContinue)) {
+				if(outContinue == 0) {
 					if(!MainController.outPutChk3) {
 						outPut(3);
 					}
@@ -177,7 +177,7 @@ public class OutPutServiceImpl implements OutPutService{
 			//화물 위치체크
 			if("0".equals(hogi4Prd)) {
 				//PLCWRITE의 설비값이 0일때
-				if("true".equals(outContinue)) {
+				if(outContinue == 0) {
 					if(!MainController.outPutChk4) {
 						outPut(4);
 					}

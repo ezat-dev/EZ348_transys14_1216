@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="arrivedTab">
+
+	<select id="getArrivedTabDataSelect" resultType="arrivedTab">
+		SELECT *
+		FROM arrived_tab
+		WHERE status = '0'
+	</select>
+	
+	<delete id="setArrivedTabDataDelete" parameterType="arrivedTab">
+		DELETE FROM arrived_tab
+		WHERE code = #{code}
+		AND fireno = #{fireno}
+		AND TO_CHAR(workdate,'YYYY-MM-DD HH24:MI:SS') = #{workdate}
+	</delete>
+	
+</mapper>

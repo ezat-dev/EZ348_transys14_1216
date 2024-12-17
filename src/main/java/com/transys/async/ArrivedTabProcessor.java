@@ -15,6 +15,6 @@ public class ArrivedTabProcessor {
 	
 	@Scheduled(fixedRate = 2000)
 	public void handle() throws InterruptedException, ExecutionException{
-//		arrivedTabService.arrivedTabTimer();
+		arrivedTabService.arrivedTabTimer();
 	}
 }

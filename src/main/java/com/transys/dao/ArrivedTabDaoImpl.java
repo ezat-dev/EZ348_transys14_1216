@@ -23,7 +23,7 @@ public class ArrivedTabDaoImpl implements ArrivedTabDao{
 
 	@Override
 	public List<ArrivedTab> getArrivedTabDataSelect() {
-		return sqlSession.selectList("arrivedTab.getArrivedTabDataSelect");
+		return sqlSessionOracle.selectList("arrivedTab.getArrivedTabDataSelect");
 	}
 
 
@@ -35,7 +35,7 @@ public class ArrivedTabDaoImpl implements ArrivedTabDao{
 
 	@Override
 	public void setArrivedTabDataInsert(ArrivedTab avt) {
-		sqlSessionOracle.insert("arrivedTab.setArrivedTabDataInsert",avt);
+		sqlSession.insert("arrivedTab.setArrivedTabDataInsert",avt);
 	}
 
 
