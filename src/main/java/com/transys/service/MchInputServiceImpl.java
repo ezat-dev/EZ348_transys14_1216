@@ -79,10 +79,10 @@ public class MchInputServiceImpl implements MchInputService{
 					//INPUT_TAB에 정상적인 데이터 INSERT
 					mchInputDao.setMchDataInsertInputTab(mchData);
 			
-					String send1 = mchInput.getPumcode();
-					String send2 = mchInput.getLotno();
-					String send3 = mchInput.getMeslot();
-					int send4 = mchInput.getLoadcnt();
+					String send1 = mchData.getPumcode();
+					String send2 = mchData.getLotno();
+					String send3 = mchData.getMeslot();
+					String send4 = mchData.getLoadcnt()+"";
 					
 					//PLC값 0:출고대기, 1:작업중, 2:창고입고완료
 					//t_waitlist에 PLC값 2로 업데이트
@@ -95,6 +95,17 @@ public class MchInputServiceImpl implements MchInputService{
 					mchInputDao.setMchDataDeleteWorkInline(mchData);
 			
 					OpcDataMap opcData = new OpcDataMap();
+					
+					//창고 입고내역 입력
+					opcData.setOpcData("Transys.MCHINPUT.CM01.PUMCODE", send1);
+					opcData.setOpcData("Transys.MCHINPUT.CM01.LOTNO", send2);
+					opcData.setOpcData("Transys.MCHINPUT.CM01.MESLOT", send3);
+					opcData.setOpcData("Transys.MCHINPUT.CM01.LOADCNT", send4);
+					
+					//창고 마지막 입고이력
+					opcData.setOpcData("Transys.MCHINPUT.CM01.LAST_PUMBUN", Short.parseShort(plcPumbun));
+					opcData.setOpcData("Transys.MCHINPUT.CM01.LAST_DEVICE", Short.parseShort(plcDevice));
+					
 					
 					//화면의 표시값 초기화 (PLC값 등등)
 					opcData.setOpcData("Transys.MCHINPUT.CM01.PUMBUN", resetValue);
