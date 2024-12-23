@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="util">
+
+	<select id="utilYearList" parameterType="Util" resultType="Util">
+	    SELECT 
+	        DEVICECODE + '침탄로' AS DEVICECODE,
+	        M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M11, M12 
+	    FROM T_LNG_VIEW 
+	    WHERE LNG_YEAR = #{electricYear}
+	</select>
+
+
+    <update id="executeUtilProc05">
+        EXEC UTIL_PROC05
+    </update>
+
+	<select id="utilMonthList" parameterType="map" resultType="map">
+        SELECT WRITEDAYTIME, LNG_SUM
+        FROM T_LNG_DAY
+        WHERE DEVICECODE = #{deviceCode}
+        AND LNG_YEAR = #{lngYear}
+        AND LNG_MONTH = #{lngMonth}
+    </select>
+ 
+ 
+ 
+    <select id="utilElectricMonthList" parameterType="map" resultType="map">
+        SELECT WRITEDAYTIME, ELECTRIC
+        FROM T_ELECTRIC_DAY
+        WHERE DEVICECODE = #{deviceCode}
+        AND ELECTRIC_YEAR = #{lngYear}
+        AND ELECTRIC_MONTH = #{lngMonth}
+    </select>
+    
+    
+    <select id="utilElectricYearList" parameterType="Util" resultType="Util">
+	    SELECT 
+	        DEVICECODE + '침탄로' AS DEVICECODE,
+	        M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M11, M12 
+	    FROM T_ELECTRIC_VIEW 
+	    WHERE ELECTRIC_YEAR = #{electricYear}
+	</select>
+    
+    
+	
+</mapper>

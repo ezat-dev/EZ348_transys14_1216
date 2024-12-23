@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="mchInput">
+
+	<insert id="setMchDataInsertInputTab" parameterType="mchInput">
+		INSERT INTO INPUT_TAB ( CODE, LOTNO, GEARNO, WORKDATE, FIRENO, STATUS, REMARK)
+		VALUES (TRIM(#{pumcode}), TRIM(#{meslot}), TRIM(#{loadcnt}), SYSDATE, TRIM(#{devicecode}), '0', #{remark})
+	</insert>
+
+	<insert id="setMchDataInsertInputTabFail" parameterType="mchInput">
+		INSERT INTO INPUT_TAB (CODE, LOTNO, GEARNO, WORKDATE, FIRENO, STATUS)
+		VALUES ('9999', '', 0, SYSDATE, #{devicecode}, '0')
+	</insert>
+	
+</mapper>

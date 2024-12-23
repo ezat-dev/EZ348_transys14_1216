@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+    <select id="productDetailList" parameterType="string" resultType="product">
+        SELECT *
+        FROM T_PRODUCT
+        <where>
+            <if test="dobun != null and dobun != ''">
+                AND DOBUN = #{dobun}
+            </if>
+        </where>
+        ORDER BY PUMCODE
+    </select>
+
+    <delete id="deleteByDobun" parameterType="string">
+        DELETE FROM T_PRODUCT WHERE DOBUN = #{dobun}
+    </delete>
+    
+    <select id="selectProductByDobun" parameterType="string" resultType="product">
+        SELECT * FROM T_PRODUCT WHERE dobun = #{dobun}
+    </select>
+    
+    
+    
+     
+	 <update id="updateProduct" parameterType="Product">
+	    EXEC PRODUCT_PROC01 
+	        #{pumcode}, 
+	        #{pumname}, 
+	        #{gijong}, 
+	        #{dobun}, 
+	        #{cnt}, 
+	        #{writer}, 
+	        #{insertday}, 
+	        #{updateday}, 
+	        #{base_tmp1}, 
+	        #{base_tmp2}, 
+	        #{base_tmp3}, 
+	        #{base_tmp4}, 
+	        #{base_cp1}, 
+	        #{base_cp2}, 
+	        #{base_cp3}, 
+	        #{base_cyc1}, 
+	        #{base_cyc2}, 
+	        #{base_cyc3}, 
+	        #{base_cyc4}, 
+	        #{cycleno}, 
+	        #{agitate_rpm}, 
+	        #{material}, 
+	        #{danjung}, 
+	        #{deepL}, 
+	        #{deepH}, 
+	        #{surfhard}, 
+	        #{deephard}, 
+	        #{inshard}, 
+	        #{cycletime}, 
+	        #{common_device}
+	</update>
+ 
+ 
+ 
+	<select id="getWaitList" parameterType="map" resultType="plcWrite">
+	    SELECT 
+	        A.LOTNO, 
+	        A.DEVICECODE, 
+	        A.COMMON_DEVICE, 
+	        A.PUMCODE, 
+	        B.PUMNAME, 
+	        B.GIJONG, 
+	        A.PUMBUN, 
+	        A.LOADCNT, 
+	        A.STATUS, 
+	        A.DATASTATUS, 
+	        ISNULL(A.REMARK, '') AS REMARK, 
+	        ISNULL(A.MESLOT, '') AS MESLOT
+	    FROM T_WAITLIST A
+	    JOIN T_PRODUCT B 
+	        ON A.PUMCODE = B.DOBUN
+	    <where>
+	        <!-- workday가 null이 아니고 빈 문자열이 아닐 때만 조건을 추가 -->
+	        <if test="workday != null and workday != 1">
+	            A.WORKDAY = #{workday}
+	        </if>
+	        
+	        <!-- devicecode가 null이 아니고 빈 문자열이 아닐 때만 조건을 추가 -->
+	        <if test="devicecode != null and devicecode != ''">
+	            AND A.DEVICECODE = #{devicecode}
+	        </if>
+	    </where>
+	    ORDER BY A.DEVICECODE, A.LOTNO
+	</select>
+
+
+	<select id="getWaitPlayList" parameterType="map" resultType="plcWrite">
+	    SELECT 
+   			A.LOTNO, 
+            A.DEVICECODE, 
+            A.PUMCODE, 
+            B.PUMNAME, 
+            B.GIJONG, 
+            A.PUMBUN, 
+            A.LOADCNT, 
+            A.REGTIME, 
+            A.MESLOT, 
+            A.REMARK, 
+            A.CUR_LOCATION 
+        FROM T_WORKINLINE A
+        JOIN T_PRODUCT B ON A.PUMCODE = B.DOBUN
+	    <where>
+	       
+	        
+	        <!-- devicecode가 null이 아니고 빈 문자열이 아닐 때만 조건을 추가 -->
+	        <if test="devicecode != null and devicecode != ''">
+	            AND A.DEVICECODE = #{devicecode}
+	        </if>
+	    </where>
+	    ORDER BY A.DEVICECODE, A.LOTNO
+	</select>
+	
+	<update  id="updateCurLocation" parameterType="string">
+        UPDATE T_WORKINLINE
+	    SET CUR_LOCATION = '9'
+	    WHERE LOTNO = #{lotno}
+    </update >
+    
+    
+    <update id="5dayforce">
+        UPDATE T_WAITLIST
+        SET PLC = '2'
+        WHERE list_year <![CDATA[<]]> DATEADD(DAY, -5, GETDATE()) 
+        AND PLC = '1';
+        
+        DELETE FROM T_WORKINLINE
+        WHERE REGTIME <![CDATA[<]]> DATEADD(DAY, -5, GETDATE());
+    </update>
+
+
+ 
+</mapper>

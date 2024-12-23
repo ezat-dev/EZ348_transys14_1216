@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="plcWrite">
+
+	<select id="getPlcWriteWorkData" resultType="plcWrite">
+		SELECT LIST_YEAR, LOTNO, CYCLENO, PUMBUN, AGITATE_RPM, DEVICECODE, COMMON_DEVICE, MESLOT
+		FROM T_WAITLIST
+		WHERE LIST_YEAR = 
+		(SELECT MIN(LIST_YEAR) FROM T_WAITLIST WHERE PLC = '0')
+	</select>
+<!-- 
+	<select id="getPlcWriteWorkData" resultType="plcWrite">
+		SELECT *
+		FROM t_siljuk
+	</select>
+ -->
+	<update id="setPlcWriteDataUpdate" parameterType="plcWrite">
+		UPDATE T_WAITLIST SET plc = '1'
+		WHERE DEVICECODE = #{devicecode}
+		AND LOTNO = #{lotno}
+		AND PLC = '0'
+	</update>
+	
+	<update id="setPlcWriteProc" parameterType="plcWrite">
+		EXEC TRACKING_PROC00 #{devicecode}, #{pumbun}
+	</update>
+	
+</mapper>

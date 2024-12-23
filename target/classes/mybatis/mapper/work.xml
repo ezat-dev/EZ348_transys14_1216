@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="work">
+    <!-- 작업일보 데이터 조회 -->
+   <select id="workDetailList" parameterType="work" resultType="work">
+      SELECT A.DEVICECODE, A.LOTNO, A.PUMBUN, A.PUMCODE, B.PUMNAME, B.GIJONG,
+      A.LOADCNT, SUBSTRING(A.STARTTIME, 6, 11) STARTTIME, SUBSTRING(A.STARTCARB, 6,11) STARTCARB,
+      SUBSTRING(A.ENDSALT,6,11) ENDSALT, SUBSTRING(A.ENDTIME, 6, 11) ENDTIME, A.MESLOT, A.REMARK
+      FROM t_siljuk A, t_product B
+      WHERE 1=1
+      AND SUBSTRING(A.STARTTIME, 1, 16) >= #{searchStartDate}
+      AND SUBSTRING(A.STARTTIME, 1, 16) <![CDATA[<=]]> DATEADD(DAY,1,#{searchEndDate})
+      <if test="devicecode != ''">
+      AND A.DEVICECODE = #{devicecode}
+      </if>
+      AND A.PUMCODE = B.DOBUN
+      ORDER BY A.DEVICECODE, A.LOTNO
+   </select>
+   
+   
+   <!-- 작업일보 데이터 조회(상세이력) -->
+   <select id="workDetailDescData" parameterType="work" resultType="work">
+       SELECT A.DEVICECODE, A.LOTNO,A.PUMCODE,B.PUMNAME,B.GIJONG,A.PUMBUN, 
+       B.CNT,B.MATERIAL, 
+       B.DANJUNG,B.DEEPL,B.DEEPH, 
+       B.SURFHARD,B.INSHARD,B.CYCLETIME, 
+       A.STARTTIME,A.STARTCARB,A.ENDCARB,A.ENDSALT,A.STARTWASH, 
+       A.ENDWASH,A.ENDTIME, 
+       ROUND(A.SET_TMP1,3) AS SET_TMP1, ROUND(A.SET_TMP2,3) AS SET_TMP2, 
+       ROUND(A.SET_TMP3,3) AS SET_TMP3, ROUND(A.SET_TMP4,3) AS SET_TMP4,  
+       ROUND(A.ACTION_TMP1,3) AS ACTION_TMP1 ,ROUND(A.ACTION_TMP2,3) AS ACTION_TMP2, 
+       ROUND(A.ACTION_TMP3,3) AS ACTION_TMP3, ROUND(A.ACTION_TMP4,3) AS ACTION_TMP4, 
+       ROUND(A.SET_CP1,3) AS SET_CP1,ROUND(A.SET_CP2,3) AS SET_CP2,ROUND(A.SET_CP3,3) AS SET_CP3, 
+       ROUND(A.ACTION_CP1,3) AS ACTION_CP1, ROUND(A.ACTION_CP2,3) AS ACTION_CP2, ROUND(A.ACTION_CP3,3) AS ACTION_CP3,
+       A.CYC1_TIME,A.CYC2_TIME,A.CYC3_TIME,A.CYC4_TIME,A.MESLOT 
+       FROM t_siljuk A, t_product B 
+       WHERE A.PUMCODE = B.DOBUN 
+       AND A.LOTNO = #{lotno}
+   </select>
+   
+   <!-- 작업일보 편집화면 제품리스트 -->
+   <select id="workDetailProductList" resultType="product">
+      SELECT *
+      FROM T_PRODUCT
+   </select>
+   
+   <!-- 작업일보 편집화면 수정할 데이터 조회 -->
+   <select id="workDetailEditData" parameterType="work" resultType="work">
+      SELECT 
+      A.DEVICECODE,
+      A.PUMCODE,
+      B.GIJONG,
+      A.STARTTIME,
+      A.ENDSALT,
+      A.MESLOT,
+      A.LOTNO,
+      B.PUMNAME,
+      A.LOADCNT,
+      A.ENDTIME,
+      A.REMARK
+      FROM t_siljuk AS A
+      INNER JOIN
+         t_product AS B
+      ON A.pumcode = B.dobun
+      WHERE A.LOTNO = #{lotno}
+   </select>
+   
+   <!-- 작업일보 편집화면 데이터 수정 -->
+   <update id="setWorkDetailEditDataSave" parameterType="work">
+      EXEC sp_siljuk_update #{devicecode},#{lotno},#{pumcode},#{loadcnt},#{starttime},#{endsalt},#{endtime},#{meslot},#{remark},#{pumname},#{gijong}
+   </update>
+   
+   <!-- 작업일보 처리품데이터 추가 -->
+   <insert id="setWorkDetailAddDataSave" parameterType="work">
+      <if test="seq != 0">
+         EXEC INPUT_PROC03 #{devicecode},#{pumcode},#{cycleno},#{agitate_rpm},#{cnt},#{common_device},#{meslot},#{seq}
+      </if>
+      
+      <if test="seq == 0">
+         EXEC INPUT_PROC02 #{devicecode},#{pumcode},#{cycleno},#{agitate_rpm},#{cnt},#{common_device},#{meslot}
+      </if>
+   </insert>
+   
+   <delete id="setWorkDetailDelete" parameterType="work">
+      DELETE FROM T_WAITLIST WHERE LOTNO = #{lotno}
+      DELETE FROM T_SILJUK WHERE LOTNO = #{lotno}
+      DELETE FROM T_WORKINLINE WHERE LOTNO = #{lotno}
+   </delete>
+   
+   <update id="setWorkDetailEndSalt" parameterType="work">
+      UPDATE T_SILJUK
+      SET ENDSALT = CONVERT(CHAR(16), GETDATE(), 120)
+      WHERE LOTNO = #{lotno}
+   </update>
+   
+   <update id="setWorkDetailEndTime" parameterType="work">
+      UPDATE T_WAITLIST SET PLC = '2'
+      WHERE LOTNO = #{lotno}
+      
+      UPDATE T_SILJUK
+      SET ENDTIME = CONVERT(CHAR(16), GETDATE(), 120)
+      WHERE LOTNO = #{lotno}
+      
+      DELETE FROM T_WORKINLINE
+      WHERE LOTNO = #{lotno}
+   </update>
+   
+   <update id="setWorkDetailForcingStart" parameterType="work">
+      EXEC TRACKING_PROC00 #{devicecode},#{pumbun}
+   </update>
+   
+   <update id="setWorkDetailForcingEnd" parameterType="work">
+      UPDATE T_WAITLIST
+      SET PLC = '2'
+      WHERE LOTNO = #{lotno}
+      
+      UPDATE T_SILJUK
+      SET ENDTIME = CONVERT(CHAR(16), GETDATE(), 120)
+      WHERE LOTNO = #{lotno}
+      
+      DELETE FROM T_WORKINLINE
+      WHERE LOTNO = #{lotno}
+   </update>
+   
+   <select id="getWorkDetailEndTime" parameterType="work" resultType="work">
+      SELECT *
+      FROM T_SILJUK
+      WHERE LOTNO = #{lotno}
+   </select>
+
+   
+   
+   <select id="getWorkDetail" parameterType="work" resultType="work">
+   SELECT A.LOTNO, A.PUMCODE, B.PUMNAME, B.GIJONG, A.PUMBUN, 
+         B.CNT, B.MATERIAL, 
+         B.DANJUNG, B.DEEPL, B.DEEPH, 
+         B.SURFHARD, B.INSHARD, B.CYCLETIME, 
+         A.STARTTIME, A.STARTCARB, A.ENDCARB, A.ENDSALT, A.STARTWASH, 
+         A.ENDWASH, A.ENDTIME, 
+         ROUND(A.SET_TMP1, 3) AS SET_TMP1, 
+         ROUND(A.SET_TMP2, 3) AS SET_TMP2, 
+         ROUND(A.SET_TMP3, 3) AS SET_TMP3, 
+         ROUND(A.SET_TMP4, 3) AS SET_TMP4,  
+         ROUND(A.ACTION_TMP1, 3) AS ACTION_TMP1, 
+         ROUND(A.ACTION_TMP2, 3) AS ACTION_TMP2, 
+         ROUND(A.ACTION_TMP3, 3) AS ACTION_TMP3, 
+         ROUND(A.ACTION_TMP4, 3) AS ACTION_TMP4, 
+         ROUND(A.SET_CP1, 3) AS SET_CP1, 
+         ROUND(A.SET_CP2, 3) AS SET_CP2, 
+         ROUND(A.SET_CP3, 3) AS SET_CP3, 
+         ROUND(A.ACTION_CP1, 3) AS ACTION_CP1, 
+         ROUND(A.ACTION_CP2, 3) AS ACTION_CP2, 
+         ROUND(A.ACTION_CP3, 3) AS ACTION_CP3, 
+         A.STARTTIME, A.STARTCARB, 
+         A.CYC1_TIME, A.CYC2_TIME, A.CYC3_TIME, A.CYC4_TIME, A.MESLOT 
+	   FROM 
+	       t_siljuk A
+	   FULL OUTER JOIN
+	       t_product B
+	   ON A.PUMCODE = B.PUMCODE
+	   WHERE A.LOTNO = #{lotno}
+	   <!-- 
+	   FROM t_siljuk A, t_product B 
+	   WHERE A.PUMCODE = B.PUMCODE 
+	   AND A.LOTNO = #{lotno}   
+	    -->
+	</select>
+	
+	<select id="getAllProducts" resultType="work">
+	    SELECT * 
+	    FROM t_product
+	</select>
+   
+   <!-- PLC데이터 -->
+   <select id="getPlcWriteWorkData" resultType="work">
+      SELECT LIST_YEAR, LOTNO, CYCLENO, PUMBUN, AGITATE_RPM, DEVICECODE, COMMON_DEVICE, MESLOT
+      FROM T_WAITLIST
+      WHERE LIST_YEAR = 
+      (SELECT MIN(LIST_YEAR) FROM T_WAITLIST WHERE PLC = '0')
+   </select>
+   
+	<select id="workDayList" parameterType="work" resultType="work">
+	    SELECT A.DEVICECODE, A.PUMCODE, B.PUMNAME, B.GIJONG,
+	           SUM(A.LOADCNT) AS CNTSUM,
+	           ISNULL(SUM(CASE WHEN CUR_LOCATION <![CDATA[<]]> 12 THEN A.LOADCNT END), 0) AS INTRAY,
+	           ISNULL(SUM(CASE WHEN CUR_LOCATION = 12 THEN A.LOADCNT END), 0) AS OUTTRAY
+	    FROM t_siljuk A, t_product B
+	    WHERE 1=1
+	    AND SUBSTRING(A.STARTTIME, 1, 16) >= #{searchStartDate}
+	    AND SUBSTRING(A.STARTTIME, 1, 16) <![CDATA[<=]]> DATEADD(DAY, 1, #{searchEndDate})
+	    <if test="devicecode != '' and devicecode != null and devicecode != '' ">
+	       AND A.DEVICECODE = #{devicecode}
+	    </if>
+	    AND A.PUMCODE = B.dobun
+	    GROUP BY A.DEVICECODE, A.PUMCODE, B.PUMNAME, B.GIJONG
+	</select>
+
+         
+	<select id="workMonthList" parameterType="work" resultType="work">
+	  SELECT keymonth, devicecode, pumcode, pumname, gijong, dobun, totalout, realout
+	    FROM t_workmonth
+	    WHERE 1=1
+	    <if test="keymonth != null and keymonth != ''">
+	        AND keymonth = #{keymonth}
+	    </if>
+	    <if test="devicecode != null and devicecode != ''">
+	        AND devicecode = #{devicecode}
+	    </if>
+	    ORDER BY keymonth DESC
+	</select>
+
+         
+         
+	<select id="workYearList" parameterType="work" resultType="work">
+	    SELECT keyyear, devicecode, pumcode, pumname, gijong, 
+	           m01, m02, m03, m04, m05, m06, 
+	           m07, m08, m09, m10, m11, m12
+	    FROM t_workyear
+	    WHERE keyyear = #{keyyear}
+	      <if test="devicecode != null and devicecode != ''">
+	        AND devicecode = #{devicecode}
+	      </if>
+	</select>
+   
+</mapper>

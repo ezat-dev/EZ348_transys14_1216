@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="alarm">
+
+<select id="getAlarmSummary" parameterType="alarm" resultType="alarm">
+    SELECT tagName, 
+           CASE 
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF1' THEN '1호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF2' THEN '2호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF3' THEN '3호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF4' THEN '4호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF5' THEN '5호기'
+               ELSE alarmGroup
+           END AS alarmGroupLabel,  <!-- 변환된 값 -->
+           alarmDesc,
+           SUM(M01) AS m01,
+           SUM(M02) AS m02,
+           SUM(M03) AS m03,
+           SUM(M04) AS m04,
+           SUM(M05) AS m05,
+           SUM(M06) AS m06,
+           SUM(M07) AS m07,
+           SUM(M08) AS m08,
+           SUM(M09) AS m09,
+           SUM(M10) AS m10,
+           SUM(M11) AS m11,
+           SUM(M12) AS m12,
+           (SUM(m01) + SUM(m02) + SUM(m03) + SUM(m04) + SUM(m05) + SUM(m06) + 
+            SUM(m07) + SUM(m08) + SUM(m09) + SUM(m10) + SUM(m11) + SUM(m12)) AS total
+    FROM (
+        SELECT 
+            tagname,
+            alarmGroup,
+            alarmdesc,
+            IFNULL(CASE WHEN mons = '01' THEN ccnt END, 0) AS 'M01',
+            IFNULL(CASE WHEN mons = '02' THEN ccnt END, 0) AS 'M02',
+            IFNULL(CASE WHEN mons = '03' THEN ccnt END, 0) AS 'M03',
+            IFNULL(CASE WHEN mons = '04' THEN ccnt END, 0) AS 'M04',
+            IFNULL(CASE WHEN mons = '05' THEN ccnt END, 0) AS 'M05',
+            IFNULL(CASE WHEN mons = '06' THEN ccnt END, 0) AS 'M06',
+            IFNULL(CASE WHEN mons = '07' THEN ccnt END, 0) AS 'M07',
+            IFNULL(CASE WHEN mons = '08' THEN ccnt END, 0) AS 'M08',
+            IFNULL(CASE WHEN mons = '09' THEN ccnt END, 0) AS 'M09',
+            IFNULL(CASE WHEN mons = '10' THEN ccnt END, 0) AS 'M10',
+            IFNULL(CASE WHEN mons = '11' THEN ccnt END, 0) AS 'M11',
+            IFNULL(CASE WHEN mons = '12' THEN ccnt END, 0) AS 'M12'
+        FROM (
+            SELECT 
+                tagname, 
+                alarmGroup,
+                alarmdesc, 
+                SUBSTR(MAX(time), 6, 2) AS mons, 
+                COUNT(*) AS ccnt
+            FROM (
+                SELECT 
+                    * ,
+                    LEAD(alarmstate) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmstate,
+                    LEAD(time) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmtime
+                FROM ALARMDATA
+                WHERE 1=1
+                AND (#{alarmGroup} IS NULL OR #{alarmGroup} = '' OR alarmgroup = #{alarmGroup})
+                AND substr(time, 1, 4) = #{time}
+                ORDER BY time
+            ) AS aa
+            WHERE alarmstate != 'Clear'
+            GROUP BY tagname, alarmGroup, SUBSTR(time, 6, 2)
+            ORDER BY time
+        ) AS bb
+        ORDER BY tagname, alarmGroup
+    ) AS cc
+    GROUP BY tagname, alarmGroupLabel, alarmdesc
+</select>
+
+ 	
+<select id="getAlarmList" parameterType="alarm" resultType="alarm">
+    SELECT *
+    FROM (
+        SELECT 
+            *,
+            LEAD(alarmstate) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmstate,
+            LEAD(time) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmtime,
+            CASE
+                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF1' THEN '1호기'
+                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF2' THEN '2호기'
+                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF3' THEN '3호기'
+                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF4' THEN '4호기'
+                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF5' THEN '5호기'
+                ELSE alarmgroup
+            END AS alarmGroupLabel
+        FROM ALARMDATA
+        WHERE 1=1
+        <if test="alarmGroup != null and alarmGroup != ''">
+            AND alarmgroup = #{alarmGroup}
+        </if>
+        AND time BETWEEN #{sdate} AND #{edate}
+        ORDER BY time
+    ) AS aa
+    WHERE 1=1
+    AND alarmstate = 'Warning'
+    AND lead_alarmstate = 'Clear'
+    ORDER BY time
+</select>
+
+
+
+	<select id="getAlarmInfo" parameterType="alarm" resultType="alarm">
+    SELECT no, 
+           CASE 
+               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF1' THEN '1호기'
+               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF2' THEN '2호기'
+               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF3' THEN '3호기'
+               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF4' THEN '4호기'
+               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF5' THEN '5호기'
+               ELSE alarmgroup
+           END AS alarmgroupLabel,  
+           tagname, 
+           alarmdesc
+    FROM alarmInfo
+    WHERE 1 = 1
+    <if test="alarmGroup != null and alarmGroup != ''">
+        AND alarmgroup = #{alarmGroup}
+    </if>
+    <if test="alarmGroup == null or alarmGroup == ''">
+    </if>
+    ORDER BY NO ASC
+</select>
+
+
+
+
+</mapper>

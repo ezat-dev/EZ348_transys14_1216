@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<typeAliases>
+	<package name="com.transys.domain"/>
+</typeAliases>
+  <mappers>
+   <mapper resource="mybatis/mapper/work.xml"/>
+   <mapper resource="mybatis/mapper/product.xml"/>
+   <mapper resource="mybatis/mapper/plcWrite.xml"/>
+   <mapper resource="mybatis/mapper/mchInput.xml"/>
+   <mapper resource="mybatis/mapper/util.xml"/>
+   <mapper resource="mybatis/mapper/arrivedTab.xml"/>
+   <mapper resource="mybatis/mapper/tracking.xml"/>
+  </mappers>
+</configuration>

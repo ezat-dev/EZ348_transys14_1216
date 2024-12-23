@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<task:annotation-driven executor="executor" scheduler="scheduler" proxy-target-class="false"/>
+	<bean id="commProcessor" class="com.transys.async.CommProcessor"/>
+	<bean id="plcWriteProcessor" class="com.transys.async.PlcWriteProcessor"/>
+	<bean id="mchInputProcessor" class="com.transys.async.MchInputProcessor"/>
+	<bean id="outPutProcessor" class="com.transys.async.OutPutProcessor"/>
+	<bean id="arrivedTabProcessor" class="com.transys.async.ArrivedTabProcessor"/>
+	<bean id="trackingProcessor1" class="com.transys.async.TrackingProcessor1"/>
+ 	<bean id="trackingProcessor2" class="com.transys.async.TrackingProcessor2"/>
+	<bean id="trackingProcessor3" class="com.transys.async.TrackingProcessor3"/>
+	<bean id="trackingProcessor4" class="com.transys.async.TrackingProcessor4"/> 
+	<bean id="trackingProcessor5" class="com.transys.async.TrackingProcessor5"/>
+	<task:scheduler id="scheduler" pool-size="4" />
+	<task:executor id="executor" keep-alive="10" pool-size="10-20"
+		queue-capacity="10" rejection-policy="ABORT" />
+	<!-- 메인DB(MSSQL) 테스트용
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
+		<property name="url" value="jdbc:sqlserver://192.168.0.104:1433;DataBaseName=HTSERVERDB;" /> 
+		<property name="username" value="sa" /> 
+		<property name="password" value="ezat6695"/>
+	</bean>-->
+
+	<!-- 창고DB(Oracle) 테스트용
+	<bean id="dataSourceOracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> 
+		<property name="url" value="jdbc:oracle:thin:@192.168.0.105:1521/XEPDB1" /> 
+		<property name="username" value="ez" /> 
+		<property name="password" value="1234"/>
+	</bean>-->
+	
+	<!-- 메인DB(MSSQL) -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
+		<property name="url" value="jdbc:sqlserver://192.168.0.53:1433;DataBaseName=HTSERVERDB;" /> 
+		<property name="username" value="user_db" /> 
+		<property name="password" value="octosys"/>
+	</bean>
+
+	<!-- 창고DB(Oracle) -->
+	<bean id="dataSourceOracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> 
+		<property name="url" value="jdbc:oracle:thin:@192.168.0.71:1521/SIDWMS" /> 
+		<property name="username" value="cvtfire" /> 
+		<property name="password" value="cvtfire"/>
+	</bean>
+
+	<!-- 알람DB(SQLite) -->
+	<bean id="dataSourceSQLite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="org.sqlite.JDBC" /> 
+		<property name="url" value="jdbc:sqlite:Y:\Alarm\Transys_AlarmData.db" />
+	</bean>
+
+	<tx:annotation-driven/>
+
+	<!-- MSSQLDB 메인 -->	
+	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis/config/mybatis-context.xml"></property>
+	 </bean>
+	 <bean id="session" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	 </bean>
+		 
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- Oralcle -->
+	 <bean id="sqlSessionFactoryOracle" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceOracle" />
+		<property name="configLocation" value="classpath:mybatis/config/mybatis-context-oracle.xml"></property>
+	 </bean>
+	 <bean id="sessionOracle" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactoryOracle" />
+	 </bean>
+		 
+	<bean id="transactionManagerOracle" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>	
+		
+	<!-- SQLite -->
+	 <bean id="sqlSessionFactorySQLite" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceSQLite" />
+		<property name="configLocation" value="classpath:mybatis/config/mybatis-context-sqlite.xml"></property>
+	 </bean>
+	 <bean id="sessionSQLite" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactorySQLite" />
+	 </bean>
+		 
+	<bean id="transactionManagerSQLite" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>	
+
+	<context:component-scan base-package="com.transys.dao com.transys.service"/>
+</beans>

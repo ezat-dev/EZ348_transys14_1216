@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="mchInput">
+
+	<select id="getMchInputDataSelectWorkInline" resultType="mchInput" parameterType="mchInput">
+		SELECT A.regtime, A.pumcode, A.lotno, A.loadcnt, A.meslot, B.cycleno, B.agitate_rpm, A.remark
+		FROM T_WORKINLINE A
+		INNER JOIN T_PRODUCT B ON A.PUMCODE = B.DOBUN
+		WHERE A.PUMBUN = #{pumbun}
+		AND A.DEVICECODE = #{devicecode}
+		AND A.CUR_LOCATION >= 9
+		ORDER BY A.LOTNO ASC
+	</select>
+	
+	<update id="setMchDataUpdateWaitList" parameterType="mchInput">
+		UPDATE T_WAITLIST SET PLC = '2'
+		WHERE LOTNO = #{lotno}
+	</update>
+	
+	<update id="setMchDataUpdateSiljuk" parameterType="mchInput">
+		UPDATE T_SILJUK SET ENDTIME = CONVERT(CHAR(16), GETDATE(), 120)
+		WHERE LOTNO = #{lotno}
+	</update>
+	
+	<delete id="setMchDataDeleteWorkInline" parameterType="mchInput">
+		DELETE FROM T_WORKINLINE
+		WHERE LOTNO = #{lotno}
+	</delete>
+	
+	<update id="setMchDataUpdateSiljukFail" parameterType="mchInput">
+		UPDATE T_WAITLIST SET PLC = '2'
+		WHERE PLC = '1'
+		AND convert(varchar(10),list_year,120) <![CDATA[<]]> CONVERT(varchar(10),GETDATE()-5,120)
+	</update>
+	
+	<update id="setMchDataDeleteWorkInlineFail" parameterType="mchInput">
+		DELETE FROM T_WORKINLINE
+		WHERE convert(varchar(10),regtime,120) <![CDATA[<]]> CONVERT(varchar(10),GETDATE()-5,120)
+	</update>
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="tracking">
+	<update id="ccf1Tracking01" parameterType="tracking">
+		EXEC TRACKING_PROC01 #{devicecode}, #{pumbun}, #{curLocation}
+	</update>
+	
+	<update id="ccf1Tracking02" parameterType="tracking">
+		EXEC TRACKING_PROC01 #{devicecode}, #{pumbun}, #{curLocation}
+	</update>
+</mapper>
