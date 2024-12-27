@@ -98,4 +98,19 @@ public class WorkServiceImpl implements WorkService {
     public List<Work> workYearList(Work work) {
         return workDao.workYearList(work);
     }
+    
+    @Override
+    public List<Work> workDayPrint(Work work) {
+        return workDao.workDayPrint(work);
+    }
+    
+    @Override
+    public List<Work> workMonthPrint(Work work) {
+        return workDao.workMonthPrint(work);
+    }
+    
+    @Override
+    public List<Work> workYearPrint(Work work) {
+        return workDao.workYearPrint(work);
+    }
 }

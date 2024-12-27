@@ -142,15 +142,7 @@
             <fieldset class="list_input">
                 <legend style="font-size: 15pt;">검색조건</legend>
                 <div class="input_d">
-                   <label> 설비명 : 
-					    <select name="placename" id="placename">
-					     	<option value="">전체</option>
-					        <option value="1">1호기</option>
-					        <option value="2">2호기</option>
-					        <option value="3">3호기</option>
-					        <option value="4">4호기</option>
-					    </select>
-					</label>
+                
 
                     <label style="margin-left: 15px;"> 작업일자 : 
 					    <input type="text" class="monthSet" id="to_date" name="to_date" 
@@ -159,8 +151,8 @@
 
                     <button id="searchbtn" style="margin-left: 100px;">조회</button>
              
-                     <button id="excelBtn">엑셀</button>
-                    <button id="previewbtn" style="width: 200px;">인쇄 전 미리보기</button>
+                   <!--  <button id="excelBtn">엑셀</button> -->
+                  <!--  <button id="previewbtn" style="width: 200px;">인쇄 전 미리보기</button> -->
                 </div>
             </fieldset>
             <div id="table_file">

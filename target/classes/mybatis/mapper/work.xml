@@ -221,5 +221,28 @@
 	        AND devicecode = #{devicecode}
 	      </if>
 	</select>
+	
+	
+	 <!-- dayPrint -->
+	<select id="workDayPrint" parameterType="work" resultType="work">
+	    EXEC P_PRINT
+	        @p_WORK_TYPE = 'Q1',
+	        @p_DATE = #{p_DATE},
+	        @p_DEVICECODE = ''
+	</select>
+	
+	<select id="workMonthPrint" parameterType="work" resultType="work">
+	    EXEC P_PRINT_Month
+	        @p_WORK_TYPE = 'Q1',
+	        @p_DATE = #{p_DATE},
+	        @p_DEVICECODE = ''
+	</select>
+
+	<select id="workYearPrint" parameterType="work" resultType="work">
+	    EXEC P_PRINT_YEAR
+	        @p_WORK_TYPE = 'Q1',
+	        @p_DATE = #{p_DATE},
+	        @p_DEVICECODE = ''
+	</select>
    
 </mapper>

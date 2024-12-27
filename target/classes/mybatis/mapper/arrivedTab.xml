@@ -2,16 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="arrivedTab">
 
-	<select id="getArrivedTabDataSelect" resultType="arrivedTab">
-		SELECT *
-		FROM arrived_tab
-		WHERE status = '0'
-	</select>
-
 	<select id="getArrivedTabProductSelect" parameterType="arrivedTab" resultType="product">
 		SELECT *
 		FROM T_PRODUCT
 		WHERE dobun = #{code}
 	</select>
+
+	<insert id="setArrivedTabDataInsert" parameterType="arrivedTab">
+		INSERT INTO arrived_tab
+			(code, fireno, gearno, workdate, status, MESLOT, REMARK)
+			VALUES
+			(#{code}, #{fireno}, #{gearno}, CONVERT(DATETIME, #{workdate}),
+			#{status}, #{lotno}, #{remark})
+	</insert>	
 	
 </mapper>

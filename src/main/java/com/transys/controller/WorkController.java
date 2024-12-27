@@ -43,13 +43,7 @@ public class WorkController {
 
    private static final Logger logger = LoggerFactory.getLogger(WorkController.class);
    
-   
-   //작업일보 상세
-    @RequestMapping(value= "/work/workDetail", method = RequestMethod.GET)
-    public String workDetail(Model model) {       
 
-        return "/work/workDetail.jsp"; // 
-    }
     
     //작업일보 상세 조회
     @RequestMapping(value= "/work/workDetail/list", method = RequestMethod.POST)
@@ -203,7 +197,7 @@ public class WorkController {
           return rtnMap;
        }
        
-       if(work.getCycleno() == 0) {
+       if(work.getCycleno() == null || work.getCycleno().length() == 0) {
           rtnMap.put("data", "사이클 NO를 입력하세요.");
           return rtnMap;
        }

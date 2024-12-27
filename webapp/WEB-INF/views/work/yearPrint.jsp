@@ -140,31 +140,34 @@
 		</div>
         <div id="contents">
             <div style="color: black; font-size: 14px; padding-top: 1%; margin-left: 2.5%; text-align: left;">
-                <b style="font-size: 15pt;">작업실적</b> / <label style="font-size: 14pt;">작업일보</label>
+                <b style="font-size: 15pt;">작업실적</b> / <label style="font-size: 14pt;">작업연보 인쇄</label>
             </div>
             <hr>
             <fieldset class="list_input">
                 <legend style="font-size: 15pt;">검색조건</legend>
                 <div class="input_d">
-                   <label> 설비명 : 
+					<!--
+					<label> 설비명 : 
 					    <select name="placename" id="placename">
-					     	<option value="">전체</option>
+					        <option value="">전체</option>
 					        <option value="1">1호기</option>
 					        <option value="2">2호기</option>
 					        <option value="3">3호기</option>
 					        <option value="4">4호기</option>
 					    </select>
 					</label>
+					-->
+
 
                     <label style="margin-left: 15px;"> 작업일자 : 
-					    <input type="text" class="daySet" id="to_date" 
+					    <input type="text" class="yearSet" id="to_date" 
 					    name="to_date" style="font-size: 14pt; font-weight: 700; text-align: center; width: 150px;" placeholder=""/>
 					    
 					</label>
 
                     <button id="searchbtn" style="margin-left: 100px;">조회</button>
                 
-                   <!--  <button id="excelBtn">엑셀</button>-->
+                    <button id="excelBtn">엑셀</button>
 
                 </div>
             </fieldset>
@@ -179,6 +182,7 @@
 <script>
     // Tabulator 테이블 설정
     var tableData = []; 
+    var selectedDate = "";  // selectedDate를 글로벌 변수로 선언
 
     var table = new Tabulator("#tabulator-table", {
         height: 650,
@@ -190,13 +194,16 @@
         reactiveData:true,
         headerHozAlign:"center",
         columns: [
-            { title: "설비명", field: "devicecode", width: 80, hozAlign:"center"},
-            { title: "품명코드", field: "pumcode", width: 300, hozAlign:"center"},
-            { title: "품명", field: "pumname", width: 300, hozAlign:"center"},
-            { title: "기종", field: "gijong", width: 200, hozAlign:"center"},
-            { title: "장입량", field: "cntsum", width: 200, hozAlign:"center"},
-            { title: "처리중", field: "intray", width: 300, hozAlign:"center"},
-            { title: "추출량", field: "outtray", width: 200, hozAlign:"center"},
+        	{ title: "일자", field: "date_feat", width: 320, hozAlign:"center"},
+            { title: "품명", field: "pumname", width: 320, hozAlign:"center"},
+            { title: "품명코드", field: "pumcode", width: 320, hozAlign:"center"},
+            { title: "기종", field: "gijong", width: 220, hozAlign:"center"},
+            { title: "Cycle", field: "cycleno", width: 140, hozAlign:"center"},
+            { title: "가동시간", field: "tray_time", width: 140, hozAlign:"center"},
+            { title: "Tray", field: "cnt", width: 140, hozAlign:"center"},
+            { title: "생산수량", field: "total_cnt", width: 145, hozAlign:"center"},
+            { title: "검사", field: "check_cnt", width: 140, hozAlign:"center"},
+            { title: "합계", field: "total_cnt", width: 145, hozAlign:"center"},
         ],
         placeholder: "검색 결과가 없습니다.", 
     });
@@ -204,25 +211,24 @@
     // 검색 버튼 클릭 이벤트
     document.getElementById("searchbtn").addEventListener("click", function() {
         // 선택한 날짜와 설비명 가져오기
-        var selectedDate = $("#to_date").val(); 
+        selectedDate = $("#to_date").val().replace(/-/g, "");  // 하이픈 제거
         var selectedHogi = $("#placename").val() || ""; // 설비명이 비어있을 경우 빈 문자열로 설정
 
         // 콘솔에 출력
         console.log("선택한 날짜:", selectedDate);
-        console.log("선택한 설비명:", selectedHogi);
-
+     
         // Ajax 요청
         $.ajax({
-            url: "/transys/work/workDay/list", // 실제 API 엔드포인트
+            url: "/transys/work/yearPrint/list", 
             method: "POST",
             data: {
-                date: selectedDate, // 전달할 날짜
-                placename: selectedHogi // 전달할 설비명 (빈 문자열 포함)
+                p_DATE: selectedDate // 전달할 날짜 (하이픈이 제거된 날짜)
             },
-            success: function(data) {
-                table.setData(data); 
-                document.querySelector(".countDATA").textContent = "조회된 데이터 수 : " + data.length;
-                console.log("서버에서 받아온 데이터:", data);
+            success: function(response) {
+                // 서버 응답에서 data 배열만 추출하여 Tabulator에 전달
+                table.setData(response.data); 
+                document.querySelector(".countDATA").textContent = "조회된 데이터 수 : " + response.data.length;
+                console.log("서버에서 받아온 데이터:", response.data);
             },
             error: function() {
                 alert("데이터를 가져오는 데 실패했습니다.");
@@ -231,59 +237,48 @@
 
         // Ajax 요청에 사용될 매개변수 출력
         console.log("서버로 전송할 값:", {
-            date: selectedDate,
-            placename: selectedHogi
+            date: selectedDate
         });
     });
 
-  
- // 페이지 로딩 시 자동으로 하루 전 날짜로 설정
     $(document).ready(function() {
         var now = new Date();
-        now.setDate(now.getDate() - 1);  // 하루 전 날짜로 설정
+        var y = now.getFullYear();  // 현재 년도만 가져오기
 
-        var y = now.getFullYear();
-        var m = paddingZero(now.getMonth() + 1);
-        var d = paddingZero(now.getDate());  // 하루 전 날짜의 일자
+        // "yyyy" 형식으로 설정
+        $("#to_date").val(y);  // 현재 연도로 설정
 
-        // 해당 날짜로 설정 (년-월-일 형식)
-        $("#to_date").val(y + "-" + m + "-" + d);
-
-        // 페이지 로드 시 자동으로 검색 버튼 클릭
-        $("#searchbtn").trigger("click"); // 로드되면 자동으로 검색 실행
+        // 페이지 로드 시 자동으로 검색 수행
+        $("#searchbtn").trigger("click");
     });
 
-    // 2자리 숫자 처리 함수 (1자리 수인 경우 앞에 0을 붙여서 두 자리를 맞춤)
-    function paddingZero(num) {
-        return num < 10 ? "0" + num : num;
-    }
 
+ // 엑셀 다운로드 버튼 클릭 이벤트
+    $("#excelBtn").on("click", function () {
+        console.log("엑셀 보내지는 날:", selectedDate); // selectedDate로 수정
 
-    $("#excelBtn").on("click", function(){
-    	 var selectedDate = $("#to_date").val();
-	     var selectedHogi = $("#placename").val() || ""; // 설비명은 공백으로 처리
-
-		 console.log("엑셀 보내지는 날:", selectedDate);
-		 console.log("엑셀 호기:", selectedHogi);
-		 
         $.ajax({
-            url: "/transys/work/workDay/excelDownload",
-            type:"post",
-			dataType:"json",
-			data:{
-				date: selectedDate, // 전달할 YYYYMM 형식 날짜
-                placename: selectedHogi // 전달할 설비명
-			},
-			success:function(result){
-				console.log(result);
-			}
-		});
+            url: "/transys/work/yearPrint/excelDownload",
+            type: "post",
+            dataType: "json",
+            data: {
+                p_DATE: selectedDate 
+            },
+            success: function (result) {
+                console.log(result);
 
-	});
+ 
+                alert("D:\\생산일지\\연간생산일지 저장 완료되었습니다.");
+            },
+            error: function (xhr, status, error) {
+        
+                alert("엑셀 다운로드 중 오류가 발생했습니다. 다시 시도해주세요.");
+                console.error("Error:", error);
+            }
+        });
+    });
 
-    
 </script>
-
 
 
 <form name="parmForm" method="post">

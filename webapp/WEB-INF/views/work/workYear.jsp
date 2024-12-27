@@ -168,7 +168,7 @@
 					</label>
 
                     <button id="searchbtn" style="margin-left: 100px;">조회</button>
-                    <button id="excelBtn">엑셀</button>
+                       <!--  <button id="excelBtn">엑셀</button> -->
                    
                 </div>
             </fieldset>

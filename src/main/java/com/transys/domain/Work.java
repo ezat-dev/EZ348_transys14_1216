@@ -2,9 +2,20 @@ package com.transys.domain;
 
 public class Work {
 	
+	
+	
+	//Print
+	private String p_DATE;
+	private int total_cnt;
+	private int tray_time;
+	private int check_cnt;
+	private String date_feat;
+	
+	
+	
 	//2024-11-30 추가(1~4호기 : 1, 5~7호기 : 2)
 	private int serverSelect;
-	
+   
    private String cntsum;
    private String intray;
    private String outtray;
@@ -82,7 +93,7 @@ public class Work {
    private String base_cyc2;
    private String base_cyc3;
    private String base_cyc4;
-   private int cycleno;
+   private String cycleno;
    private String material;
    private String danjung;
    private String deepL;
@@ -129,7 +140,37 @@ public class Work {
    
    
    
-   public int getServerSelect() {
+public String getDate_feat() {
+	return date_feat;
+}
+public void setDate_feat(String date_feat) {
+	this.date_feat = date_feat;
+}
+public int getTotal_cnt() {
+	return total_cnt;
+}
+public void setTotal_cnt(int total_cnt) {
+	this.total_cnt = total_cnt;
+}
+public int getTray_time() {
+	return tray_time;
+}
+public void setTray_time(int tray_time) {
+	this.tray_time = tray_time;
+}
+public int getCheck_cnt() {
+	return check_cnt;
+}
+public void setCheck_cnt(int check_cnt) {
+	this.check_cnt = check_cnt;
+}
+public String getP_DATE() {
+	return p_DATE;
+}
+public void setP_DATE(String p_DATE) {
+	this.p_DATE = p_DATE;
+}
+public int getServerSelect() {
 	return serverSelect;
 }
 public void setServerSelect(int serverSelect) {
@@ -543,10 +584,10 @@ public String getDevicecode() {
    public void setBase_cyc4(String base_cyc4) {
       this.base_cyc4 = base_cyc4;
    }
-   public int getCycleno() {
+   public String getCycleno() {
       return cycleno;
    }
-   public void setCycleno(int cycleno) {
+   public void setCycleno(String cycleno) {
       this.cycleno = cycleno;
    }
    public String getMaterial() {

@@ -56,9 +56,15 @@ ul{
 			
 			<li><a class="menuLink" href="/transys/work/workMonth">작업월보</a></li>
 			
-			<li><a class="menuLink" href="/transys/work/workYear">작업년보</a></li>
+			<li><a class="menuLink" href="/transys/work/workYear">작업연보</a></li>
 			
-<!--		<li><a class="menuLink" href="01work_05uptime.jsp">가동시간 분석</a></li> -->
+			<!--<li><a class="menuLink" href="/transys/work/dayPrint">작업일보 인쇄</a></li>
+			
+			<li><a class="menuLink" href="/transys/work/monthPrint">작업월보 인쇄</a></li>
+			
+			<li><a class="menuLink" href="/transys/work/yearPrint">작업년보 인쇄</a></li>-->
+			
+
 			
 			<li><a class="menuLink" href="/transys/popup_data">MENU</a></li>
 		</ul>
