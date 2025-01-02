@@ -28,7 +28,6 @@ public class OutPutServiceImpl implements OutPutService{
 		//파라미터로 받은 설비로 status값 조회
 		StringBuffer desc = new StringBuffer();
 		OutPut outPut = outPutDao.getOutPutDeviceStatus(paramOutPut);
-		logger.info("Output객체 {}",outPut);
 		
 		if(outPut == null) {
 			//status값 0이라면
@@ -49,7 +48,7 @@ public class OutPutServiceImpl implements OutPutService{
 				break;
 			}
 			
-//			outPutDao.setOutPutSend(paramOutPut);
+			outPutDao.setOutPutSend(paramOutPut);
 			logger.info("OUTPUT(14호기) : {}",desc.toString());				
 		}
 	}

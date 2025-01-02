@@ -15,11 +15,14 @@ public class AlarmDaoImpl implements AlarmDao{
 	    
 		@Resource(name="sessionSQLite")
 		private SqlSession sessionSQLite;
+		
+	    @Resource(name="session")
+	    private SqlSession sqlSession;
 
 
 	    @Override
 	    public List<Alarm> getAlarmSummary(Alarm params) {
-	        return sessionSQLite.selectList("alarm.getAlarmSummary", params);  
+	        return sqlSession.selectList("alarmSql.getAlarmSummary", params);  
 	    }
 	    @Override
 	    public List<Alarm> getAlarmList(Alarm params) {

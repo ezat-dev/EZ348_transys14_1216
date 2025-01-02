@@ -8,4 +8,13 @@
 	<update id="ccf1Tracking02" parameterType="tracking">
 		EXEC TRACKING_PROC01 #{devicecode}, #{pumbun}, #{curLocation}
 	</update>
+	
+	<select id="trackingLocationReturn" parameterType="tracking" resultType="tracking">
+		SELECT TOP 1 devicecode, pumbun, cur_location AS curlocation
+		FROM t_workinline
+		WHERE 1=1
+		AND devicecode = #{devicecode}
+		AND pumbun = #{pumbun}
+		ORDER BY regtime DESC 
+	</select>
 </mapper>

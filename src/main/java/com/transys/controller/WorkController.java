@@ -33,7 +33,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.transys.domain.Product;
 import com.transys.domain.Work;
 import com.transys.service.WorkService;
-import com.transys.util.UtilClass;
 
 @Controller
 public class WorkController {
@@ -44,6 +43,12 @@ public class WorkController {
    private static final Logger logger = LoggerFactory.getLogger(WorkController.class);
    
 
+   //작업일보 상세
+   @RequestMapping(value= "/work/workDetail", method = RequestMethod.GET)
+   public String workDetail(Model model) {       
+
+       return "/work/workDetail.jsp"; // 
+   }
     
     //작업일보 상세 조회
     @RequestMapping(value= "/work/workDetail/list", method = RequestMethod.POST)

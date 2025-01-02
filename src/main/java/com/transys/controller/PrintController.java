@@ -213,7 +213,7 @@ public class PrintController {
 	    public Map<String, Object> workMonthPrint(@RequestParam String p_DATE) {
 
 	        // 입력된 p_DATE 값 출력
-	        System.out.println("p_DATE: " + p_DATE);
+	        //System.out.println("p_DATE: " + p_DATE);
 
 	        Map<String, Object> rtnMap = new HashMap<>();
 	        Work work = new Work();
@@ -223,7 +223,7 @@ public class PrintController {
 	        List<Work> workList = workService.workMonthPrint(work);
 
 	        // workList 내용 출력
-	        System.out.println("workList: " + workList);
+	      //  System.out.println("workList: " + workList);
 
 	        rtnMap.put("last_page", 1);
 	        rtnMap.put("data", workList);
@@ -384,7 +384,7 @@ public class PrintController {
 	    public Map<String, Object> workYearPrint(@RequestParam String p_DATE) {
 
 	        // 입력된 p_DATE 값 출력
-	        System.out.println("p_DATE: " + p_DATE);
+	        //System.out.println("p_DATE: " + p_DATE);
 
 	        Map<String, Object> rtnMap = new HashMap<>();
 	        Work work = new Work();
@@ -394,7 +394,7 @@ public class PrintController {
 	        List<Work> workList = workService.workYearPrint(work);
 
 	        // workList 내용 출력
-	        System.out.println("workList: " + workList);
+	        //System.out.println("workList: " + workList);
 
 	        rtnMap.put("last_page", 1);
 	        rtnMap.put("data", workList);

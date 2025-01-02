@@ -576,8 +576,8 @@ var overviewInterval;
 
 //로드
 $(function(){
-//	overviewListView();
-//	overviewInterval = setInterval("overviewListView()", 1000);
+	overviewListView();
+	overviewInterval = setInterval("overviewListView()", 1000);
 });
 
 //OPC값 알람 조회

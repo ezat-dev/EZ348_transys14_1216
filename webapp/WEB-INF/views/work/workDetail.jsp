@@ -433,7 +433,7 @@
 			
 	/* 작업일보 상세 */
 		alarmHistory = new Tabulator("#workDetailList", {
-		    height:"640px",
+		    height:"560px",
 		    layout:"fitColumns",
 		    selectable:true,	//로우 선택설정
 		    tooltips:true,

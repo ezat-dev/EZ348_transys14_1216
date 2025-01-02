@@ -128,8 +128,8 @@ public class AlarmController {
       //      System.out.println("Alarm List Size: " + alarmList.size());
 
             for (Alarm alarmData : alarmList) {
-                System.out.println("Tag Name: " + alarmData.getTagName());
-                System.out.println("Total: " + alarmData.getTotal());
+            //    System.out.println("Tag Name: " + alarmData.getTagName());
+            //    System.out.println("Total: " + alarmData.getTotal());
             }
 
             rtnMap.put("status", "success");
@@ -186,12 +186,12 @@ public class AlarmController {
         //    System.out.println("알람 리스트:");
             for (int i = 0; i < alarmList.size(); i++) {
                 Alarm w = alarmList.get(i);
-                System.out.println("순번: " + (i + 1));
-                System.out.println("설비명: " + w.getTagName());
-                System.out.println("PLC ADDR: " + w.getAlarmState());
-                System.out.println("경보내용: " + w.getAlarmState());
-                System.out.println("발생시간" + w.getTime());
-                System.out.println("해제시간" + w.getLead_alarmtime());
+        //        System.out.println("순번: " + (i + 1));
+        //        System.out.println("설비명: " + w.getTagName());
+        //        System.out.println("PLC ADDR: " + w.getAlarmState());
+        //        System.out.println("경보내용: " + w.getAlarmState());
+        //        System.out.println("발생시간" + w.getTime());
+        //        System.out.println("해제시간" + w.getLead_alarmtime());
             }
 
             try {

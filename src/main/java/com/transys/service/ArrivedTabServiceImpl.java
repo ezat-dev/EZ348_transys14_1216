@@ -46,11 +46,11 @@ public class ArrivedTabServiceImpl implements ArrivedTabService{
 						//arrived_tab 추가
 						
 						//ARRIVED_TAB 데이터 저장
-//						arrivedTabDao.setArrivedTabDataInsert(avt);
+						arrivedTabDao.setArrivedTabDataInsert(avt);
 						desc.append("MSSQL arrived_tab INSERT 완료 ");
 						
 						//arrived_tab 삭제
-//						arrivedTabDao.setArrivedTabDataDelete(avt);
+						arrivedTabDao.setArrivedTabDataDelete(avt);
 						desc.append("CODE : "+avt.getCode()+"// fireno : "+avt.getFireno()+"// workdate : "+avt.getWorkdate());
 						desc.append("ORACLE arrived_tab DELETE 완료 ");
 						logger.info("ARRIVED_TAB 14호기- {}",desc.toString());						

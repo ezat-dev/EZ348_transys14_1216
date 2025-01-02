@@ -58,11 +58,11 @@ ul{
 			
 			<li><a class="menuLink" href="/transys/work/workYear">작업연보</a></li>
 			
-			<!--<li><a class="menuLink" href="/transys/work/dayPrint">작업일보 인쇄</a></li>
+			<li><a class="menuLink" href="/transys/work/dayPrint">작업일보 인쇄</a></li>
 			
 			<li><a class="menuLink" href="/transys/work/monthPrint">작업월보 인쇄</a></li>
 			
-			<li><a class="menuLink" href="/transys/work/yearPrint">작업년보 인쇄</a></li>-->
+			<li><a class="menuLink" href="/transys/work/yearPrint">작업년보 인쇄</a></li>
 			
 
 			

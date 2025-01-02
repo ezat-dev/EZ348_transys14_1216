@@ -61,15 +61,18 @@ public class TrackingServiceImpl5 implements TrackingService5{
 		//DB저장
 		if(curLocation < 12) {
 			if(!"0000".equals(tracking.getPumbun()) && tracking.getPumbun() != null && prdChk != 0) {
+				Tracking trackingReturn = trackingDao.trackingLocationReturn(tracking);
 				
-				desc.append("DEVICECODE : "+tracking.getDevicecode()+"// ");
-				desc.append("PUMBUN : "+tracking.getPumbun()+"// ");
-				desc.append("CURLOCATION : "+tracking.getCurLocation()+"// ");
-				desc.append("setDataDir : "+setDataDir);
 				
-				logger.info("TRACKING(14호기) : {}",desc.toString());							
+				desc.append("설비 : "+tracking.getDevicecode()+"// ");
+				desc.append("품번 : "+tracking.getPumbun()+"// ");
+				desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
+				desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
+				desc.append("OPC태그 : "+setDataDir);	
+				
+				logger.info("TRACKING(14호기) : {}",desc.toString());					
 				//트래킹 실행
-//				trackingDao.ccf1Tracking01(tracking);
+				trackingDao.ccf1Tracking01(tracking);
 				//지연시간 0.3초
 				Thread.sleep(300);
 				
@@ -80,14 +83,18 @@ public class TrackingServiceImpl5 implements TrackingService5{
 		}else {
 			if(!"0000".equals(tracking.getPumbun()) && tracking.getPumbun() != null && prdChk != 0) {
 				tracking.setCurLocation(12);
-				desc.append("DEVICECODE : "+tracking.getDevicecode()+"// ");
-				desc.append("PUMBUN : "+tracking.getPumbun()+"// ");
-				desc.append("CURLOCATION : "+tracking.getCurLocation()+"// ");
-				desc.append("setDataDir : "+setDataDir);
+				Tracking trackingReturn = trackingDao.trackingLocationReturn(tracking);
 				
-				logger.info("TRACKING(14호기) : {}",desc.toString());							
+				
+				desc.append("설비 : "+tracking.getDevicecode()+"// ");
+				desc.append("품번 : "+tracking.getPumbun()+"// ");
+				desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
+				desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
+				desc.append("OPC태그 : "+setDataDir);
+				
+				logger.info("TRACKING(14호기) : {}",desc.toString());					
 				//트래킹 실행
-//				trackingDao.ccf1Tracking01(tracking);
+				trackingDao.ccf1Tracking01(tracking);
 				//지연시간 0.3초
 				Thread.sleep(300);
 				

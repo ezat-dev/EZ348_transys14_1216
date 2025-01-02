@@ -2,8 +2,6 @@ package com.transys.domain;
 
 public class Work {
 	
-	
-	
 	//Print
 	private String p_DATE;
 	private int total_cnt;

@@ -21,8 +21,8 @@ import com.transys.util.OpcDataMap;
 public class MainController {
 	
 	//오토닉스 서버 IP
-	public static final String MAIN_IP = "192.168.0.102";
-	public static final String SUB_IP = "192.168.0.102";
+	public static final String MAIN_IP = "192.168.0.101";
+	public static final String SUB_IP = "192.168.0.101";
 	public static final int PORT = 5660;
 	
 	public static OpcUaClient client = null;

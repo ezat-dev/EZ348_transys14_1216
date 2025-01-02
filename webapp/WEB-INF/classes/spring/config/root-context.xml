@@ -20,40 +20,40 @@
 	<bean id="commProcessor" class="com.transys.async.CommProcessor"/>
 	<bean id="plcWriteProcessor" class="com.transys.async.PlcWriteProcessor"/>
 	<bean id="mchInputProcessor" class="com.transys.async.MchInputProcessor"/>
-	<bean id="outPutProcessor" class="com.transys.async.OutPutProcessor"/>
+ 	<bean id="outPutProcessor" class="com.transys.async.OutPutProcessor"/>
 	<bean id="arrivedTabProcessor" class="com.transys.async.ArrivedTabProcessor"/>
 	<bean id="trackingProcessor1" class="com.transys.async.TrackingProcessor1"/>
- 	<bean id="trackingProcessor2" class="com.transys.async.TrackingProcessor2"/>
+  	<bean id="trackingProcessor2" class="com.transys.async.TrackingProcessor2"/>
 	<bean id="trackingProcessor3" class="com.transys.async.TrackingProcessor3"/>
-	<bean id="trackingProcessor4" class="com.transys.async.TrackingProcessor4"/> 
-	<bean id="trackingProcessor5" class="com.transys.async.TrackingProcessor5"/>
+	<bean id="trackingProcessor4" class="com.transys.async.TrackingProcessor4"/>
+	<bean id="trackingProcessor5" class="com.transys.async.TrackingProcessor5"/> 
 	<task:scheduler id="scheduler" pool-size="4" />
 	<task:executor id="executor" keep-alive="10" pool-size="10-20"
 		queue-capacity="10" rejection-policy="ABORT" />
 	<!-- 메인DB(MSSQL) 테스트용
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
-		<property name="url" value="jdbc:sqlserver://192.168.0.104:1433;DataBaseName=HTSERVERDB;" /> 
+		<property name="url" value="jdbc:sqlserver://127.0.0.1:1433;DataBaseName=HTSERVERDB14;" /> 
 		<property name="username" value="sa" /> 
-		<property name="password" value="ezat6695"/>
+		<property name="password" value="1q2w3e4r"/>
 	</bean>-->
 
 	<!-- 창고DB(Oracle) 테스트용
 	<bean id="dataSourceOracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> 
-		<property name="url" value="jdbc:oracle:thin:@192.168.0.105:1521/XEPDB1" /> 
-		<property name="username" value="ez" /> 
-		<property name="password" value="1234"/>
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521/ORCL" /> 
+		<property name="username" value="fire" /> 
+		<property name="password" value="1q2w3e4r"/>
 	</bean>-->
 	
-	<!-- 메인DB(MSSQL) -->
+	<!-- 메인DB(MSSQL)-->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
 		<property name="url" value="jdbc:sqlserver://192.168.0.53:1433;DataBaseName=HTSERVERDB;" /> 
 		<property name="username" value="user_db" /> 
 		<property name="password" value="octosys"/>
 	</bean>
-
+ 
 	<!-- 창고DB(Oracle) -->
 	<bean id="dataSourceOracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> 

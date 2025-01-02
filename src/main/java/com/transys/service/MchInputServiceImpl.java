@@ -58,7 +58,7 @@ public class MchInputServiceImpl implements MchInputService{
 					}else {
 						dbMesLot = mchData.getMeslot();
 					}
-					if(mchData.getRemark().length() == 0 || mchData.getRemark() == null) {
+					if(mchData.getRemark() == null) {
 						dbRemark = " ";
 					}else {
 						dbRemark = mchData.getRemark();
@@ -76,11 +76,12 @@ public class MchInputServiceImpl implements MchInputService{
 					desc.append("MESLOT : "+mchData.getMeslot()+"// ");
 					desc.append("REMARK : "+mchData.getRemark()+"// ");
 					desc.append("LOADCNT : "+mchData.getLoadcnt()+"// ");
+					desc.append("LOTNO : "+mchData.getLotno()+"// ");
 					
 					logger.info("MCHINPUT(14호기) : {}",desc.toString());
 					
 					//INPUT_TAB에 정상적인 데이터 INSERT
-//					mchInputDao.setMchDataInsertInputTab(mchData);
+					mchInputDao.setMchDataInsertInputTab(mchData);
 			
 					String send1 = mchData.getPumcode();
 					String send2 = mchData.getLotno();
@@ -89,16 +90,16 @@ public class MchInputServiceImpl implements MchInputService{
 					
 					//PLC값 0:출고대기, 1:작업중, 2:창고입고완료
 					//t_waitlist에 PLC값 2로 업데이트
-//					mchInputDao.setMchDataUpdateWaitList(mchData);
+					mchInputDao.setMchDataUpdateWaitList(mchData);
 			
 					//t_siljuk테이블에 완료시간 업데이트
-//					mchInputDao.setMchDataUpdateSiljuk(mchData);
+					mchInputDao.setMchDataUpdateSiljuk(mchData);
 			
 					//t_workinline에서 해당 호기의 품번 삭제
-//					mchInputDao.setMchDataDeleteWorkInline(mchData);
+					mchInputDao.setMchDataDeleteWorkInline(mchData);
 			
 					OpcDataMap opcData = new OpcDataMap();
-					
+				
 					//창고 입고내역 입력
 					opcData.setOpcData("Transys.MCHINPUT.CM01.PUMCODE", send1);
 					opcData.setOpcData("Transys.MCHINPUT.CM01.LOTNO", send2);
@@ -111,32 +112,34 @@ public class MchInputServiceImpl implements MchInputService{
 					
 					
 					//화면의 표시값 초기화 (PLC값 등등)
-//					opcData.setOpcData("Transys.MCHINPUT.CM01.PUMBUN", resetValue);
-//					opcData.setOpcData("Transys.MCHINPUT.CM01.DEVICECODE", resetValue);
+					opcData.setOpcData("Transys.MCHINPUT.CM01.PUMBUN", resetValue);
+					opcData.setOpcData("Transys.MCHINPUT.CM01.DEVICECODE", resetValue);
 					
 					//창고 입고신호 임시값
 					opcData.setOpcData("Transys.MCHINPUT.CM01.MCHINPUT_CHK_TMP", false);
-					
+		
 					//마지막 창고 입고내역
 					desc.append("--> 입고완료");
 					opcData.setOpcData("Transys.MCHINPUT.CM01.INPUT_COUNT", Short.parseShort(MainController.plcCount+""));
 					logger.info("MCHINPUT(14호기) : {}",desc.toString());					
 					
-				}else {
-					//조회 카운터가 0이하이면 입고요청에러로 INPUT_TAB에 INSERT 후 리턴
-					//카운트0 대신에 받아온 데이터가 null로 구분
-//					mchInputDao.setMchDataInsertInputTabFail(mchData);
 				}
+			}else {
+				//조회 카운터가 0이하이면 입고요청에러로 INPUT_TAB에 INSERT 후 리턴
+				//카운트0 대신에 받아온 데이터가 null로 구분
+				MchInput mchTemp = new MchInput();
+				mchTemp.setDevicecode(mchInput.getDevicecode());
+				mchInputDao.setMchDataInsertInputTabFail(mchTemp);
 			}
 			
 			
 			//t_workinline에 데이터가 없어도
 			//t_waitlist 업데이트, t_workinline 딜리트
 			//오늘날짜 - 5일 이전의 waitlist 업데이트
-//			mchInputDao.setMchDataUpdateSiljukFail(mchData);
+			mchInputDao.setMchDataUpdateSiljukFail(mchData);
 			
 			//오늘날짜 -5일 이전의 workinline 딜리트
-//			mchInputDao.setMchDataDeleteWorkInlineFail(mchData);
+			mchInputDao.setMchDataDeleteWorkInlineFail(mchData);
 		}
 	}
 
@@ -213,10 +216,10 @@ public class MchInputServiceImpl implements MchInputService{
 		}
 		
 		if("true".equals(mchInputChk)) {
-			desc.append("PUMBUN : "+savePumbun+"// ");
-			desc.append("DEVICECODE : "+saveDevice+"// ");
+//			desc.append("PUMBUN : "+savePumbun+"// ");
+//			desc.append("DEVICECODE : "+saveDevice+"// ");
 			
-			logger.info("MCHINPUT(14호기) : {}",desc.toString());					
+//			logger.info("MCHINPUT(14호기) : {}",desc.toString());					
 			
 			Map<String, Object> plcCountMap = opcDataMap.getOpcData("Transys.MCHINPUT.CM01.INPUT_COUNT");	//가상태그
 			

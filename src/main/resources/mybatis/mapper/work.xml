@@ -244,5 +244,5 @@
 	        @p_DATE = #{p_DATE},
 	        @p_DEVICECODE = ''
 	</select>
-   
+
 </mapper>

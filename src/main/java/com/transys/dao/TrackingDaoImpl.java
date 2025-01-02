@@ -18,4 +18,9 @@ public class TrackingDaoImpl implements TrackingDao{
 		sqlSession.update("tracking.ccf1Tracking01", tracking);
 	}
 
+	@Override
+	public Tracking trackingLocationReturn(Tracking tracking) {
+		return sqlSession.selectOne("tracking.trackingLocationReturn", tracking);
+	}
+
 }

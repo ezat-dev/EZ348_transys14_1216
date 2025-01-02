@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import com.transys.dao.TrackingDao;
 import com.transys.domain.Tracking;
 import com.transys.util.OpcDataMap;
-import com.transys.util.UtilClass;
 
 @Service
 public class TrackingServiceImpl1 implements TrackingService1{
@@ -57,14 +56,19 @@ public class TrackingServiceImpl1 implements TrackingService1{
 		
 		//DB저장
 		if(!"0000".equals(tracking.getPumbun()) && tracking.getPumbun() != null && prdChk != 0) {
-			desc.append("DEVICECODE : "+tracking.getDevicecode()+"// ");
-			desc.append("PUMBUN : "+tracking.getPumbun()+"// ");
-			desc.append("CURLOCATION : "+tracking.getCurLocation()+"// ");
-			desc.append("setDataDir : "+setDataDir);
+			//현재 설비, 품번의 위치번호 리턴
+			Tracking trackingReturn = trackingDao.trackingLocationReturn(tracking);
+			
+			
+			desc.append("설비 : "+tracking.getDevicecode()+"// ");
+			desc.append("품번 : "+tracking.getPumbun()+"// ");
+			desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
+			desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
+			desc.append("OPC태그 : "+setDataDir);
 			
 			logger.info("TRACKING(14호기) : {}",desc.toString());						
 			//트래킹 실행
-//			trackingDao.ccf1Tracking01(tracking);
+			trackingDao.ccf1Tracking01(tracking);
 			//지연시간 0.3초
 			Thread.sleep(300);
 			
