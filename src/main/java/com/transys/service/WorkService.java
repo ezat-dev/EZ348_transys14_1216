@@ -46,6 +46,8 @@ public interface WorkService {
    List<Work> workMonthPrint(Work work);
    
    List<Work> workYearPrint(Work work);
+
+   void workDayPrintListCheckCntSet(Work work);
       
    
 }

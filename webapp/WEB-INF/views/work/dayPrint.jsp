@@ -194,21 +194,69 @@
         reactiveData:true,
         headerHozAlign:"center",
         columns: [
+            { title: "호기", field: "devicecode", width: 320, hozAlign:"center", visible:false},
             { title: "품명", field: "pumname", width: 320, hozAlign:"center"},
             { title: "품명코드", field: "pumcode", width: 320, hozAlign:"center"},
             { title: "기종", field: "gijong", width: 220, hozAlign:"center"},
             { title: "Cycle", field: "cycleno", width: 140, hozAlign:"center"},
             { title: "가동시간", field: "tray_time", width: 140, hozAlign:"center"},
             { title: "Tray", field: "cnt", width: 140, hozAlign:"center"},
-            { title: "생산수량", field: "total_cnt", width: 145, hozAlign:"center"},
-            { title: "검사", field: "check_cnt", width: 140, hozAlign:"center"},
+            { title: "생산수량", field: "loadcnt", width: 145, hozAlign:"center"},
+            { title: "검사", field: "check_cnt", width: 140, hozAlign:"center",
+            	editor:true,
+				cellEdited:function(cell){
+					var workDate = $("#to_date").val();
+					var rowData = cell.getRow().getData();
+					var cellData = cell.getData();
+					//devicecode
+					//lotno, 앞자리8개
+					//품코드
+					//검사값		
+					var deviceCode = rowData.devicecode;
+					var lotDate = workDate.replace("-","").replace("-","");
+					var pumCode = rowData.pumcode;
+
+					console.log(deviceCode);
+					console.log(lotDate);
+					console.log(pumCode);
+					console.log(cellData.check_cnt);
+					var checkCnt = cellData.check_cnt;
+
+					dayPrintCheckCntSet(deviceCode, lotDate, pumCode, checkCnt);
+					return false;
+				}
+			},
             { title: "합계", field: "total_cnt", width: 145, hozAlign:"center"},
         ],
         placeholder: "검색 결과가 없습니다.", 
     });
 
+	//2025-01-15 추가(검사값 수정)
+	function dayPrintCheckCntSet(deviceCode, lotDate, pumCode, checkCnt){
+		$.ajax({
+			url:"/transys/work/dayPrint/checkCntSet",
+			type:"post",
+			dataType:"json",
+			data:{
+				"deviceCode":deviceCode,
+				"lotDate":lotDate,
+				"pumCode":pumCode,
+				"checkCnt":checkCnt
+			},
+			success:function(result){
+				console.log(result);
+				getWorkDataPrintList();
+			}
+		});
+		
+	}
+    
     // 검색 버튼 클릭 이벤트
     document.getElementById("searchbtn").addEventListener("click", function() {
+    	getWorkDataPrintList();
+    });
+
+	function getWorkDataPrintList(){
         // 선택한 날짜와 설비명 가져오기
         selectedDate = $("#to_date").val();  // selectedDate를 글로벌 변수로 설정
         var selectedHogi = $("#placename").val() || ""; // 설비명이 비어있을 경우 빈 문자열로 설정
@@ -237,9 +285,9 @@
         // Ajax 요청에 사용될 매개변수 출력
         console.log("서버로 전송할 값:", {
             date: selectedDate
-        });
-    });
-
+        });		
+	}
+    
  // 페이지 로딩 시 자동으로 하루 전 날짜로 설정
     $(document).ready(function() {
         var now = new Date();
@@ -253,7 +301,8 @@
         $("#to_date").val(y + "-" + m + "-" + d);
 
         // 페이지 로드 시 자동으로 검색 버튼 클릭
-        $("#searchbtn").trigger("click"); // 로드되면 자동으로 검색 실행
+//        $("#searchbtn").trigger("click"); // 로드되면 자동으로 검색 실행
+        getWorkDataPrintList();
     });
 
     // 2자리 숫자 처리 함수 (1자리 수인 경우 앞에 0을 붙여서 두 자리를 맞춤)

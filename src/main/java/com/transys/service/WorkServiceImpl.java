@@ -113,4 +113,9 @@ public class WorkServiceImpl implements WorkService {
     public List<Work> workYearPrint(Work work) {
         return workDao.workYearPrint(work);
     }
+
+	@Override
+	public void workDayPrintListCheckCntSet(Work work) {
+		workDao.workDayPrintListCheckCntSet(work);
+	}
 }

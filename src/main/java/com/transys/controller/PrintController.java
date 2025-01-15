@@ -61,6 +61,29 @@ public class PrintController {
 	        return rtnMap;
 	    }
 	    
+	    //작업일보인쇄 검사값 수정
+	    @RequestMapping(value = "/work/dayPrint/checkCntSet", method = RequestMethod.POST)
+	    @ResponseBody
+	    public Map<String, Object> workDayPrintListCheckCntSet(
+	    		@RequestParam String deviceCode,
+	    		@RequestParam String lotDate,
+	    		@RequestParam String pumCode,
+	    		@RequestParam int checkCnt) {
+	    	
+	    	Map<String, Object> rtnMap = new HashMap<>();
+	    	Work work = new Work();
+	    	work.setDevicecode(deviceCode);
+	    	work.setP_DATE(lotDate);
+	    	work.setPumcode(pumCode);
+	    	work.setCheck_cnt(checkCnt);
+	    	
+	    	
+	    	//2025-01-15추가 검사값 입력 수정
+	    	workService.workDayPrintListCheckCntSet(work);
+	    	
+	    	return rtnMap;
+	    }
+	    
 	    
 	    @RequestMapping(value = "/work/dayPrint/excelDownload", method = RequestMethod.POST)
 	    @ResponseBody

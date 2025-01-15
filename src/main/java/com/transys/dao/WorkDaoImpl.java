@@ -114,4 +114,9 @@ public class WorkDaoImpl implements WorkDao {
         return sqlSession.selectList("work.workYearPrint", work);
     }
 
+	@Override
+	public void workDayPrintListCheckCntSet(Work work) {
+		sqlSession.insert("work.workDayPrintListCheckCntSet", work);
+	}
+
 }
