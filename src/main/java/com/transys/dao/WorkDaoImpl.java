@@ -48,6 +48,11 @@ public class WorkDaoImpl implements WorkDao {
     public void setWorkDetailDelete(Work work) {
     	sqlSession.delete("work.setWorkDetailDelete", work);
     }
+    
+    @Override
+    public void setWorkDetailInlineDelete(Work work) {
+    	sqlSession.delete("work.setWorkDetailInlineDelete", work);
+    }
 
     @Override
     public void setWorkDetailEndSalt(Work work) {

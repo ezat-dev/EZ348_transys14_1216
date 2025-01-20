@@ -20,6 +20,8 @@ public interface WorkDao {
    void setWorkDetailAddDataSave(Work work);
 
    void setWorkDetailDelete(Work work);
+   
+   void setWorkDetailInlineDelete(Work work);
 
    void setWorkDetailEndSalt(Work work);
 

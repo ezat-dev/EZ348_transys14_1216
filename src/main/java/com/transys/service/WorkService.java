@@ -1,3 +1,4 @@
+
 package com.transys.service;
 
 import java.util.List;
@@ -20,6 +21,8 @@ public interface WorkService {
    void setWorkDetailAddDataSave(Work work);
 
    void setWorkDetailDelete(Work work);
+   
+   void setWorkDetailInlineDelete(Work work);
 
    void setWorkDetailEndSalt(Work work);
 

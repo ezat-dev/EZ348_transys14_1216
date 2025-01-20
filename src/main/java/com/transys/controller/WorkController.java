@@ -258,6 +258,26 @@ public class WorkController {
        return rtnMap;
     }
     
+    //작업일보 데이터 삭제
+    @RequestMapping(value= "/work/workDetail/inlineDelete", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> setWorkDetailInlineDelete(@RequestParam String lotNo) {
+    	Map<String, Object> rtnMap = new HashMap<String, Object>();
+    	
+    	Work work = new Work();
+    	work.setLotno(lotNo);
+    	
+    	workService.setWorkDetailInlineDelete(work);
+    	
+    	StringBuffer desc = new StringBuffer();
+    	
+    	desc.append("LOTNO : "+work.getLotno());
+    	
+    	logger.info("작업일보 삭제 - 데이터 삭제완료 {}", desc);             
+    	
+    	return rtnMap;
+    }
+    
     //작업이력 SALT추출
     @RequestMapping(value= "/work/workDetail/endSalt", method = RequestMethod.POST)
     @ResponseBody

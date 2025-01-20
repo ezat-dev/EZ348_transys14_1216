@@ -129,7 +129,7 @@ public class MchInputServiceImpl implements MchInputService{
 				//카운트0 대신에 받아온 데이터가 null로 구분
 				MchInput mchTemp = new MchInput();
 				mchTemp.setDevicecode(mchInput.getDevicecode());
-				mchInputDao.setMchDataInsertInputTabFail(mchTemp);
+//				mchInputDao.setMchDataInsertInputTabFail(mchTemp);
 			}
 			
 			

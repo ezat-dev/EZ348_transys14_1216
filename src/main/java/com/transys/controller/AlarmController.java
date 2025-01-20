@@ -497,7 +497,7 @@ public class AlarmController {
             @RequestParam(required = false) String alarmgroup
     ) {
      // System.out.println("=== Received request ===");
-        System.out.println("alarmgroup: " + alarmgroup);
+//        System.out.println("alarmgroup: " + alarmgroup);
 
         Map<String, Object> rtnMap = new HashMap<>();
 

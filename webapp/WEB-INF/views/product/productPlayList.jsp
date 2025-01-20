@@ -495,7 +495,7 @@
 		var lotNo = localStorage.getItem("lotNo");
 			
 		$.ajax({
-			url:"/transys/work/workDetail/delete",
+			url:"/transys/work/workDetail/inlineDelete",
 			type:"post",
 			dataType:"json",
 			data:{"lotNo":lotNo},

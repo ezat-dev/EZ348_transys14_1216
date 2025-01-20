@@ -86,6 +86,11 @@
       DELETE FROM T_WORKINLINE WHERE LOTNO = #{lotno}
    </delete>
    
+   <delete id="setWorkDetailInlineDelete" parameterType="work">
+      DELETE FROM T_WAITLIST WHERE LOTNO = #{lotno}      DELETE FROM T_SILJUK WHERE LOTNO = #{lotno}
+      DELETE FROM T_WORKINLINE WHERE LOTNO = #{lotno}
+   </delete>
+   
    <update id="setWorkDetailEndSalt" parameterType="work">
       UPDATE T_SILJUK
       SET ENDSALT = CONVERT(CHAR(16), GETDATE(), 120)

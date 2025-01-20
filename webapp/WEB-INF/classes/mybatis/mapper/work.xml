@@ -8,8 +8,7 @@
       SUBSTRING(A.ENDSALT,6,11) ENDSALT, SUBSTRING(A.ENDTIME, 6, 11) ENDTIME, A.MESLOT, A.REMARK
       FROM t_siljuk A, t_product B
       WHERE 1=1
-      AND SUBSTRING(A.STARTTIME, 1, 16) >= #{searchStartDate}
-      AND SUBSTRING(A.STARTTIME, 1, 16) <![CDATA[<=]]> DATEADD(DAY,1,#{searchEndDate})
+	AND SUBSTRING(A.LOTNO, 1, 8) = REPLACE(SUBSTRING(#{searchStartDate},1,10),'-','')
       <if test="devicecode != ''">
       AND A.DEVICECODE = #{devicecode}
       </if>
@@ -84,6 +83,11 @@
    <delete id="setWorkDetailDelete" parameterType="work">
       DELETE FROM T_WAITLIST WHERE LOTNO = #{lotno}
       DELETE FROM T_SILJUK WHERE LOTNO = #{lotno}
+      DELETE FROM T_WORKINLINE WHERE LOTNO = #{lotno}
+   </delete>
+   
+   <delete id="setWorkDetailInlineDelete" parameterType="work">
+      DELETE FROM T_WAITLIST WHERE LOTNO = #{lotno}      DELETE FROM T_SILJUK WHERE LOTNO = #{lotno}
       DELETE FROM T_WORKINLINE WHERE LOTNO = #{lotno}
    </delete>
    
@@ -244,5 +248,9 @@
 	        @p_DATE = #{p_DATE},
 	        @p_DEVICECODE = ''
 	</select>
+	
+	<insert id="workDayPrintListCheckCntSet" parameterType="work">
+		EXEC sp_siljuk_check_update ' ', #{devicecode}, #{p_DATE}, #{pumcode}, #{check_cnt}
+	</insert>
 
 </mapper>

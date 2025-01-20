@@ -47,6 +47,13 @@ public class WorkServiceImpl implements WorkService {
     public void setWorkDetailDelete(Work work) {
         workDao.setWorkDetailDelete(work);
     }
+    
+
+    @Override
+    public void setWorkDetailInlineDelete(Work work) {
+        workDao.setWorkDetailInlineDelete(work);
+    }
+
 
     @Override
     public void setWorkDetailEndSalt(Work work) {

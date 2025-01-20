@@ -104,7 +104,7 @@
 		width: 95%;
 		text-align: center;
 		margin: auto;
-		height: 950px;
+		height: 900px;
     	white-space: nowrap; /* 테이블 공백 해제 (오버플로우) */
 		overflow:auto;
 	}
@@ -330,7 +330,7 @@
 
 
    $("#addBtn").click(function() {
-	    var url = "http://localhost:9090/transys/product/productAdd"; 
+	    var url = "/transys/product/productAdd"; 
 	    var width = 1200; 
 	    var height = 900; 
 	    var left = (screen.width / 2) - (width / 2); 
@@ -342,7 +342,7 @@
    $("#modifyBtn").click(function() {
 	    if (selectedRowData && selectedRowData.dobun) {
 	        var dobun = selectedRowData.dobun; 
-	        var url = "http://localhost:9090/transys/product/productModify?dobun=" + dobun; 
+	        var url = "/transys/product/productModify?dobun=" + dobun; 
 	        var width = 1200; 
 	        var height = 900; 
 	        var left = (screen.width / 2) - (width / 2); 

@@ -4,7 +4,7 @@
 
 	<insert id="setMchDataInsertInputTab" parameterType="mchInput">
 		INSERT INTO INPUT_TAB ( CODE, LOTNO, GEARNO, WORKDATE, FIRENO, STATUS, REMARK)
-		VALUES (TRIM(#{pumcode}), TRIM(#{meslot}), TRIM(#{loadcnt}), SYSDATE, TRIM(#{devicecode}), '0', #{remark})
+		VALUES (TRIM(#{pumcode}), #{meslot}, TRIM(#{loadcnt}), SYSDATE, TRIM(#{devicecode}), '0', #{remark})
 	</insert>
 
 	<insert id="setMchDataInsertInputTabFail" parameterType="mchInput">

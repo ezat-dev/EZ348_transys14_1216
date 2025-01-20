@@ -111,7 +111,8 @@
 		width: 90%;
 		text-align: center;
 		margin: auto;
-		max-height: 70%;
+		height: 850px;
+    	white-space: nowrap; /* 테이블 공백 해제 (오버플로우) */
 		overflow:auto;
 	}
 	

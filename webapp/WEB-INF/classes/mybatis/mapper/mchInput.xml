@@ -3,12 +3,14 @@
  <mapper namespace="mchInput">
 
 	<select id="getMchInputDataSelectWorkInline" resultType="mchInput" parameterType="mchInput">
-		SELECT A.regtime, A.pumcode, A.lotno, A.loadcnt, A.meslot, B.cycleno, B.agitate_rpm, A.remark
+		SELECT TOP 1 A.regtime, A.pumcode, A.lotno, A.loadcnt, A.meslot, B.cycleno, B.agitate_rpm, A.remark, C.PLC
 		FROM T_WORKINLINE A
 		INNER JOIN T_PRODUCT B ON A.PUMCODE = B.DOBUN
+		INNER JOIN T_WAITLIST C ON A.LOTNO = C.LOTNO
 		WHERE A.PUMBUN = #{pumbun}
 		AND A.DEVICECODE = #{devicecode}
 		AND A.CUR_LOCATION >= 9
+		AND C.PLC = '1'
 		ORDER BY A.LOTNO ASC
 	</select>
 	
