@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품관리</title>
+<title>처리품등록</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
 
@@ -242,17 +242,17 @@
 		    reactiveData:true,
 		    headerHozAlign:"center",
         columns: [
-            { title: "NO", field: "idx", hozAlign: "center", width: 80 },
-            { title: "품명 코드", field: "pumcode", hozAlign: "center", width: 200 },
+            /*{ title: "NO", field: "idx", hozAlign: "center", width: 80 },*/
+            { title: "기종명", field: "pumcode", hozAlign: "center", width: 200 },
             { title: "품명", field: "pumname", hozAlign: "center", width: 200 },
-            { title: "기종", field: "gijong", hozAlign: "center", width: 180 },
-            { title: "품번", field: "dobun", hozAlign: "center", width: 200 },
-            { title: "수량", field: "cnt", hozAlign: "center", width: 120 },
+            { title: "약어", field: "gijong", hozAlign: "center", width: 180 },
+            { title: "MES 코드", field: "dobun", hozAlign: "center", width: 200 },
+            { title: "적재수량", field: "cnt", hozAlign: "center", width: 120 },
             { title: "CYCLE NO", field: "cycleno", hozAlign: "center", width: 120 },
             { title: "아지테이터 RPM", field: "agitate_rpm", hozAlign: "center", width: 150 },
             { title: "공통설비 투입 호기", field: "common_device", hozAlign: "center", width: 160 },
             { title: "등록일", field: "insertday", hozAlign: "center", width: 150 },
-            { title: "수정일", field: "updateday", hozAlign: "center", width: 150 },
+            { title: "수정일", field: "updateday", hozAlign: "center", width: 150 },        
         ],
         rowClick: function(e, row) {
             selectedRowData = row.getData(); // 선택된 행의 데이터를 저장

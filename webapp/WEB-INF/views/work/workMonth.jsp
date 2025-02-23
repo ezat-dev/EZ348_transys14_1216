@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>작업실적 월보</title>
+    <title>작업월보</title>
 
 <jsp:include page="../include/pluginpage.jsp"/>
 
@@ -177,10 +177,10 @@
         reactiveData:true,
         headerHozAlign:"center",
         columns: [
-            { title: "품명코드", field: "pumcode", width: 345, hozAlign:"center"},
+            { title: "MES코드", field: "pumcode", width: 345, hozAlign:"center"},
             { title: "품명", field: "pumname", width: 345, hozAlign:"center"},
             { title: "기종", field: "gijong", width: 345, hozAlign:"center"},
-            { title: "dobun", field: "dobun", width: 340, hozAlign:"center"},
+            { title: "품번코드", field: "dobun", width: 340, hozAlign:"center"},
             { title: "추출량(Tray)", field: "totalout", width: 340, hozAlign:"center"},
         ],
         placeholder: "검색 결과가 없습니다.", 

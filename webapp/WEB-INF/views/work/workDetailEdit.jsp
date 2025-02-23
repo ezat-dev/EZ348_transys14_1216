@@ -125,8 +125,8 @@
 				<div class="add_box" style="margin-top: 1%;" >
 					<!-- 라디오박스 -->
 					<div class="add_text"><label>호기 :</label> <input type="text" id="devicecode" name="devicecode" readonly="readonly" style="background-color:white;"/></div>
-					<div class="add_text"><label>품번 :</label> <input type="text" id="pumcode" name="pumcode" readonly="readonly" style="background-color:white;"/></div>
-					<div class="add_text"><label>기종 :</label> <input type="text" id="gijong" name="gijong"/></div>
+					<div class="add_text"><label>MES코드 :</label> <input type="text" id="pumcode" name="pumcode"/></div>
+					<div class="add_text"><label>약어 :</label> <input type="text" id="gijong" name="gijong"/></div>
 					
 					
 					<div class="add_text"><label>투입시간 :</label> <input type="text" id="starttime" name="starttime"/></div>
@@ -138,8 +138,8 @@
 					<!-- 라디오박스 -->						
 					
 					<div class="add_text"><label>LotNo :</label> <input type="text" id="lotno" name="lotno" readonly="readonly" style="background-color:white;"/></div>
-					<div class="add_text"><label>품명코드 :</label> <input type="text" id="pumname" name="pumname"/></div>
-					<div class="add_text"><label>적재량 :</label> <input type="text" id="loadcnt" name="loadcnt"/></div>
+					<div class="add_text"><label>품명 :</label> <input type="text" id="pumname" name="pumname"/></div>
+					<div class="add_text"><label>적재수량 :</label> <input type="text" id="loadcnt" name="loadcnt"/></div>
 					
 					<div class="add_text"><label></label> <input type="text" id="ssss" name="ssss" readonly="readonly"/></div>
 					<div class="add_text"><label>추출완료 :</label> <input type="text" id="endtime" name="endtime"/></div>
@@ -205,13 +205,13 @@
 		        return response; //return the response data to tabulator
 		    },
 		    columns:[
-		        {title:"제품 - 품번", field:"dobun", sorter:"string", width:200,
+		        {title:"MES 코드", field:"dobun", sorter:"string", width:200,
 		        	hozAlign:"center"},
-		        {title:"제품 - 기종", field:"gijong", sorter:"string", width:120,
+		        {title:"약어", field:"gijong", sorter:"string", width:120,
 		        	hozAlign:"center"},
-		        {title:"제품 - 품명코드", field:"pumcode", sorter:"string", width:200,
+		        {title:"기종명", field:"pumcode", sorter:"string", width:200,
 		        	hozAlign:"center"},
-		        {title:"제품 - 품명", field:"pumname", sorter:"string", width:300,
+		        {title:"품명", field:"pumname", sorter:"string", width:300,
 		        	hozAlign:"center"},
 		    ],
 		    rowFormatter:function(row){
@@ -237,8 +237,13 @@
 
 				//행 선택시 세션에 LOTNO전송
 				var gijong = rowData.gijong;
+				//2025-02-21 추가
+				var pumcode = rowData.dobun;
+				var pumname = rowData.pumname;
 				
 				$("#gijong").val(gijong);
+				$("#pumcode").val(pumcode);
+				$("#pumname").val(pumname);	
 				
 			}
 		});

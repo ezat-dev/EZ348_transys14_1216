@@ -273,7 +273,7 @@
             },
             success: function(response) {
                 // 서버 응답에서 data 배열만 추출하여 Tabulator에 전달
-                table.setData(response.data); 
+                table.replaceData(response.data); 
                 document.querySelector(".countDATA").textContent = "조회된 데이터 수 : " + response.data.length;
                 console.log("서버에서 받아온 데이터:", response.data);
             },

@@ -156,7 +156,7 @@ public class PrintController {
 	                cell.setCellValue(workList.get(i).getCycleno() != null ? workList.get(i).getCycleno() : "");
 //	                cell.setCellStyle(styleCenter);
 
-	        
+/*
 	             // 가동시간 (I9부터)
 	                cell = row.getCell(8); // I9부터 (가동시간)
 	                Integer trayTimeStr = workList.get(i).getTray_time();  // Integer로 변경
@@ -173,7 +173,7 @@ public class PrintController {
 
 	             // 생산수량 (L9부터)
 	                cell = row.getCell(11); // L9부터 (생산수량)
-	                int totalCnt = workList.get(i).getTotal_cnt();  
+	                int totalCnt = workList.get(i).getLoadcnt();  
 	                cell.setCellValue((double) totalCnt);  
 //	                cell.setCellStyle(styleCenter);
 
@@ -188,16 +188,90 @@ public class PrintController {
 	                int sum = workList.get(i).getTotal_cnt();  
 	                cell.setCellValue((double) sum); 
 //	                cell.setCellStyle(styleCenter);
+*/
+	                
+		             // 가동시간 (I9부터)
+	                cell = row.getCell(8); // I9부터 (가동시간)	                                
+	                Integer trayTimeStr = workList.get(i).getTray_time();  // Integer로 변경
 
+	                int trayTime = (trayTimeStr != null) ? trayTimeStr.intValue() : null;  // null 체크 후 double로 변환
+	                String setTrayTime = "";
+	                if(workList.get(i).getPumname().contains("호기")) {
+	                	setTrayTime = "";
+	                }else {
+	                	setTrayTime = trayTime+"";
+	                }
+	                cell.setCellValue(setTrayTime);
+//	                cell.setCellStyle(styleCenter);
+
+	             // Tray (K9부터)
+	                cell = row.getCell(10); // K9부터 (Tray)
+	                int tray = workList.get(i).getCnt();
+	                String setTray = "";
+	                if(workList.get(i).getPumname().contains("호기")) {
+	                	setTray = "";
+	                }else {
+	                	setTray = tray+"";
+	                }	                
+	                cell.setCellValue(setTray);  
+//	                cell.setCellStyle(styleCenter);
+
+
+	             // 생산수량 (L9부터)
+	                cell = row.getCell(11); // L9부터 (생산수량)
+	                int totalCnt = workList.get(i).getTotal_cnt();
+	                String setTotalCnt = "";
+	                if(workList.get(i).getPumname().contains("호기")) {
+	                	setTotalCnt = "";
+	                }else {
+	                	setTotalCnt = totalCnt+"";
+	                }		                
+	                cell.setCellValue(setTotalCnt);  
+//	                cell.setCellStyle(styleCenter);
+
+	                // 검사 (N9부터)
+	                cell = row.getCell(13); // N9부터 (검사)
+	                int checkCnt = workList.get(i).getCheck_cnt();
+	                String setCheckCnt = "";
+	                if(workList.get(i).getPumname().contains("호기")) {
+	                	setCheckCnt = "";
+	                }else {
+	                	setCheckCnt = checkCnt+"";
+	                }		                
+	                cell.setCellValue(setCheckCnt);  
+//	                cell.setCellStyle(styleCenter);
+
+	                // 합계 (O9부터)
+	                cell = row.getCell(14); // O9부터 (합계)
+	                int sum = workList.get(i).getTotal_cnt();
+	                String setSum = "";
+	                if(workList.get(i).getPumname().contains("호기")) {
+	                	setSum = "";
+	                }else {
+	                	setSum = sum+"";
+	                }		                
+	                cell.setCellValue(setSum); 
+//	                cell.setCellStyle(styleCenter);
+
+	                
+	                
 	            }
 
 	            // 출력일자 설정 (N5)
 	            row = sheet.getRow(4);  // N5는 row 4, cell 13
 	            if (row == null) row = sheet.createRow(4);
 	            cell = row.getCell(13); // N5
-	            if (cell == null) cell = row.createCell(13);
+//	            if (cell == null) cell = row.createCell(13);
 	            cell.setCellValue(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-	            cell.setCellStyle(styleLeft);
+//	            cell.setCellStyle(styleLeft);
+	            
+	            //생산일자 설정 p_DATE
+	            row = sheet.getRow(5);  // N5는 row 4, cell 13
+	            if (row == null) row = sheet.createRow(5);
+	            cell = row.getCell(13); // N5
+//	            if (cell == null) cell = row.createCell(13);
+	            cell.setCellValue(p_DATE);
+//	            cell.setCellStyle(styleLeft);
 
 	            workbook.setForceFormulaRecalculation(true);
 	            fos = new FileOutputStream(savePath + fileName); // 파일 저장

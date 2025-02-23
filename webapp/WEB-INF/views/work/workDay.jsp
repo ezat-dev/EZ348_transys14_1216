@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>작업실적</title>
+    <title>작업일보</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
     <style>
@@ -191,9 +191,9 @@
         headerHozAlign:"center",
         columns: [
             { title: "설비명", field: "devicecode", width: 80, hozAlign:"center"},
-            { title: "품명코드", field: "pumcode", width: 300, hozAlign:"center"},
+            { title: "MES코드", field: "pumcode", width: 300, hozAlign:"center"},
             { title: "품명", field: "pumname", width: 300, hozAlign:"center"},
-            { title: "기종", field: "gijong", width: 200, hozAlign:"center"},
+            { title: "약어", field: "gijong", width: 200, hozAlign:"center"},
             { title: "장입량", field: "cntsum", width: 200, hozAlign:"center"},
             { title: "처리중", field: "intray", width: 300, hozAlign:"center"},
             { title: "추출량", field: "outtray", width: 200, hozAlign:"center"},

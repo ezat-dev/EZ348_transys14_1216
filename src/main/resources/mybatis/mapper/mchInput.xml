@@ -10,8 +10,8 @@
 		WHERE A.PUMBUN = #{pumbun}
 		AND A.DEVICECODE = #{devicecode}
 		AND A.CUR_LOCATION >= 9
-		AND C.PLC = '1'
-		ORDER BY A.LOTNO ASC
+		<!--AND C.PLC = '1'-->
+		ORDER BY A.ENDTIME DESC
 	</select>
 	
 	<update id="setMchDataUpdateWaitList" parameterType="mchInput">

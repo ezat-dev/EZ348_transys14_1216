@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>작업실적</title>
+<title>진행LIST</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 <style>
 
@@ -421,9 +421,9 @@
 	            {title:"침탄로 호기", field:"devicecode", sorter:"string", width:120, hozAlign:"center"},
 	            {title:"품번", field:"pumbun", sorter:"string", width:120, hozAlign:"center"},
 	            {title:"공통설비 호기", field:"common_device", sorter:"string", width:130, hozAlign:"center"},
-	            {title:"품명코드", field:"pumcode", sorter:"string", width:180, hozAlign:"center"},
-	            {title:"품명", field:"pumname", sorter:"string", width:180, hozAlign:"center"},
-	            {title:"기종", field:"gijong", sorter:"string", width:100, hozAlign:"center"},
+	            {title:"MES 코드", field:"pumcode", sorter:"string", width:180, hozAlign:"center"},
+	            {title:"기종명", field:"pumname", sorter:"string", width:180, hozAlign:"center"},
+	            {title:"약어", field:"gijong", sorter:"string", width:100, hozAlign:"center"},
 	            {title:"적재량", field:"loadcnt", sorter:"string", width:100, hozAlign:"center"},
 	            {title:"투입구분", field:"status", sorter:"string", width:100, hozAlign:"center"},
 	            {title:"데이터발생", field:"datastatus", sorter:"string", width:125, hozAlign:"center"},
@@ -487,7 +487,9 @@
 		var popupx = 0;
 		var popupy = 0;
 		
-		openWin = window.open('/transys/work/workDetailAdd', 'detail_edit', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX='+popupx+', screenY='+popupy);
+		var selectDevice = $("#devicecode").val();
+		
+		openWin = window.open('/transys/work/workDetailAdd?wDevice='+selectDevice, 'detail_edit', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX='+popupx+', screenY='+popupy);
 		
 	}	
 	

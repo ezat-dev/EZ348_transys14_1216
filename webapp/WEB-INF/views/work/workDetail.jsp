@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>작업실적</title>
+<title>작업일보상세</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 <style>
 
@@ -466,13 +466,13 @@
 		        	hozAlign:"center"},
 		        {title:"Lot No.", field:"lotno", sorter:"string", width:180,
 		        	hozAlign:"center"},
-		        {title:"품번", field:"pumcode", sorter:"string", width:180,
+		        {title:"MES 코드", field:"pumcode", sorter:"string", width:180,
 		        	hozAlign:"center"},
-		        {title:"품명코드", field:"pumname", sorter:"string", width:180,
+		        {title:"품명", field:"pumname", sorter:"string", width:180,
 		        	hozAlign:"center"},
 		        {title:"기종", field:"gijong", sorter:"string", width:140,
 		        	hozAlign:"center"},
-		        {title:"적재량", field:"loadcnt", sorter:"string", width:140,
+		        {title:"적재수량", field:"loadcnt", sorter:"string", width:100,
 		        	hozAlign:"center"},
 		        {title:"투입시간", field:"starttime", sorter:"string", width:140,
 		        	hozAlign:"center"},
@@ -480,7 +480,7 @@
 		        	hozAlign:"center"},
 		        {title:"추출완료시간", field:"endtime", sorter:"string", width:140,
 		        	hozAlign:"center"},
-		        {title:"MES LOT", field:"meslot", sorter:"string", width:140,
+		        {title:"MES LOT", field:"meslot", sorter:"string", width:160,
 		        	hozAlign:"center"},
 		        {title:"참고사항", field:"remark", sorter:"string", width:260,
 		        	hozAlign:"center"},

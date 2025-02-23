@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품관리</title>
+<title>일자별 투입LIST 추가</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 <style>
 
@@ -119,7 +119,8 @@
 			
 			<form id="workDataAddForm" name="workDataAddForm" method="post">
 				<div class="add_box" style="margin-top: 5%;" >
-					<div class="add_text"><label>처리품 코드 : </label><input type="text" id="pumcode" name="pumcode"/></div>
+					<div class="add_text"><label>작업일자 : </label><input type="text" id="p_DATE" name="p_DATE" class="daySet"/></div>
+					<div class="add_text"><label>MES 코드 : </label><input type="text" id="pumcode" name="pumcode"/></div>
 					<div class="add_text"><label>침탄로 :</label>
 						<select id="devicecode" name="devicecode" >
 							<option value="1">1호기</option>
@@ -139,7 +140,7 @@
 			</form>
 		</div>
 		
-		<div class="btnaddpage" style="margin-top: 15%;">
+		<div class="btnaddpage" style="margin-top: 10%;">
 			<button id="saveBtn" type="button">저장</button>
 			<button id="closeBtn" type="button">닫기</button>
 		</div>
@@ -149,6 +150,36 @@
 
 	//로드
 	$(function () {
+		var now = new Date();
+		var y = now.getFullYear();
+		var m = paddingZero(now.getMonth()+1);
+		var d = paddingZero(now.getDate());
+		//20250122
+		<%String selectWdate = request.getParameter("wDate");
+		  String selectWdevice = request.getParameter("wDevice");
+		%>
+		
+		var paramWdate = <%=selectWdate%>+"";
+		var paramWdevice = <%=selectWdevice%>+"";
+
+		if(paramWdate != "null"){
+			var paramWdateY = paramWdate.substr(0,4);
+			var paramWdateM = paramWdate.substr(4,2);
+			var paramWdateD = paramWdate.substr(6,2);
+			var paramWdateOut = paramWdateY+"-"+paramWdateM+"-"+paramWdateD;
+			
+			$("#p_DATE").val(paramWdateOut);
+		}else{
+			$("#p_DATE").val(y+"-"+m+"-"+d);
+		}
+		
+		if(paramWdevice != "" && paramWdevice != "null"){
+			$("#devicecode").val(paramWdevice);
+		}else{
+			$("#devicecode").val(1);
+		}
+		
+				
 		getProductDataInit();
 		getProductList();
 	});
@@ -201,13 +232,13 @@
 		        return response; //return the response data to tabulator
 		    },
 		    columns:[
-		        {title:"품명코드", field:"dobun", sorter:"string", width:160,
+		        {title:"MES코드", field:"dobun", sorter:"string", width:160,
 		        	hozAlign:"center"},
 		        {title:"품명", field:"pumname", sorter:"string", width:200,
 		        	hozAlign:"center"},
-		        {title:"기종", field:"gijong", sorter:"string", width:150,
+		        {title:"약어", field:"gijong", sorter:"string", width:150,
 		        	hozAlign:"center"},
-		        {title:"적재량", field:"cnt", sorter:"string", width:150,
+		        {title:"적재수량", field:"cnt", sorter:"string", width:150,
 		        	hozAlign:"center"},
 		        {title:"CYCLE NO.", field:"cycleno", sorter:"string", width:160,
 		        	hozAlign:"center"},

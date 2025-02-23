@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품관리</title>
+<title>처리품등록</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
 
@@ -198,15 +198,16 @@
 					<div class="input_info">
 						<div style="margin: 5% 0%; text-align: left; font-size: 19px;"><b>등록정보</b></div>
 						
-						<div class="inputtxt"> 품&nbsp;명&nbsp;코&nbsp;드 : 								<input type="text" class="left_in" id="pumcode" name="pumcode" style="margin-left: 1px;" /></div>
+					<div class="inputtxt"> 기&nbsp;&nbsp;&nbsp;종&nbsp;&nbsp;&nbsp;명&nbsp;: 		   <input type="text" class="left_in" id="pumcode" name="pumcode" style="margin-left: 1px;" /></div>
 						<div class="inputtxt"> 품&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명 : <input type="text" class="left_in" id="pumname" name="pumname" /> </div>
-						<div class="inputtxt"> 기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;종 : <input type="text" class="left_in" id="gijong" name="gijong" /> </div>
-						<div class="inputtxt"> 품&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번 : <input type="text" class="left_in" id="dobun" name="dobun" style="width: 100px;"/> ~ <input type="text" class="left_in" id="e_dobun" name="e_dobun" style="width: 100px;"/></div>
+						<div class="inputtxt"> 약&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;어 : <input type="text" class="left_in" id="gijong" name="gijong" /> </div>
+						<div class="inputtxt"> MES&nbsp;&nbsp; 코드 : <input type="text" class="left_in" id="dobun" name="dobun"/></div>
+						<!-- ~ <input type="text" class="left_in" id="e_dobun" name="e_dobun" style="width: 100px;"/> -->
 						<div class="inputtxt"> 적&nbsp;재&nbsp;수&nbsp;량 : 								<input type="text" class="left_in" id="cnt" name="cnt" style="margin-left: 2px;"/> </div>
 						<div class="inputtxt"> 작&nbsp;&nbsp;&nbsp;성&nbsp;&nbsp;&nbsp;자 : 				<input type="text" class="left_in" id="writer" name="writer" style="margin-left: 1px;"/> </div>
 						<div class="inputtxt"> 등&nbsp;록&nbsp;일&nbsp;자 : 								<input type="text" class="left_in" id="insertday" name="insertday" style="margin-left: 2px;"/> </div>
 						<div class="inputtxt"> 수&nbsp;정&nbsp;일&nbsp;자 : 								<input type="text" class="left_in" id="updateday" name="updateday" style="margin-left: 2px;"/> </div>
-					</div>
+						</div>
 	
 					<hr>
 	
