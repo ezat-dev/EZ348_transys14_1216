@@ -37,6 +37,28 @@
        AND A.LOTNO = #{lotno}
    </select>
    
+   <!-- 작업일보 데이터 조회(상세이력) 오버뷰 -->
+   <select id="workDetailDescDataOverView" parameterType="work" resultType="work">
+       SELECT A.DEVICECODE, A.LOTNO,A.PUMCODE,B.PUMNAME,B.GIJONG,A.PUMBUN, 
+       B.CNT,B.MATERIAL, 
+       B.DANJUNG,B.DEEPL,B.DEEPH, 
+       B.SURFHARD,B.INSHARD,B.CYCLETIME, 
+       A.STARTTIME,A.STARTCARB,A.ENDCARB,A.ENDSALT,A.STARTWASH, 
+       A.ENDWASH,A.ENDTIME, 
+       ROUND(A.SET_TMP1,3) AS SET_TMP1, ROUND(A.SET_TMP2,3) AS SET_TMP2, 
+       ROUND(A.SET_TMP3,3) AS SET_TMP3, ROUND(A.SET_TMP4,3) AS SET_TMP4,  
+       ROUND(A.ACTION_TMP1,3) AS ACTION_TMP1 ,ROUND(A.ACTION_TMP2,3) AS ACTION_TMP2, 
+       ROUND(A.ACTION_TMP3,3) AS ACTION_TMP3, ROUND(A.ACTION_TMP4,3) AS ACTION_TMP4, 
+       ROUND(A.SET_CP1,3) AS SET_CP1,ROUND(A.SET_CP2,3) AS SET_CP2,ROUND(A.SET_CP3,3) AS SET_CP3, 
+       ROUND(A.ACTION_CP1,3) AS ACTION_CP1, ROUND(A.ACTION_CP2,3) AS ACTION_CP2, ROUND(A.ACTION_CP3,3) AS ACTION_CP3,
+       A.CYC1_TIME,A.CYC2_TIME,A.CYC3_TIME,A.CYC4_TIME,A.MESLOT 
+       FROM t_workinline A, t_product B 
+       WHERE A.PUMCODE = B.DOBUN 
+       AND A.DEVICECODE = #{devicecode}
+       AND A.PUMBUN = #{pumbun}
+   </select>
+   
+   
    <!-- 작업일보 편집화면 제품리스트 -->
    <select id="workDetailProductList" resultType="product">
       SELECT *
@@ -252,5 +274,39 @@
 	<insert id="workDayPrintListCheckCntSet" parameterType="work">
 		EXEC sp_siljuk_check_update ' ', #{devicecode}, #{p_DATE}, #{pumcode}, #{check_cnt}
 	</insert>
+
+	<select id="getInOutList" resultType="inOut">
+		SELECT *
+		FROM (
+			SELECT 
+				devicecode AS out_devicecode,
+				pumbun AS out_pumbun,
+				tdatetime AS out_tdatetime,
+				lotno AS out_lotno,
+				dobun AS out_dobun,
+				pumcode AS out_pumcode,
+				pumname AS out_pumname,
+				loadcnt AS out_loadcnt,
+				gijong AS out_gijong
+			FROM v_inoutlist
+			WHERE gb = 'OUT'
+		) AS outlist
+		INNER JOIN
+		(
+			SELECT 
+				devicecode AS in_devicecode,
+				pumbun AS in_pumbun,
+				tdatetime AS in_tdatetime,
+				lotno AS in_lotno,
+				dobun AS in_dobun,
+				pumcode AS in_pumcode,
+				pumname AS in_pumname,
+				loadcnt AS in_loadcnt,
+				gijong AS in_gijong
+			FROM v_inoutlist
+			WHERE gb = 'IN'
+		) AS inlist
+		ON outlist.out_devicecode = inlist.in_devicecode	
+</select>
 
 </mapper>

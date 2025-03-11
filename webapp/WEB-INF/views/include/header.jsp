@@ -64,9 +64,24 @@ ul{
 	
 			
 			<li><a class="menuLink" href="/transys/popup_data"  style="width: 250px;" >MENU</a></li>
+			
+			
+			<li><a id="inOutList" class="menuLink"  style="width: 250px;" >입출고이력</a></li>
 		</ul>
 	</nav>
 <script>
+
+$("#inOutList").on("click",function(e){
+	var width = window.screen.width;
+	var height = 400;
+	
+	var popupx = 0;
+	var popupy = 300;
+	
+	openWin = window.open('/transys/work/workInOutPopup', '', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX='+popupx+', screenY='+popupy);
+	
+});
+
 </script>	
 </body>
 </html>

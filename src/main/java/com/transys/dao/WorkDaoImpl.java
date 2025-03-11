@@ -4,6 +4,8 @@ import java.util.List;
 import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
+
+import com.transys.domain.InOut;
 import com.transys.domain.Product;
 import com.transys.domain.Work;
 
@@ -122,6 +124,16 @@ public class WorkDaoImpl implements WorkDao {
 	@Override
 	public void workDayPrintListCheckCntSet(Work work) {
 		sqlSession.insert("work.workDayPrintListCheckCntSet", work);
+	}
+
+	@Override
+	public Work workDetailDescDataOverView(Work work) {
+		return sqlSession.selectOne("work.workDetailDescDataOverView", work);
+	}
+
+	@Override
+	public List<InOut> getInOutList() {
+		return sqlSession.selectList("work.getInOutList");
 	}
 
 }

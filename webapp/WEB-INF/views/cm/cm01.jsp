@@ -729,12 +729,57 @@ function value(keys, value){
 			$("."+tong_tag3).css("display","none");
 			$("."+keys).css("display","none");			
 		}else{
+			var pumbun = 0;
+			//t : 1,3 호기
+			if(value == true){
+				pumbun = tong_split[1];
+			}		
+			
 			$("."+tong_tag1).css("display","");
 			$("."+tong_tag2).css("display","");
 			$("."+tong_tag3).css("display","");			
 			$("."+keys).css("display","");
+
+			$("."+tong_tag1).css("cursor","pointer");
+			$("."+tong_tag2).css("cursor","pointer");
+			$("."+tong_tag3).css("cursor","pointer");			
+			$("."+keys).css("cursor","pointer");
+			$("."+tong_tag1).attr("onclick","getPopupDetail('"+pumbun+"');");
+			$("."+tong_tag2).attr("onclick","getPopupDetail('"+pumbun+"');");
+			$("."+tong_tag3).attr("onclick","getPopupDetail('"+pumbun+"');");			
+			$("."+keys).attr("onclick","getPopupDetail('"+pumbun+"');");
+
 		}
 	}
+}
+
+//상세조회 팝업창
+function getPopupDetail(selectPumbun){
+	
+	var splitData = selectPumbun.split(";");
+	
+	var deviceCode = 0;
+	var tongPosition = selectPumbun;
+	var pumbun = 0;
+	
+	deviceCode = $(".v-"+tongPosition+"-tong-2").text();
+	pumbun = $(".v-"+tongPosition+"-tong-3").text();
+	
+//	console.log("topBottom : "+topBottom+"// deviceCode : "+deviceCode+"// tongPosition : "+tongPosition+"// pumbun : "+pumbun);
+	
+	localStorage.setItem("overViewDevice",deviceCode);
+	localStorage.setItem("overViewPumbun",pumbun);	
+	/*큰화면
+	var width = (window.screen.width)-620;
+	var height = (window.screen.height)-630;
+	*/
+	var width = (window.screen.width)-300;
+	var height = (window.screen.height)-630;
+	
+	var popupx = width-(width/2)-400;
+	var popupy = height-(height/2);
+	
+	openWin = window.open('/transys/work/workDetailDescOverView', '', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX='+popupx+', screenY='+popupy);
 }
 
 </script>

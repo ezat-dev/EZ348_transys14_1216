@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.transys.domain.InOut;
 import com.transys.domain.Product;
 import com.transys.domain.Work;
 import com.transys.service.WorkService;
@@ -106,6 +107,41 @@ public class WorkController {
        
         return rtnMap; // 
     }
+    
+
+    //작업일보 상세이력
+    @RequestMapping(value= "/work/workDetailDescOverView", method = RequestMethod.GET)
+    public String workDetailDescOverView(Model model) {       
+
+        return "/work/workDetailDescOverView.jsp"; // 
+    }
+    
+    //작업일보 상세 조회
+    @RequestMapping(value= "/work/workDetailDescOverView/data", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> workDetailOverViewDescData(
+    		@RequestParam String devicecode,
+    		@RequestParam int pumbun) {
+
+       Map<String, Object> rtnMap = new HashMap<String, Object>();
+       Work work = new Work();
+       work.setDevicecode(devicecode);
+       work.setPumbun(String.format("%04d",pumbun));
+       
+       Work workDetailDesc = workService.workDetailDescDataOverView(work);
+       
+       StringBuffer desc = new StringBuffer();
+       
+       desc.append("devicecode : "+devicecode+"// pumbun : "+pumbun);
+       
+       logger.info("작업일보 상세이력 조회(오버뷰) {}", desc);
+       
+       rtnMap.put("data", workDetailDesc);
+       
+        return rtnMap; // 
+    }
+    
+    
 
     //작업일보 편집
     @RequestMapping(value= "/work/workDetailEdit", method = RequestMethod.GET)
@@ -935,6 +971,29 @@ public class WorkController {
 
         rtnMap.put("data", savePath + now + "_작업년보.xlsx");
         return rtnMap;
+    }
+
+
+    //작업일보 상세이력
+    @RequestMapping(value= "/work/workInOutPopup", method = RequestMethod.GET)
+    public String workInOutPopup(Model model) {       
+
+        return "/include/inOutPopup.jsp"; // 
+    }
+    
+    //작업일보 상세 조회
+    @RequestMapping(value= "/work/workInOutPopup/data", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> workInOutPopupData() {
+
+       Map<String, Object> rtnMap = new HashMap<String, Object>();
+       
+       List<InOut> inOutList = workService.getInOutList();
+       
+       rtnMap.put("last_page",1);
+       rtnMap.put("data", inOutList);
+       
+        return rtnMap; // 
     }
 
 

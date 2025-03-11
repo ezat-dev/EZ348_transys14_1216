@@ -19,6 +19,10 @@ import org.apache.poi.ss.usermodel.VerticalAlignment;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -295,6 +299,148 @@ public class PrintController {
 
 	        return rtnMap;
 	    }
+	    
+
+	    @RequestMapping(value = "/work/dayPrint/excelDownloadJson", method = RequestMethod.POST)
+	    @ResponseBody
+	    public Map<String, Object> workYearExcelDownloadJson(@RequestParam(required = false) String jsonData,
+	                                                    HttpServletRequest request) {
+	    	Map<String, Object> rtnMap = new HashMap<String, Object>();
+			JSONObject resultObj = new JSONObject();
+
+			JSONParser parser = new JSONParser();
+			Object obj = null;
+			try {
+				obj = parser.parse(jsonData);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			
+			JSONObject jsonObj = (JSONObject)obj;
+	    	
+	        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_작업일보_HHmmss");
+	        Date time = new Date();
+	        String fileName = format.format(time) + ".xlsx"; // 최종 파일 이름
+
+
+	        FileOutputStream fos = null;
+	        FileInputStream fis = null;
+	        String openPath = "D:/엑셀_양식/";
+	        String savePath = "D:/생산일지/일간생산일지/";
+
+	    	
+	    	JSONArray printArray = (JSONArray)jsonObj.get("printList");
+
+	        if (printArray == null || printArray.isEmpty()) {
+	            rtnMap.put("error", "없음");
+	            return rtnMap;
+	        }
+
+	        try {
+	            fis = new FileInputStream(openPath + "EZ348)트랜시스양식_일간생산일지.xlsx");
+
+	            XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	            FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
+	            XSSFSheet sheet = workbook.getSheetAt(0);
+	            Row row = null;
+	            Cell cell = null;
+
+	            XSSFCellStyle styleCenter = workbook.createCellStyle();
+	            styleCenter.setAlignment(HorizontalAlignment.CENTER);  // 중앙 정렬
+	            styleCenter.setVerticalAlignment(VerticalAlignment.CENTER);  // 세로 중앙 정렬
+
+	            XSSFCellStyle styleLeft = workbook.createCellStyle();
+	            styleLeft.setAlignment(HorizontalAlignment.LEFT);  // 왼쪽 정렬
+	            styleLeft.setVerticalAlignment(VerticalAlignment.CENTER);  // 세로 중앙 정렬
+
+	            int startRow = 8;
+	            
+		    	for(int i=0; i<printArray.size(); i++) {
+		    		row = sheet.getRow(startRow + i);
+		    		JSONObject printData = (JSONObject)printArray.get(i);
+//		    		System.out.println(printData.get("cycleno"));
+
+	                cell = row.getCell(1); // B9부터 (품명)
+	                cell.setCellValue(printData.get("pumname") != null ? printData.get("pumname").toString() : "");
+
+	                cell = row.getCell(3); // D9부터 (품명코드)
+	                cell.setCellValue(printData.get("pumcode") != null ? printData.get("pumcode").toString() : "");
+
+	                cell = row.getCell(5); // F9부터 (기종)
+	                cell.setCellValue(printData.get("gijong") != null ? printData.get("gijong").toString() : "");
+
+	                cell = row.getCell(7); // H9부터 (Cycle)
+	                if(printData.get("cycleno") != null && !"".equals(printData.get("cycleno"))) {	                	
+	                	cell.setCellValue(Integer.parseInt(printData.get("cycleno").toString()));
+	                }
+
+	                cell = row.getCell(8); // I9부터 (가동시간)
+	                if(printData.get("tray_time") != null && !"".equals(printData.get("tray_time"))) {
+	                	cell.setCellValue(Integer.parseInt(printData.get("tray_time").toString()));
+	                }
+
+	                cell = row.getCell(10); // K9부터 (Tray)
+	                if(printData.get("cnt") != null && !"".equals(printData.get("cnt"))) {
+	                	cell.setCellValue(Integer.parseInt(printData.get("cnt").toString()));
+	                }
+
+	                cell = row.getCell(11); // L9부터 (생산수량)
+	                if(printData.get("loadcnt") != null && !"".equals(printData.get("loadcnt"))) {
+	                	cell.setCellValue(Integer.parseInt(printData.get("loadcnt").toString()));
+	                }
+
+	                cell = row.getCell(13); // N9부터 (검사)
+	                if(printData.get("check_cnt") != null && !"".equals(printData.get("check_cnt"))) {
+	                	cell.setCellValue(Integer.parseInt(printData.get("check_cnt").toString()));
+	                }
+
+	                // 합계 (O9부터)
+	                cell = row.getCell(14); // O9부터 (합계)
+	                if(printData.get("total_cnt") != null && !"".equals(printData.get("total_cnt"))) {
+	                	cell.setCellValue(Integer.parseInt(printData.get("total_cnt").toString()));
+	                }
+	                
+	                
+		            //생산일자 설정 p_DATE
+		            row = sheet.getRow(5);  // N5는 row 4, cell 13
+		            if (row == null) row = sheet.createRow(5);
+		            cell = row.getCell(13); // N5
+		            cell.setCellValue(printData.get("date_feat") != null ? 
+		            		printData.get("date_feat").toString().substring(0,4)+"-"+
+		            		printData.get("date_feat").toString().substring(4,6)+"-"+
+		            		printData.get("date_feat").toString().substring(6,8): null);
+	            }
+
+	            // 출력일자 설정 (N5)
+	            row = sheet.getRow(4);  // N5는 row 4, cell 13
+	            if (row == null) row = sheet.createRow(4);
+	            cell = row.getCell(13); // N5
+	            cell.setCellValue(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+
+
+	            workbook.setForceFormulaRecalculation(true);
+	            fos = new FileOutputStream(savePath + fileName); // 파일 저장
+	            workbook.write(fos);
+	            workbook.close();
+	            fos.flush();
+
+	            rtnMap.put("data", savePath + fileName); // 저장된 파일 경로 반환
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	            rtnMap.put("error", "엑셀 파일 생성 중 오류가 발생했습니다.");
+	            return rtnMap;
+	        } finally {
+	            try {
+	                if (fis != null) fis.close();
+	                if (fos != null) fos.close();
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    	
+	    	return rtnMap;
+	    }
+	    
 
 	    
 	    //열처리 월별 생산 일지
@@ -503,7 +649,6 @@ public class PrintController {
 	    @RequestMapping(value = "/work/yearPrint/excelDownload", method = RequestMethod.POST)
 	    @ResponseBody
 	    public Map<String, Object> workYearExcelDownload(@RequestParam String p_DATE,
-	                                                    
 	                                                    HttpServletRequest request) {
 
 	        Map<String, Object> rtnMap = new HashMap<>();
@@ -641,5 +786,5 @@ public class PrintController {
 
 	        return rtnMap;
 	    }
-
+	    
 }

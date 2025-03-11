@@ -84,7 +84,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[1]투입완료: 탈지로입구 리프트에 처리품이 위치할때
 	public void ccf4Tracking01() throws InterruptedException, ExecutionException {
 		//Transys.TRACKING.CCF04.C01의 하위태그 조회		
-		String setDataDir = "Transys.TRACKING.CCF04.C01";
+		String setDataDir = "Transys14.TRACKING.CCF04.C01";
 		
 		//호기, 위치(순서), 태그경로
 		trackingDataSet("4",1,setDataDir);
@@ -93,7 +93,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[2]예열장입 : 처리품이 예열실에 도착할 때
 	public void ccf4Tracking02() throws InterruptedException, ExecutionException {
 		//Transys.TRACKING.CCF04.C02의 하위태그 조회		
-		String setDataDir = "Transys.TRACKING.CCF04.C02";
+		String setDataDir = "Transys14.TRACKING.CCF04.C02";
 	
 		//호기, 위치(순서), 태그경로
 		trackingDataSet("4",2,setDataDir);
@@ -102,7 +102,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[3]침탄실(1) : 침탄 처리 시작위치
 	public void ccf4Tracking03() throws InterruptedException, ExecutionException {
 		//Transys.TRACKING.CCF04.C02의 하위태그 조회		
-		String setDataDir = "Transys.TRACKING.CCF04.C03";
+		String setDataDir = "Transys14.TRACKING.CCF04.C03";
 	
 		//호기, 위치(순서), 태그경로
 		trackingDataSet("4",3,setDataDir);
@@ -111,7 +111,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[4]확산실(1) : 침탄 처리 종료 및 확산 처리 시작위치
 	public void ccf4Tracking04() throws InterruptedException, ExecutionException {
 		//Transys.TRACKING.CCF04.C02의 하위태그 조회		
-		String setDataDir = "Transys.TRACKING.CCF04.C04";
+		String setDataDir = "Transys14.TRACKING.CCF04.C04";
 		
 		//호기, 위치(순서), 태그경로
 		trackingDataSet("4",4,setDataDir);
@@ -120,7 +120,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[5]냉각실(1) : 확산 처리 종료 위치
 	public void ccf4Tracking05() throws InterruptedException, ExecutionException{
 		
-		String setDataDir = "Transys.TRACKING.CCF04.C05";
+		String setDataDir = "Transys14.TRACKING.CCF04.C05";
 		
 		trackingDataSet("4",5,setDataDir);
 		
@@ -129,7 +129,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[6]소입1실(1) : 소입 처리 시작 위치
 	public void ccf4Tracking06() throws InterruptedException, ExecutionException{
 			
-		String setDataDir = "Transys.TRACKING.CCF04.C06";
+		String setDataDir = "Transys14.TRACKING.CCF04.C06";
 			
 		trackingDataSet("4",6,setDataDir);
 			
@@ -138,7 +138,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[7]소입2 추출 : 소입 처리 종료
 	public void ccf4Tracking07() throws InterruptedException, ExecutionException{
 				
-		String setDataDir = "Transys.TRACKING.CCF04.C07";
+		String setDataDir = "Transys14.TRACKING.CCF04.C07";
 				
 		trackingDataSet("4",7,setDataDir);
 				
@@ -147,7 +147,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[8]SALT장입 : SALT 처리 시작위치
 	public void ccf4Tracking08() throws InterruptedException, ExecutionException{
 					
-		String setDataDir = "Transys.TRACKING.CCF04.C08";
+		String setDataDir = "Transys14.TRACKING.CCF04.C08";
 					
 		trackingDataSet("4",8,setDataDir);
 					
@@ -156,7 +156,7 @@ public class TrackingServiceImpl4 implements TrackingService4{
 	//[9]SALT추출 : 출구 리트리버 후퇴정지
 	public void ccf4Tracking09() throws InterruptedException, ExecutionException{
 						
-		String setDataDir = "Transys.TRACKING.CCF04.C09";
+		String setDataDir = "Transys14.TRACKING.CCF04.C09";
 						
 		trackingDataSet("4",9,setDataDir);
 						

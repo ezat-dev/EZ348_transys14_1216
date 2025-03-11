@@ -21,8 +21,8 @@ import com.transys.util.OpcDataMap;
 public class MainController {
 	
 	//오토닉스 서버 IP
-	public static final String MAIN_IP = "192.168.0.101";
-	public static final String SUB_IP = "192.168.0.101";
+	public static final String MAIN_IP = "192.168.1.59";
+	public static final String SUB_IP = "192.168.1.59";
 	public static final int PORT = 5660;
 	
 	public static OpcUaClient client = null;
@@ -70,7 +70,7 @@ public class MainController {
 				OpcDataMap opcDataMap = new OpcDataMap();
 
 				try {
-					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientMain, "Transys.$SYSTEM$.$SystemStatus$");
+					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientMain, "Transys14.$SYSTEM$.$SystemStatus$");
 					tagValueMain = dataMap.get("value").toString();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -97,7 +97,7 @@ public class MainController {
 				OpcDataMap opcDataMap = new OpcDataMap();
 				
 				try {
-					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientSub, "Transys.$SYSTEM$.$SystemStatus$");
+					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientSub, "Transys14.$SYSTEM$.$SystemStatus$");
 					tagValueSub = dataMap.get("value").toString();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
