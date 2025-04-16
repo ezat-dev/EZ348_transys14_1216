@@ -13,7 +13,7 @@ public interface WorkService {
 
    Work workDetailDescData(Work work);
 
-   List<Product> workDetailProductList();
+   List<Product> workDetailProductList(Product product);
 
    Work workDetailEditData(Work work);
 
@@ -52,10 +52,9 @@ public interface WorkService {
    List<Work> workYearPrint(Work work);
 
    void workDayPrintListCheckCntSet(Work work);
-
-Work workDetailDescDataOverView(Work work);
-
-List<InOut> getInOutList();
       
+   Work workDetailDescDataOverView(Work work);
+
+   List<InOut> getInOutList();   
    
 }

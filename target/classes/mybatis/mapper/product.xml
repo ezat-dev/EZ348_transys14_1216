@@ -136,5 +136,10 @@
     </update>
 
 
+	<update id="productPlayListEditSave" parameterType="plcWrite">
+		UPDATE T_WORKINLINE SET remark = #{remark}
+		WHERE lotno = #{lotno}
+	</update>
+ 
  
 </mapper>

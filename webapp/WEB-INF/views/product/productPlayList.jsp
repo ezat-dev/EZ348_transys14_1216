@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>진행LIST</title>
+<title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 <style>
 
@@ -230,6 +230,7 @@
 				</div>
 			</div>
 		</fieldset>
+		<div class="countDATA">조회된 데이터 수 : </div>
 		<div id="workDetailList" style="margin-left: 110px;"></div>
 
 	</div>
@@ -412,6 +413,9 @@
 	            console.log("Ajax 응답 URL: ", url);
 	            console.log("Ajax 응답 파라미터: ", params);
 	            console.log("Ajax 응답 데이터: ", response);
+				
+				document.querySelector(".countDATA").textContent = "조회된 데이터 수 : " + response.data.length;
+				
 	            return response; // 응답 데이터 출력
 	        },
 	        
@@ -419,7 +423,8 @@
 	        columns: [
 	            {title:"Lot NO", field:"lotno", sorter:"string", width:150, hozAlign:"center"},
 	            {title:"침탄로 호기", field:"devicecode", sorter:"string", width:120, hozAlign:"center"},
-	            {title:"품번", field:"pumbun", sorter:"string", width:120, hozAlign:"center"},
+	            {title:"품번", field:"pumbun", sorter:"string", width:80, hozAlign:"center"},
+	            {title:"위치", field:"cur_location", sorter:"string", width:80, hozAlign:"center"},
 	            {title:"공통설비 호기", field:"common_device", sorter:"string", width:130, hozAlign:"center"},
 	            {title:"MES 코드", field:"pumcode", sorter:"string", width:180, hozAlign:"center"},
 	            {title:"기종명", field:"pumname", sorter:"string", width:180, hozAlign:"center"},
@@ -450,36 +455,52 @@
 				});
 
 				var rowData = row.getData();
-				//행 선택시 세션에 LOTNO전송
 				localStorage.setItem("lotNo",rowData.lotno);
 				localStorage.setItem("pumbun",rowData.pumbun);
-				localStorage.setItem("deviceCode", rowData.devicecode);
-
-				 	console.log("Selected Row Data:");
-				    console.log("Lot No: ", rowData.lotno);
-				    console.log("Device Code: ", rowData.devicecode);
-				    console.log("Common Device: ", rowData.common_device);
-				    console.log("Pum Code: ", rowData.pumcode);
-				    console.log("Pum Name: ", rowData.pumname);
-				    console.log("Gijong: ", rowData.gijong);
-				    console.log("Load Count: ", rowData.loadcnt);
-				    console.log("Status: ", rowData.status);
-				    console.log("Data Status: ", rowData.datastatus);
-				    console.log("MES Lot: ", rowData.meslot);
-				    console.log("Remark: ", rowData.remark);		
+				localStorage.setItem("deviceCode",rowData.devicecode);
+				
 			},
 			rowDblClick: function(e, row){
 
 				var rowData = row.getData();
 
-				//행 선택시 세션에 LOTNO전송
-				localStorage.setItem("lotNo",rowData.lotno);
-				localStorage.setItem("pumbun",rowData.pumbun);
+				//위치번호 추가, 참고사항 수정
+				//1.위치번호 별로 트래킹수정
+				//2.참고사항은 창고테이블 수정
+				
+				console.log("lotNo : "+rowData.lotno);
+				console.log("devicecode : "+rowData.devicecode);
+				console.log("pumbun : "+rowData.pumbun);
+				console.log("cur_location : "+rowData.lotno);
+				
+				localStorage.setItem("productListlotNo",rowData.lotno);
+				localStorage.setItem("productListPumbun",rowData.pumbun);				
+				localStorage.setItem("productListDevicecode",rowData.devicecode);				
+				localStorage.setItem("productListCurLocation",rowData.cur_location);
+				localStorage.setItem("productListRemark",rowData.remark);
+				
 				getPopupDetailEdit();
+				
 			}
 		});
 	}
-	//추가화면 팝업창
+	
+	var openWin2;
+	//2025-03-24 추가(트래킹, 참고사항 수정)
+	function getPopupDetailEdit(){
+		/*큰화면
+		var width = (window.screen.width)-620;
+		var height = (window.screen.height)-630;
+		*/
+		var width = 1000;
+		var height = 620;
+		
+		var popupx = 0;
+		var popupy = 0;
+		
+		openWin2 = window.open('/transys/product/productPlayListEdit', 'product_edit', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX=200, screenY=200');
+	}
+		//추가화면 팝업창
 	function getPopupDetailAdd(){
 		var width = window.screen.width;
 		var height = window.screen.height;

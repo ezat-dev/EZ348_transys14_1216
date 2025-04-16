@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>열처리 1~4호기</title>  
   <link rel="stylesheet" href="/transys/css/cm/cm.css">
   	<jsp:include page="../include/pluginpage.jsp"/>
 	<jsp:include page="../include/header.jsp"/>
@@ -40,12 +41,7 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="t-overview-2">
-    <div class="t-group-1">
-      
-      <div class="t-main"></div>
-       </div>
-       <div class="t-group-3">
+  
     <img class="_3-3-1" src="/transys/image/cm/_3-3-10.png" />
     <div class="textName">공통설비1호기</div>
     <div class="background-1"></div>
@@ -63,31 +59,31 @@
     <img class="elevator-on-4" src="/transys/image/cm/elevator-on-40.png" />
     <img class="elevator-off-3" src="/transys/image/cm/elevator-off-30.png" />
     <img class="elevator-off-4" src="/transys/image/cm/elevator-off-40.png" />
-    <img class="tong-0" src="/transys/image/cm/tong-00.png" />
+    <img class="tong-0" src="/transys/image/cm/tong.png" />
     <div class="v-0-tong-1"></div>
     <div class="v-0-tong-2"></div>
     <div class="v-0-tong-3"></div>
-    <img class="tong-1" src="/transys/image/cm/tong-10.png" />
+    <img class="tong-1" src="/transys/image/cm/tong.png" />
     <div class="v-1-tong-1"></div>
     <div class="v-1-tong-2"></div>
     <div class="v-1-tong-3"></div>
-    <img class="tong-2" src="/transys/image/cm/tong-20.png" />
+    <img class="tong-2" src="/transys/image/cm/tong.png" />
     <div class="v-2-tong-1"></div>
     <div class="v-2-tong-2"></div>
     <div class="v-2-tong-3"></div>
-    <img class="tong-3" src="/transys/image/cm/tong-30.png" />
+    <img class="tong-3" src="/transys/image/cm/tong.png" />
     <div class="v-3-tong-1"></div>
     <div class="v-3-tong-2"></div>
     <div class="v-3-tong-3"></div>
-    <img class="tong-4" src="/transys/image/cm/tong-40.png" />
+    <img class="tong-4" src="/transys/image/cm/tong.png" />
     <div class="v-4-tong-1"></div>
     <div class="v-4-tong-2"></div>
     <div class="v-4-tong-3"></div>
-    <img class="tong-5" src="/transys/image/cm/tong-50.png" />
+    <img class="tong-5" src="/transys/image/cm/tong.png" />
     <div class="v-5-tong-1"></div>
     <div class="v-5-tong-2"></div>
     <div class="v-5-tong-3"></div>
-    <img class="tong-6" src="/transys/image/cm/tong-60.png" />
+    <img class="tong-6" src="/transys/image/cm/tong.png" />
     <div class="v-6-tong-1"></div>
     <div class="v-6-tong-2"></div>
     <div class="v-6-tong-3"></div>
@@ -95,171 +91,171 @@
     <img class="shor-door-1" src="/transys/image/cm/shor-door-10.png" />
     <img class="shor-open-2" src="/transys/image/cm/shor-open-10.png" />
     <img class="shor-door-2" src="/transys/image/cm/shor-door-10.png" /> -->
-    <img class="tong-7" src="/transys/image/cm/tong-70.png" />
+    <img class="tong-7" src="/transys/image/cm/tong.png" />
     <div class="v-7-tong-1"></div>
     <div class="v-7-tong-2"></div>
     <div class="v-7-tong-3"></div>
-    <img class="tong-8" src="/transys/image/cm/tong-80.png" />
+    <img class="tong-8" src="/transys/image/cm/tong.png" />
     <div class="v-8-tong-1"></div>
     <div class="v-8-tong-2"></div>
     <div class="v-8-tong-3"></div>
-    <img class="tong-9" src="/transys/image/cm/tong-90.png" />
+    <img class="tong-9" src="/transys/image/cm/tong.png" />
     <div class="v-9-tong-1"></div>
     <div class="v-9-tong-2"></div>
     <div class="v-9-tong-3"></div>
-    <img class="tong-10" src="/transys/image/cm/tong-100.png" />
+    <img class="tong-10" src="/transys/image/cm/tong.png" />
     <div class="v-10-tong-1"></div>
     <div class="v-10-tong-2"></div>
     <div class="v-10-tong-3"></div>
-    <img class="tong-11" src="/transys/image/cm/tong-110.png" />
+    <img class="tong-11" src="/transys/image/cm/tong.png" />
     <div class="v-11-tong-1"></div>
     <div class="v-11-tong-2"></div>
     <div class="v-11-tong-3"></div>
-    <img class="tong-12" src="/transys/image/cm/tong-120.png" />
+    <img class="tong-12" src="/transys/image/cm/tong.png" />
     <div class="v-12-tong-1"></div>
     <div class="v-12-tong-2"></div>
     <div class="v-12-tong-3"></div>
-    <img class="tong-13" src="/transys/image/cm/tong-130.png" />
+    <img class="tong-13" src="/transys/image/cm/tong.png" />
     <div class="v-13-tong-1"></div>
     <div class="v-13-tong-2"></div>
     <div class="v-13-tong-3"></div>
-    <img class="tong-14" src="/transys/image/cm/tong-140.png" />
+    <img class="tong-14" src="/transys/image/cm/tong.png" />
     <div class="v-14-tong-1"></div>
     <div class="v-14-tong-2"></div>
     <div class="v-14-tong-3"></div>
-    <img class="tong-15" src="/transys/image/cm/tong-150.png" />
+    <img class="tong-15" src="/transys/image/cm/tong.png" />
     <div class="v-15-tong-1"></div>
     <div class="v-15-tong-2"></div>
     <div class="v-15-tong-3"></div>
-    <img class="tong-16" src="/transys/image/cm/tong-160.png" />
+    <img class="tong-16" src="/transys/image/cm/tong.png" />
     <div class="v-16-tong-1"></div>
     <div class="v-16-tong-2"></div>
     <div class="v-16-tong-3"></div>
-    <img class="tong-17" src="/transys/image/cm/tong-170.png" />
+    <img class="tong-17" src="/transys/image/cm/tong.png" />
     <div class="v-17-tong-1"></div>
     <div class="v-17-tong-2"></div>
     <div class="v-17-tong-3"></div>
-    <img class="tong-18" src="/transys/image/cm/tong-180.png" />
+    <img class="tong-18" src="/transys/image/cm/tong.png" />
     <div class="v-18-tong-1"></div>
     <div class="v-18-tong-2"></div>
     <div class="v-18-tong-3"></div>
-    <img class="tong-19" src="/transys/image/cm/tong-190.png" />
+    <img class="tong-19" src="/transys/image/cm/tong.png" />
     <div class="v-19-tong-1"></div>
     <div class="v-19-tong-2"></div>
     <div class="v-19-tong-3"></div>
-    <img class="tong-20" src="/transys/image/cm/tong-200.png" />
+    <img class="tong-20" src="/transys/image/cm/tong.png" />
     <div class="v-20-tong-1"></div>
     <div class="v-20-tong-2"></div>
     <div class="v-20-tong-3"></div>
-    <img class="tong-21" src="/transys/image/cm/tong-210.png" />
+    <img class="tong-21" src="/transys/image/cm/tong.png" />
     <div class="v-21-tong-1"></div>
     <div class="v-21-tong-2"></div>
     <div class="v-21-tong-3"></div>
-    <img class="tong-22" src="/transys/image/cm/tong-220.png" />
+    <img class="tong-22" src="/transys/image/cm/tong.png" />
     <div class="v-22-tong-1"></div>
     <div class="v-22-tong-2"></div>
     <div class="v-22-tong-3"></div>
-    <img class="tong-23" src="/transys/image/cm/tong-230.png" />
+    <img class="tong-23" src="/transys/image/cm/tong.png" />
     <div class="v-23-tong-1"></div>
     <div class="v-23-tong-2"></div>
     <div class="v-23-tong-3"></div>
-    <img class="tong-24" src="/transys/image/cm/tong-240.png" />
+    <img class="tong-24" src="/transys/image/cm/tong.png" />
     <div class="v-24-tong-1"></div>
     <div class="v-24-tong-2"></div>
     <div class="v-24-tong-3"></div>
-    <img class="tong-25" src="/transys/image/cm/tong-250.png" />
+    <img class="tong-25" src="/transys/image/cm/tong.png" />
     <div class="v-25-tong-1"></div>
     <div class="v-25-tong-2"></div>
     <div class="v-25-tong-3"></div>
-    <img class="tong-26" src="/transys/image/cm/tong-260.png" />
+    <img class="tong-26" src="/transys/image/cm/tong.png" />
     <div class="v-26-tong-1"></div>
     <div class="v-26-tong-2"></div>
     <div class="v-26-tong-3"></div>
-    <img class="tong-27" src="/transys/image/cm/tong-270.png" />
+    <img class="tong-27" src="/transys/image/cm/tong.png" />
     <div class="v-27-tong-1"></div>
     <div class="v-27-tong-2"></div>
     <div class="v-27-tong-3"></div>
-    <img class="tong-28" src="/transys/image/cm/tong-280.png" />
+    <img class="tong-28" src="/transys/image/cm/tong.png" />
     <div class="v-28-tong-1"></div>
     <div class="v-28-tong-2"></div>
     <div class="v-28-tong-3"></div>
-    <img class="tong-29" src="/transys/image/cm/tong-290.png" />
+    <img class="tong-29" src="/transys/image/cm/tong.png" />
     <div class="v-29-tong-1"></div>
     <div class="v-29-tong-2"></div>
     <div class="v-29-tong-3"></div>
-    <img class="tong-30" src="/transys/image/cm/tong-300.png" />
+    <img class="tong-30" src="/transys/image/cm/tong.png" />
     <div class="v-30-tong-1"></div>
     <div class="v-30-tong-2"></div>
     <div class="v-30-tong-3"></div>
-    <img class="tong-31" src="/transys/image/cm/tong-310.png" />
+    <img class="tong-31" src="/transys/image/cm/tong.png" />
     <div class="v-31-tong-1"></div>
     <div class="v-31-tong-2"></div>
     <div class="v-31-tong-3"></div>
-    <img class="tong-32" src="/transys/image/cm/tong-320.png" />
+    <img class="tong-32" src="/transys/image/cm/tong.png" />
     <div class="v-32-tong-1"></div>
     <div class="v-32-tong-2"></div>
     <div class="v-32-tong-3"></div>
-    <img class="tong-33" src="/transys/image/cm/tong-330.png" />
+    <img class="tong-33" src="/transys/image/cm/tong.png" />
     <div class="v-33-tong-1"></div>
     <div class="v-33-tong-2"></div>
     <div class="v-33-tong-3"></div>
-    <img class="tong-34" src="/transys/image/cm/tong-340.png" />
+    <img class="tong-34" src="/transys/image/cm/tong.png" />
     <div class="v-34-tong-1"></div>
     <div class="v-34-tong-2"></div>
     <div class="v-34-tong-3"></div>
-    <img class="tong-35" src="/transys/image/cm/tong-350.png" />
+    <img class="tong-35" src="/transys/image/cm/tong.png" />
     <div class="v-35-tong-1"></div>
     <div class="v-35-tong-2"></div>
     <div class="v-35-tong-3"></div>
-    <img class="tong-36" src="/transys/image/cm/tong-360.png" />
+    <img class="tong-36" src="/transys/image/cm/tong.png" />
     <div class="v-36-tong-1"></div>
     <div class="v-36-tong-2"></div>
     <div class="v-36-tong-3"></div>
-    <img class="tong-37" src="/transys/image/cm/tong-370.png" />
+    <img class="tong-37" src="/transys/image/cm/tong.png" />
     <div class="v-37-tong-1"></div>
     <div class="v-37-tong-2"></div>
     <div class="v-37-tong-3"></div>
-    <img class="tong-38" src="/transys/image/cm/tong-380.png" />
+    <img class="tong-38" src="/transys/image/cm/tong.png" />
     <div class="v-38-tong-1"></div>
     <div class="v-38-tong-2"></div>
     <div class="v-38-tong-3"></div>
-    <img class="tong-39" src="/transys/image/cm/tong-390.png" />
+    <img class="tong-39" src="/transys/image/cm/tong.png" />
     <div class="v-39-tong-1"></div>
     <div class="v-39-tong-2"></div>
     <div class="v-39-tong-3"></div>
-    <img class="tong-40" src="/transys/image/cm/tong-400.png" />
+    <img class="tong-40" src="/transys/image/cm/tong.png" />
     <div class="v-40-tong-1"></div>
     <div class="v-40-tong-2"></div>
     <div class="v-40-tong-3"></div>
-    <img class="tong-41" src="/transys/image/cm/tong-410.png" />
+    <img class="tong-41" src="/transys/image/cm/tong.png" />
     <div class="v-41-tong-1"></div>
     <div class="v-41-tong-2"></div>
     <div class="v-41-tong-3"></div>
-    <img class="tong-42" src="/transys/image/cm/tong-420.png" />
+    <img class="tong-42" src="/transys/image/cm/tong.png" />
     <div class="v-42-tong-1"></div>
     <div class="v-42-tong-2"></div>
     <div class="v-42-tong-3"></div>
-    <img class="tong-43" src="/transys/image/cm/tong-430.png" />
+    <img class="tong-43" src="/transys/image/cm/tong.png" />
     <div class="v-43-tong-1"></div>
     <div class="v-43-tong-2"></div>
     <div class="v-43-tong-3"></div>
-    <img class="tong-44" src="/transys/image/cm/tong-440.png" />
+    <img class="tong-44" src="/transys/image/cm/tong.png" />
     <div class="v-44-tong-1"></div>
     <div class="v-44-tong-2"></div>
     <div class="v-44-tong-3"></div>
-    <img class="tong-45" src="/transys/image/cm/tong-450.png" />
+    <img class="tong-45" src="/transys/image/cm/tong.png" />
     <div class="v-45-tong-1"></div>
     <div class="v-45-tong-2"></div>
     <div class="v-45-tong-3"></div>
-    <img class="tong-46" src="/transys/image/cm/tong-460.png" />
+    <img class="tong-46" src="/transys/image/cm/tong.png" />
     <div class="v-46-tong-1"></div>
     <div class="v-46-tong-2"></div>
     <div class="v-46-tong-3"></div>
-    <img class="tong-47" src="/transys/image/cm/tong-470.png" />
+    <img class="tong-47" src="/transys/image/cm/tong.png" />
     <div class="v-47-tong-1"></div>
     <div class="v-47-tong-2"></div>
     <div class="v-47-tong-3"></div>
-    <img class="tong-48" src="/transys/image/cm/tong-480.png" />
+    <img class="tong-48" src="/transys/image/cm/tong.png" />
     <div class="v-48-tong-1"></div>
     <div class="v-48-tong-2"></div>
     <div class="v-48-tong-3"></div>
@@ -489,79 +485,55 @@
     <img class="pen-rol-2" src="/transys/image/cm/pen-rol-20.png" />
     <img class="lamp-green-3" src="/transys/image/cm/lamp-green-30.png" />
     <img class="pen-rol-3" src="/transys/image/cm/pen-rol-30.png" />
-    <div class="process-data-box"></div>
-  <div class="process-sp-box"></div>
-  <div class="process-pv-box"></div>
-  <div class="process-sp-text">설정온도 (℃)</div>
-  <div class="process-pv-text">현재온도 (℃)</div>
-  <div class="process-sp-box2"></div>
-  <div class="process-pv-box2"></div>
-  <div class="process-sp-text2">설정시간 [분]</div>
-  <div class="process-pv-text2">잔여시간 [분]</div>
-  <div class="pro-box-1"></div>
-  <div class="pro-text-1">균열-2실</div>
-  <div class="crack-pv-2"></div>
-  <div class="crack-sp-2"></div>
-  <div class="pro-box-2"></div>
-  <div class="pro-text-2">균열-1실</div>
-  <div class="crack-pv-1"></div>
-  <div class="crack-sp-1"></div>
-  <div class="pro-box-3"></div>
-  <div class="pro-text-3">가열실</div>
-  <div class="hit-pv-1"></div>
-  <div class="hit-sp-1"></div>
-  <div class="pro-box-4"></div>
-  <div class="pro-text-4">RINSE조</div>
-  <div class="rinse-pv-1"></div>
-  <div class="rinse-sp-1"></div>
-  <div class="pro-box-5"></div>
-  <div class="pro-text-5">DIP조</div>
-  <div class="dip-pv-1"></div>
-  <div class="dip-sp-1"></div>
-  <div class="pro-box-6"></div>
-  <div class="pro-text-6">냉각FAN 1</div>
-  <div class="cold-pv-1"></div>
-  <div class="cold-sp-1"></div>
-  <div class="pro-box-7"></div>
-  <div class="pro-text-7">냉각FAN 2</div>
-  <div class="cold-pv-2"></div>
-  <div class="cold-sp-2"></div>
-  <div class="pro-box-8"></div>
-  <div class="pro-text-8">소려로</div>
-  <div class="tem-sp-1"></div>
-  <div class="tem-pv-1"></div>
-  <div class="pro-box-9"></div>
-  <div class="pro-text-9">NO.2 AIR</div>
-  <div class="no-2-air-sp"></div>
-  <div class="no-2-air-pv"></div>
-  <div class="pro-box-10"></div>
-  <div class="pro-text-10">NO.2 RINSE</div>
-  <div class="no-2-rinse-sp"></div>
-  <div class="no-2-rinse-pv"></div>
-  <div class="pro-box-11"></div>
-  <div class="pro-text-11">NO.2 SPRAY</div>
-  <div class="no-2-spray-sp"></div>
-  <div class="no-2-spray-pv"></div>
-  <div class="pro-box-12"></div>
-  <div class="pro-text-12">NO.2 DIP조</div>
-  <div class="no-2-dip-sp"></div>
-  <div class="no-2-dip-pv"></div>
-  <div class="pro-box-13"></div>
-  <div class="pro-text-13">NO.1 AIR</div>
-  <div class="no-1-air-sp"></div>
-  <div class="no-1-air-pv"></div>
-  <div class="pro-box-14"></div>
-  <div class="pro-text-14">NO.1 RINSE</div>
-  <div class="no-1-rinse-sp"></div>
-  <div class="no-1-rinse-pv"></div>
-  <div class="pro-box-15"></div>
-  <div class="pro-text-15">NO.1 SPRAY</div>
-  <div class="no-1-spray-sp"></div>
-  <div class="no-1-spray-pv"></div>
-  <div class="pro-box-16"></div>
-  <div class="pro-text-16">NO.1 DIP조</div>
-  <div class="no-1-dip-sp"></div>
-  <div class="no-1-dip-pv"></div>
+   <div class="process-data-box"></div>
+    <div class="process-sp-box"></div>
+    <div class="process-pv-box"></div>
+    <div class="process-sp-text">설정시간 [분]</div>
+    <div class="process-pv-text">잔여시간 [분]</div>
+    <div class="pro-box-6"></div>
+    <div class="pro-text-6">냉각FAN 1</div>
+    <div class="cold-pv-1"></div>
+    <div class="cold-sp-1"></div>
+    <div class="pro-box-7"></div>
+    <div class="pro-text-7">냉각FAN 2</div>
+    <div class="cold-pv-2"></div>
+    <div class="cold-sp-2"></div>
+    <div class="pro-box-8"></div>
+    <div class="pro-text-8">소려로</div>
+    <div class="tem-sp-1"></div>
+    <div class="tem-pv-1"></div>
+    <div class="pro-box-9"></div>
+    <div class="pro-text-9">NO.2 AIR</div>
+    <div class="no-2-air-sp"></div>
+    <div class="no-2-air-pv"></div>
+    <div class="pro-box-10"></div>
+    <div class="pro-text-10">NO.2 RINSE</div>
+    <div class="no-2-rinse-sp"></div>
+    <div class="no-2-rinse-pv"></div>
+    <div class="pro-box-11"></div>
+    <div class="pro-text-11">NO.2 SPRAY</div>
+    <div class="no-2-spray-sp"></div>
+    <div class="no-2-spray-pv"></div>
+    <div class="pro-box-12"></div>
+    <div class="pro-text-12">NO.2 DIP조</div>
+    <div class="no-2-dip-sp"></div>
+    <div class="no-2-dip-pv"></div>
+    <div class="pro-box-13"></div>
+    <div class="pro-text-13">NO.1 AIR</div>
+    <div class="no-1-air-sp"></div>
+    <div class="no-1-air-pv"></div>
+    <div class="pro-box-14"></div>
+    <div class="pro-text-14">NO.1 RINSE</div>
+    <div class="no-1-rinse-sp"></div>
+    <div class="no-1-rinse-pv"></div>
+    <div class="pro-box-15"></div>
+    <div class="pro-text-15">NO.1 SPRAY</div>
+    <div class="no-1-spray-sp"></div>
+    <div class="no-1-spray-pv"></div>
+    <div class="pro-box-16"></div>
+    <div class="pro-text-16">NO.1 DIP조</div>
+    <div class="no-1-dip-sp"></div>
+    <div class="no-1-dip-pv"></div>
   <div class="sensor-pen-1"></div>
   <div class="sensor-pen-2"></div>
   <div class="sensor-pen-3"></div>
@@ -569,8 +541,6 @@
   <img class="wash-2" src="/transys/image/cm/wash-20.png" />
   <img class="wash-3" src="/transys/image/cm/wash-30.png" />
   <img class="wash-4" src="/transys/image/cm/wash-40.png" /> -->
-</div>
-</div>
 <script>
 var overviewInterval;
 

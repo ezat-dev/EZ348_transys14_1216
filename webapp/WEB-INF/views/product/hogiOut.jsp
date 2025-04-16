@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <jsp:include page="../include/pluginpage.jsp"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품관리</title>
+<title>열처리 1~4호기</title>
 
 <style>
 

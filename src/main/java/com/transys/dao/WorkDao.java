@@ -12,7 +12,7 @@ public interface WorkDao {
 
    Work workDetailDescData(Work work);
 
-   List<Product> workDetailProductList();
+   List<Product> workDetailProductList(Product product);
 
    Work workDetailEditData(Work work);
 

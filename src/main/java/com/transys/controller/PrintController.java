@@ -299,7 +299,7 @@ public class PrintController {
 
 	        return rtnMap;
 	    }
-	    
+
 
 	    @RequestMapping(value = "/work/dayPrint/excelDownloadJson", method = RequestMethod.POST)
 	    @ResponseBody
@@ -424,7 +424,7 @@ public class PrintController {
 	            workbook.close();
 	            fos.flush();
 
-	            rtnMap.put("data", savePath + fileName); // 저장된 파일 경로 반환
+	            rtnMap.put("data", fileName); // 저장된 파일 경로 반환
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	            rtnMap.put("error", "엑셀 파일 생성 중 오류가 발생했습니다.");
@@ -441,7 +441,7 @@ public class PrintController {
 	    	return rtnMap;
 	    }
 	    
-
+	    
 	    
 	    //열처리 월별 생산 일지
 	    @RequestMapping(value= "/work/monthPrint", method = RequestMethod.GET)
@@ -649,6 +649,7 @@ public class PrintController {
 	    @RequestMapping(value = "/work/yearPrint/excelDownload", method = RequestMethod.POST)
 	    @ResponseBody
 	    public Map<String, Object> workYearExcelDownload(@RequestParam String p_DATE,
+	                                                    
 	                                                    HttpServletRequest request) {
 
 	        Map<String, Object> rtnMap = new HashMap<>();
@@ -786,5 +787,5 @@ public class PrintController {
 
 	        return rtnMap;
 	    }
-	    
+
 }

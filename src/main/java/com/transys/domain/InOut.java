@@ -129,5 +129,4 @@ public class InOut {
 		this.in_gijong = in_gijong;
 	}	
 
-	
 }

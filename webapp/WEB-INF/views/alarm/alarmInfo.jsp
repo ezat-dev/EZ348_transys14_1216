@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>경보</title>
+<title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
 
@@ -141,7 +141,7 @@
 	/* 테이블 스크롤 없애기 */
 	#table_file{
 		-ms-overflow-style:none;
-		height: 900px;
+		height: 600px;
 		width: 100%;
 		margin-left: 100px;
 	}
@@ -171,15 +171,11 @@
                 <label> 설비명 : 
                     <select name="placename" id="placename"style="font-weight: 100; text-align: center; width: 150px;">
                             <option value="">전체</option>
-                        <option value="CCF1_ALARM">1 호기</option>
-                        <option value="CCF1_ALARM">2 호기</option>
-                        <option value="CCF1_ALARM">3 호기</option>
-                        <option value="CCF1_ALARM">4 호기</option>
-                        <option value="CCF1_ALARM">5 호기</option>
-                        <option value="CCF1_ALARM">6 호기</option>
-                        <option value="CCF1_ALARM">7 호기</option>
-                        <option value="CCF1_ALARM">공통 1 호기</option>
-                        <option value="CCF1_ALARM">공통 2 호기</option>
+                        <option value="CCF1_ALARM">침탄 1호기</option>
+                        <option value="CCF2_ALARM">침탄 2호기</option>
+                        <option value="CCF3_ALARM">침탄 3호기</option>
+                        <option value="CCF4_ALARM">침탄 4호기</option>
+                        <option value="CM1_ALARM">공통 1호기</option>
                     </select> 
                 </label>
                 

@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Utility</title>
+<title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
 <style>

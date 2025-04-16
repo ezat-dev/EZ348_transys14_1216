@@ -7,42 +7,73 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.transys.controller.MainController;
 import com.transys.domain.Util;
 
 @Repository
 public class UtilDaoImpl implements UtilDao{
 	
 	
-	@Resource(name="session")
+    @Resource(name="session")
     private SqlSession sqlSession;
+	
+	@Resource(name="sessionEZ")
+	private SqlSession sqlSessionEz;   
+
+	public SqlSession sessionReturn() {
+		SqlSession ss = null;
+		if(!MainController.mssqlEZChk) {
+			ss = sqlSession;
+		}else {
+			ss = sqlSessionEz;
+		}
+		
+		return ss;
+	}
 	
 	 @Override
 	    public List<Util> utilYearList(Util params) {
-		 	sqlSession.update("util.executeUtilProc05");
+			
+	    	//옥토시스
+	    	if(MainController.mssqlOCTOChk) { 
+	    		sqlSession.update("util.executeUtilProc05");
+	    	}
+	    	
+	    	//EZ
+	    	if(MainController.mssqlEZChk) { 
+	    		sqlSessionEz.update("util.executeUtilProc05");
+	    	}
 		 	
-	        return sqlSession.selectList("util.utilYearList", params);  
+	        return sessionReturn().selectList("util.utilYearList", params);  
 	    }
 	 
 	 @Override
 	    public List<Util> utilMonthList(Util params) {
 		 
 		 	
-	        return sqlSession.selectList("util.utilMonthList", params);  
+	        return sessionReturn().selectList("util.utilMonthList", params);  
 	    }
 	 
 	 
 	 @Override
 	    public List<Util> utilElectricYearList(Util params) {
-		 	sqlSession.update("util.executeUtilProc05");
+	    	//옥토시스
+	    	if(MainController.mssqlOCTOChk) { 		 
+	    		sqlSession.update("util.executeUtilProc05");
+	    	}
+	    	//EZ
+	    	if(MainController.mssqlEZChk) { 		 
+	    		sqlSessionEz.update("util.executeUtilProc05");
+	    	}
 		 	
-	        return sqlSession.selectList("util.utilElectricYearList", params);  
+	        return sessionReturn().selectList("util.utilElectricYearList", params);  
 	    }
 	 
 	 @Override
 	    public List<Util> utilElectricMonthList(Util params) {
 		 
 		 	
-	        return sqlSession.selectList("util.utilElectricMonthList", params);  
+	        return sessionReturn().selectList("util.utilElectricMonthList", params);  
 	    }
 	 
 }

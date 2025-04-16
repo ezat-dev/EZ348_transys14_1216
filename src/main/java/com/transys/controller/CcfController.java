@@ -48,7 +48,7 @@ public class CcfController {
 
     	OpcDataMap opcDataMap = new OpcDataMap();
     	
-    	returnMap = opcDataMap.getOpcDataListMap("Transys14.CCF0102");
+    	returnMap = opcDataMap.getOpcDataListMap("Transys.CCF0102");
     	
     	return returnMap;    	
     }	
@@ -60,7 +60,7 @@ public class CcfController {
 
     	OpcDataMap opcDataMap = new OpcDataMap();
     	
-    	returnMap = opcDataMap.getOpcDataListMap("Transys14.CCF0304");
+    	returnMap = opcDataMap.getOpcDataListMap("Transys.CCF0304");
     	
     	return returnMap;    	
     }	
@@ -72,7 +72,7 @@ public class CcfController {
     	
     	OpcDataMap opcDataMap = new OpcDataMap();
     	
-    	returnMap = opcDataMap.getOpcDataListMap("Transys14.CCF0506");
+    	returnMap = opcDataMap.getOpcDataListMap("Transys.CCF0506");
     	
     	return returnMap;    	
     }
@@ -84,7 +84,7 @@ public class CcfController {
     	
     	OpcDataMap opcDataMap = new OpcDataMap();
     	
-    	returnMap = opcDataMap.getOpcDataListMap("Transys14.CCF07");
+    	returnMap = opcDataMap.getOpcDataListMap("Transys.CCF07");
     	
     	return returnMap;    	
     }	    

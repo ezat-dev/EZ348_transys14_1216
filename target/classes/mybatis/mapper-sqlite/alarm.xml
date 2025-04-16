@@ -5,11 +5,15 @@
 <select id="getAlarmSummary" parameterType="alarm" resultType="alarm">
     SELECT tagName, 
            CASE 
-               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF1' THEN '1호기'
-               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF2' THEN '2호기'
-               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF3' THEN '3호기'
-               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF4' THEN '4호기'
-               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF5' THEN '5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF1' THEN '침탄 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF2' THEN '침탄 2호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF3' THEN '침탄 3호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF4' THEN '침탄 4호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF5' THEN '침탄 5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF6' THEN '침탄 6호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF7' THEN '침탄 7호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM1' THEN '공통 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM2' THEN '공통 2호기'
                ELSE alarmGroup
            END AS alarmGroupLabel,  <!-- 변환된 값 -->
            alarmDesc,
@@ -80,11 +84,15 @@
             LEAD(alarmstate) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmstate,
             LEAD(time) OVER (PARTITION BY tagname ORDER BY time) AS lead_alarmtime,
             CASE
-                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF1' THEN '1호기'
-                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF2' THEN '2호기'
-                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF3' THEN '3호기'
-                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF4' THEN '4호기'
-                WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF5' THEN '5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF1' THEN '침탄 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF2' THEN '침탄 2호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF3' THEN '침탄 3호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF4' THEN '침탄 4호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF5' THEN '침탄 5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF6' THEN '침탄 6호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF7' THEN '침탄 7호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM1' THEN '공통 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM2' THEN '공통 2호기'
                 ELSE alarmgroup
             END AS alarmGroupLabel
         FROM ALARMDATA
@@ -106,11 +114,15 @@
 	<select id="getAlarmInfo" parameterType="alarm" resultType="alarm">
     SELECT no, 
            CASE 
-               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF1' THEN '1호기'
-               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF2' THEN '2호기'
-               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF3' THEN '3호기'
-               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF4' THEN '4호기'
-               WHEN SUBSTR(alarmgroup, 1, 4) = 'CCF5' THEN '5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF1' THEN '침탄 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF2' THEN '침탄 2호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF3' THEN '침탄 3호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF4' THEN '침탄 4호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF5' THEN '침탄 5호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF6' THEN '침탄 6호기'
+               WHEN SUBSTR(alarmGroup, 1, 4) = 'CCF7' THEN '침탄 7호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM1' THEN '공통 1호기'
+               WHEN SUBSTR(alarmGroup, 1, 3) = 'CM2' THEN '공통 2호기'
                ELSE alarmgroup
            END AS alarmgroupLabel,  
            tagname, 

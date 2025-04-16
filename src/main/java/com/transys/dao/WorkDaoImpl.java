@@ -1,10 +1,13 @@
 package com.transys.dao;
 
 import java.util.List;
+
 import javax.annotation.Resource;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.transys.controller.MainController;
 import com.transys.domain.InOut;
 import com.transys.domain.Product;
 import com.transys.domain.Work;
@@ -14,126 +17,215 @@ public class WorkDaoImpl implements WorkDao {
 
     @Resource(name="session")
     private SqlSession sqlSession;
+	
+	@Resource(name="sessionEZ")
+	private SqlSession sqlSessionEz;    
+	
+	
+	public SqlSession sessionReturn() {
+		SqlSession ss = null;
+		if(!MainController.mssqlSearchChk) {
+			ss = sqlSession;
+		}else {
+			ss = sqlSessionEz;
+		}
+		
+		return ss;
+	}
     
     
     @Override
-    public List<Work> workDetailList(Work work) {
-    	return sqlSession.selectList("work.workDetailList", work);
+    public List<Work> workDetailList(Work work) {    	
+    	return sessionReturn().selectList("work.workDetailList", work);
     }
 
     @Override
     public Work workDetailDescData(Work work) {
-        return sqlSession.selectOne("work.workDetailDescData", work);
+        return sessionReturn().selectOne("work.workDetailDescData", work);
     }
 
     @Override
-    public List<Product> workDetailProductList() {
-        return sqlSession.selectList("work.workDetailProductList");
+    public List<Product> workDetailProductList(Product product) {
+    	return sessionReturn().selectList("work.workDetailProductList", product);
     }
 
     @Override
     public Work workDetailEditData(Work work) {
-        return sqlSession.selectOne("work.workDetailEditData", work);
+        return sessionReturn().selectOne("work.workDetailEditData", work);
     }
 
     @Override
     public void setWorkDetailEditDataSave(Work work) {
-    	sqlSession.update("work.setWorkDetailEditDataSave", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.update("work.setWorkDetailEditDataSave", work);	
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.update("work.setWorkDetailEditDataSave", work);
+    	}
+    	
     }
 
     @Override
     public void setWorkDetailAddDataSave(Work work) {
-    	sqlSession.insert("work.setWorkDetailAddDataSave", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.insert("work.setWorkDetailAddDataSave", work);	
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.insert("work.setWorkDetailAddDataSave", work);    		
+    	}
     }
 
     @Override
     public void setWorkDetailDelete(Work work) {
-    	sqlSession.delete("work.setWorkDetailDelete", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.delete("work.setWorkDetailDelete", work);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.delete("work.setWorkDetailDelete", work);
+    	}
     }
     
     @Override
     public void setWorkDetailInlineDelete(Work work) {
-    	sqlSession.delete("work.setWorkDetailInlineDelete", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.delete("work.setWorkDetailInlineDelete", work);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.delete("work.setWorkDetailInlineDelete", work);
+    	}
     }
 
     @Override
     public void setWorkDetailEndSalt(Work work) {
-    	sqlSession.update("work.setWorkDetailEndSalt", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.update("work.setWorkDetailEndSalt", work);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.update("work.setWorkDetailEndSalt", work);
+    	}
     }
 
     @Override
     public void setWorkDetailEndTime(Work work) {
-    	sqlSession.update("work.setWorkDetailEndTime", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.update("work.setWorkDetailEndTime", work);
+    	}
+
+    	//EZ
+    	if(MainController.mssqlEZChk) {    	
+    		sqlSessionEz.update("work.setWorkDetailEndTime", work);
+    	}
     }
 
     @Override
     public void setWorkDetailForcingStart(Work work) {
-    	sqlSession.update("work.setWorkDetailForcingStart", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.update("work.setWorkDetailForcingStart", work);
+    	}
+
+    	//EZ
+    	if(MainController.mssqlEZChk) {
+    		sqlSessionEz.update("work.setWorkDetailForcingStart", work);
+    	}
     }
 
     @Override
     public void setWorkDetailForcingEnd(Work work) {
-    	sqlSession.update("work.setWorkDetailForcingEnd", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {
+    		sqlSession.update("work.setWorkDetailForcingEnd", work);
+    	}
+
+    	//EZ
+    	if(MainController.mssqlEZChk) {    	
+    		sqlSessionEz.update("work.setWorkDetailForcingEnd", work);
+    	}
     }
 
     @Override
     public Work getWorkDetailEndTime(Work work) {
-        return sqlSession.selectOne("work.getWorkDetailEndTime", work);
+    	return sessionReturn().selectOne("work.getWorkDetailEndTime", work);
     }
     
     @Override
-    public Work getWorkDetail(Work work) {
-        return sqlSession.selectOne("work.getWorkDetail", work); 
+    public Work getWorkDetail(Work work) {        
+        return sessionReturn().selectOne("work.getWorkDetail", work);
     }
 
     @Override
     public List<Work> getAllProducts() {
-        return sqlSession.selectList("work.getAllProducts");
+    	return sessionReturn().selectList("work.getAllProducts");
     }
 
     @Override
     public List<Work> workDayList(Work work) {
-        return sqlSession.selectList("work.workDayList", work);
+        return sessionReturn().selectList("work.workDayList", work);
     }
 
     @Override
     public List<Work> workMonthList(Work work) {
-        return sqlSession.selectList("work.workMonthList", work);
+        return sessionReturn().selectList("work.workMonthList", work);
     }
 
     @Override
     public List<Work> workYearList(Work work) {
-        return sqlSession.selectList("work.workYearList", work);
+        return sessionReturn().selectList("work.workYearList", work);       
     }
     
     @Override
-    public List<Work> workDayPrint(Work work) {
-        return sqlSession.selectList("work.workDayPrint", work);
+    public List<Work> workDayPrint(Work work) {    	
+    	return sessionReturn().selectList("work.workDayPrint", work);
     }
     
     @Override
     public List<Work> workMonthPrint(Work work) {
-        return sqlSession.selectList("work.workMonthPrint", work);
+    	return sessionReturn().selectList("work.workMonthPrint", work);
     }
     
     @Override
     public List<Work> workYearPrint(Work work) {
-        return sqlSession.selectList("work.workYearPrint", work);
+    	return sessionReturn().selectList("work.workYearPrint", work);
     }
 
 	@Override
 	public void workDayPrintListCheckCntSet(Work work) {
-		sqlSession.insert("work.workDayPrintListCheckCntSet", work);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {		
+    		sqlSession.insert("work.workDayPrintListCheckCntSet", work);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {    	
+    		sqlSessionEz.insert("work.workDayPrintListCheckCntSet", work);
+    	}
 	}
 
 	@Override
 	public Work workDetailDescDataOverView(Work work) {
-		return sqlSession.selectOne("work.workDetailDescDataOverView", work);
+		return sessionReturn().selectOne("work.workDetailDescDataOverView", work);
 	}
 
 	@Override
 	public List<InOut> getInOutList() {
-		return sqlSession.selectList("work.getInOutList");
+		return sessionReturn().selectList("work.getInOutList");
 	}
+	
 
 }

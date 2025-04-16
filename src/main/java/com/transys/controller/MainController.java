@@ -21,8 +21,8 @@ import com.transys.util.OpcDataMap;
 public class MainController {
 	
 	//오토닉스 서버 IP
-	public static final String MAIN_IP = "192.168.1.59";
-	public static final String SUB_IP = "192.168.1.59";
+	public static final String MAIN_IP = "192.168.0.101";
+	public static final String SUB_IP = "192.168.0.101";
 	public static final int PORT = 5660;
 	
 	public static OpcUaClient client = null;
@@ -42,9 +42,43 @@ public class MainController {
 	//창고 입고카운트
 	public static int plcCount = 0;
 	
+	//2025-03-20 추가
+	//MSSQL 기존서버 IP(OCTOSYS)
+	public static final String MSSQL_OCTO_IP = "192.168.0.53";
+//	public static final String MSSQL_OCTO_IP = "192.168.1.61";
+	//MSSQL 신규서버 IP(EZ)
+	public static final String MSSQL_EZ_IP = "192.168.0.103";
+//	public static final String MSSQL_EZ_IP = "192.168.1.62";
+	//false : OCTOSYS, true : EZ
+	public static boolean mssqlSearchChk = false;
+	public static boolean mssqlOCTOChk = false;
+	public static boolean mssqlEZChk = false;
+	
+	//DB체크 
+	public static void dbCheck() {
+    	
+		//2025-03-20 추가
+		mssqlOCTOChk = pingTest(MSSQL_OCTO_IP);
+		mssqlEZChk = pingTest(MSSQL_EZ_IP);
+/*
+		System.out.println("mssqlOCTOChk : "+mssqlOCTOChk);
+		System.out.println("mssqlEZChk : "+mssqlEZChk);
+*/
+		//OCTOSYS서버 PING 연결되면 연결
+		//안되면 EZ서버 연결
+		
+		if(mssqlEZChk) {
+			mssqlSearchChk = true;
+		}
+
+		if(mssqlOCTOChk) {
+			mssqlSearchChk = false;
+		}
+				
+	}
 	//통신상태 체크
 	public static void commCheck() {
-    	
+		
     	//1.메인, 백업서버의 핑테스트
     	boolean mainPingCheck = pingTest(MAIN_IP);
     	boolean subPingCheck = pingTest(SUB_IP);
@@ -70,7 +104,7 @@ public class MainController {
 				OpcDataMap opcDataMap = new OpcDataMap();
 
 				try {
-					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientMain, "Transys14.$SYSTEM$.$SystemStatus$");
+					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientMain, "Transys.$SYSTEM$.$SystemStatus$");
 					tagValueMain = dataMap.get("value").toString();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -97,7 +131,7 @@ public class MainController {
 				OpcDataMap opcDataMap = new OpcDataMap();
 				
 				try {
-					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientSub, "Transys14.$SYSTEM$.$SystemStatus$");
+					Map<String, Object> dataMap = opcDataMap.getOpcDataConnCheck(clientSub, "Transys.$SYSTEM$.$SystemStatus$");
 					tagValueSub = dataMap.get("value").toString();
 				} catch (InterruptedException e) {
 					e.printStackTrace();

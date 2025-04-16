@@ -1,8 +1,10 @@
 package com.transys.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.transys.dao.WorkDao;
 import com.transys.domain.InOut;
 import com.transys.domain.Product;
@@ -25,8 +27,8 @@ public class WorkServiceImpl implements WorkService {
     }
 
     @Override
-    public List<Product> workDetailProductList() {
-        return workDao.workDetailProductList();
+    public List<Product> workDetailProductList(Product product) {
+        return workDao.workDetailProductList(product);
     }
 
     @Override
@@ -126,7 +128,7 @@ public class WorkServiceImpl implements WorkService {
 	public void workDayPrintListCheckCntSet(Work work) {
 		workDao.workDayPrintListCheckCntSet(work);
 	}
-
+	
 	@Override
 	public Work workDetailDescDataOverView(Work work) {
 		return workDao.workDetailDescDataOverView(work);
@@ -136,5 +138,4 @@ public class WorkServiceImpl implements WorkService {
 	public List<InOut> getInOutList() {
 		return workDao.getInOutList();
 	}
-
 }

@@ -108,7 +108,6 @@ public class WorkController {
         return rtnMap; // 
     }
     
-
     //작업일보 상세이력
     @RequestMapping(value= "/work/workDetailDescOverView", method = RequestMethod.GET)
     public String workDetailDescOverView(Model model) {       
@@ -140,8 +139,7 @@ public class WorkController {
        
         return rtnMap; // 
     }
-    
-    
+
 
     //작업일보 편집
     @RequestMapping(value= "/work/workDetailEdit", method = RequestMethod.GET)
@@ -154,11 +152,19 @@ public class WorkController {
     //작업일보 편집 제품이력 조회
     @RequestMapping(value= "/work/workDetail/productList", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> workDetailProductList() {
+    public Map<String, Object> workDetailProductList(
+    		@RequestParam String pumname,
+    		@RequestParam String gijong,
+    		@RequestParam String dobun) {
 
        Map<String, Object> rtnMap = new HashMap<String, Object>();
        
-       List<Product> productList = workService.workDetailProductList();
+       Product product = new Product();
+       product.setPumname(pumname);
+       product.setGijong(gijong);
+       product.setDobun(dobun);
+       
+       List<Product> productList = workService.workDetailProductList(product);
        
        rtnMap.put("last_page",1);
        rtnMap.put("data", productList);
@@ -973,7 +979,6 @@ public class WorkController {
         return rtnMap;
     }
 
-
     //작업일보 상세이력
     @RequestMapping(value= "/work/workInOutPopup", method = RequestMethod.GET)
     public String workInOutPopup(Model model) {       
@@ -995,6 +1000,5 @@ public class WorkController {
        
         return rtnMap; // 
     }
-
 
 }

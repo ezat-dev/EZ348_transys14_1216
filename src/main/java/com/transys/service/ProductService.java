@@ -15,4 +15,5 @@ public interface ProductService {
     void insertOutputTab(String deviceCode);
     void updateCurLocation(String lotno);
     void forceCompleteOldData();
+	void productPlayListEditSave(PlcWrite plcWrite);
 }

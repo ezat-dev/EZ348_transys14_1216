@@ -6,14 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.transys.dao.ProductDao;
+import com.transys.dao.TrackingDao;
 import com.transys.domain.PlcWrite;
 import com.transys.domain.Product;
+import com.transys.domain.Tracking;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductDao productDao;
+    
+    @Autowired
+    private TrackingDao trackingDao;
 
     @Override
     public List<Product> getProductList() {
@@ -53,4 +58,21 @@ public class ProductServiceImpl implements ProductService {
     public void forceCompleteOldData() {
     	productDao.forceCompleteOldData();
     }
+    
+
+	@Override
+	public void productPlayListEditSave(PlcWrite plcWrite) {
+		//트래킹은 trackingDao로
+		
+		Tracking tracking = new Tracking();
+		tracking.setCurLocation(plcWrite.getCur_location());
+		tracking.setDevicecode(plcWrite.getDevicecode());
+		tracking.setPumbun(plcWrite.getPumbun());
+		
+		trackingDao.ccf1Tracking01(tracking);
+		
+		//참고사항은
+		productDao.productPlayListEditSave(plcWrite);
+	}
+    
 }

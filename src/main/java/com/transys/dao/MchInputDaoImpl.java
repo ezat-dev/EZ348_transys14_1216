@@ -5,22 +5,37 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.transys.controller.MainController;
 import com.transys.domain.MchInput;
 
 @Repository
 public class MchInputDaoImpl implements MchInputDao{
 	
-	@Resource(name="session")
-	private SqlSession sqlSession;
+    @Resource(name="session")
+    private SqlSession sqlSession;
+	
+	@Resource(name="sessionEZ")
+	private SqlSession sqlSessionEz;   
 	
 	
 	@Resource(name="sessionOracle")
 	private SqlSession sqlSessionOracle;
 
+	public SqlSession sessionReturn() {
+		SqlSession ss = null;
+		if(!MainController.mssqlSearchChk) {
+			ss = sqlSession;
+		}else {
+			ss = sqlSessionEz;
+		}
+		
+		return ss;
+	}
+
 
 	@Override
 	public MchInput getMchInputDataSelectWorkInline(MchInput mchInput) {
-		return sqlSession.selectOne("mchInput.getMchInputDataSelectWorkInline", mchInput);
+		return sessionReturn().selectOne("mchInput.getMchInputDataSelectWorkInline", mchInput);
 	}
 
 
@@ -32,19 +47,45 @@ public class MchInputDaoImpl implements MchInputDao{
 
 	@Override
 	public void setMchDataUpdateWaitList(MchInput mchInput) {
-		sqlSession.update("mchInput.setMchDataUpdateWaitList", mchInput);
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {		
+    		sqlSession.update("mchInput.setMchDataUpdateWaitList", mchInput);
+    	}
+
+    	//EZ
+    	if(MainController.mssqlEZChk) {		
+    		sqlSessionEz.update("mchInput.setMchDataUpdateWaitList", mchInput);
+    	}
 	}
 
 
 	@Override
 	public void setMchDataUpdateSiljuk(MchInput mchInput) {
-		sqlSession.update("mchInput.setMchDataUpdateSiljuk", mchInput);
+		
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {			
+    		sqlSession.update("mchInput.setMchDataUpdateSiljuk", mchInput);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {			
+    		sqlSessionEz.update("mchInput.setMchDataUpdateSiljuk", mchInput);
+    	}
 	}
 
 
 	@Override
 	public void setMchDataDeleteWorkInline(MchInput mchInput) {
-		sqlSession.delete("mchInput.setMchDataDeleteWorkInline", mchInput);
+		
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {			
+    		sqlSession.delete("mchInput.setMchDataDeleteWorkInline", mchInput);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {			
+    		sqlSessionEz.delete("mchInput.setMchDataDeleteWorkInline", mchInput);
+    	}
 	}
 
 
@@ -56,12 +97,32 @@ public class MchInputDaoImpl implements MchInputDao{
 
 	@Override
 	public void setMchDataUpdateSiljukFail(MchInput mchInput) {
-		sqlSession.update("mchInput.setMchDataUpdateSiljukFail", mchInput);
+		
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {		
+    		sqlSession.update("mchInput.setMchDataUpdateSiljukFail", mchInput);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {		
+    		sqlSessionEz.update("mchInput.setMchDataUpdateSiljukFail", mchInput);
+    	}
+    	
 	}
 
 
 	@Override
 	public void setMchDataDeleteWorkInlineFail(MchInput mchInput) {
-		sqlSession.delete("mchInput.setMchDataDeleteWorkInlineFail", mchInput);
+		
+    	//옥토시스
+    	if(MainController.mssqlOCTOChk) {			
+    		sqlSession.delete("mchInput.setMchDataDeleteWorkInlineFail", mchInput);
+    	}
+    	
+    	//EZ
+    	if(MainController.mssqlEZChk) {			
+    		sqlSessionEz.delete("mchInput.setMchDataDeleteWorkInlineFail", mchInput);
+    	}
+    	
 	}
 }

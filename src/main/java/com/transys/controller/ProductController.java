@@ -385,5 +385,39 @@ public class ProductController {
 	        productService.forceCompleteOldData();
 	        return "5일 자료 완료"; 
 	    }
+	  //2025-03-24 추가
+	  //진행리스트 수정
+	  	    @RequestMapping(value = "/product/productPlayListEdit", method = RequestMethod.GET)
+	  	    public String productPlayListEdit(Model model) {
+	  	    	return "/product/productPlayListEdit.jsp"; 
+	  	    }
+	  	    
+	  	    @RequestMapping(value = "/product/productPlayListEdit/save", method = RequestMethod.POST)
+	  	    @ResponseBody
+	  	    public Map<String, String> productPlayListEditSave(
+	  	    		@RequestParam String lotno,
+	  	    		@RequestParam String pumbun,
+	  	    		@RequestParam String devicecode,
+	  	    		@RequestParam int cur_location,
+	  	    		@RequestParam String remark) {
+
+	  	      //  System.out.println("업데이트 요청 수신: " + product);
+	  	        Map<String, String> rtnMap = new HashMap<>();
+
+	  	        PlcWrite plcWrite = new PlcWrite();
+	  	        plcWrite.setLotno(lotno);
+	  	        plcWrite.setPumbun(pumbun);
+	  	        plcWrite.setDevicecode(devicecode);
+	  	        plcWrite.setCur_location(cur_location);
+	  	        plcWrite.setRemark(remark);
+	  	        
+
+	  	        productService.productPlayListEditSave(plcWrite);
+	  	        
+	  	        
+	  	        
+	  	        return rtnMap;
+	  	    }
+	    
 }
 

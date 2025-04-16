@@ -2,9 +2,9 @@ package com.transys.dao;
 
 import java.util.List;
 
-
 import com.transys.domain.PlcWrite;
 import com.transys.domain.Product;
+import com.transys.domain.Work;
 
 public interface ProductDao {
     List<Product> productDetailList();
@@ -16,4 +16,7 @@ public interface ProductDao {
     void insertOutputTab(String deviceCode);
     void updateCurLocation(String lotno);
     void forceCompleteOldData();
+	void productPlayListEditSave(PlcWrite plcWrite);
+	Work productPlayListEditData(Work work);
+	void setProductPlayListEditDataSave(Work work);	
 }

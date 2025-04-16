@@ -20,11 +20,12 @@
 		AND LOTNO = #{lotno}
 		AND PLC = '0'
 		
+		
 		<!-- 2025-03-05 추가 마지막 출고이력 -->
 		UPDATE t_inout SET pumbun = #{pumbun}, tdatetime = CONVERT(CHAR(19), GETDATE(), 120)
 		WHERE 1=1
 		AND devicecode = #{devicecode}
-		AND gb = 'OUT'
+		AND gb = 'OUT'		
 	</update>
 	
 	<update id="setPlcWriteProc" parameterType="plcWrite">

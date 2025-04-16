@@ -37,6 +37,7 @@
        AND A.LOTNO = #{lotno}
    </select>
    
+   
    <!-- 작업일보 데이터 조회(상세이력) 오버뷰 -->
    <select id="workDetailDescDataOverView" parameterType="work" resultType="work">
        SELECT A.DEVICECODE, A.LOTNO,A.PUMCODE,B.PUMNAME,B.GIJONG,A.PUMBUN, 
@@ -60,9 +61,19 @@
    
    
    <!-- 작업일보 편집화면 제품리스트 -->
-   <select id="workDetailProductList" resultType="product">
+   <select id="workDetailProductList" resultType="product" parameterType="product">
       SELECT *
       FROM T_PRODUCT
+      WHERE 1=1
+      <if test="pumname != '' or pumname != null">
+      	AND pumname LIKE '%'+#{pumname}+'%'
+      </if>
+      <if test="gijong != '' or gijong != null">
+      	AND gijong LIKE '%'+#{gijong}+'%'
+      </if>
+      <if test="dobun != '' or dobun != null">
+      	AND dobun LIKE '%'+#{dobun}+'%'
+      </if>
    </select>
    
    <!-- 작업일보 편집화면 수정할 데이터 조회 -->
@@ -307,6 +318,6 @@
 			WHERE gb = 'IN'
 		) AS inlist
 		ON outlist.out_devicecode = inlist.in_devicecode	
-</select>
+	</select>
 
 </mapper>

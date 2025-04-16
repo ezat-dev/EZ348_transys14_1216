@@ -18,15 +18,11 @@
 		WHERE 1=1
 		AND devicecode = #{devicecode}
 		AND gb = 'IN'		
-		
 	</select>
 	
 	<update id="setMchDataUpdateWaitList" parameterType="mchInput">
 		UPDATE T_WAITLIST SET PLC = '2'
 		WHERE LOTNO = #{lotno}
-		
-
-		
 	</update>
 	
 	<update id="setMchDataUpdateSiljuk" parameterType="mchInput">

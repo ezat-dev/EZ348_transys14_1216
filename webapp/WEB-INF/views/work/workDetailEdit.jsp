@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품관리</title>
+<title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 <style>
 
@@ -115,6 +115,13 @@
 			<!-- <div style="color: black; font-size: 20px; padding-top: 2%;"> &lt;투입 LIST&gt; </div> -->
 			<div style="color: black; font-size: 15pt; font-weight:700; padding-top: 5%; margin-left: 2.5%; text-align: left;"> <b>열처리 투입 데이터 편집</b></div>
 			<hr>
+				<div class="add_text" style="width:70%; margin-left:2%; display:flex;">
+					<label>MES 코드: </label><input type="text" id="s_meslot" name="s_meslot"/>
+					<label>품명: </label><input type="text" id="s_pumname" name="s_pumname"/>
+					<label>약어 : </label><input type="text" id="s_gijong" name="s_gijong" style="width:80px;"/>
+					<button type="button" id="searchBtn" onclick="getProductList()">조회</button>			
+				</div>
+			
 			<div id="table_file" style="margin-left: 3%;" >
 				<div id="productList"></div>
 			</div>
@@ -194,7 +201,10 @@
 		    ajaxURL:"/transys/work/workDetail/productList",
 		    ajaxProgressiveLoad:"scroll",			    			    
 		    ajaxParams:{
-		    },
+				"pumname":$("#s_pumname").val(),
+				"gijong":$("#s_gijong").val(),
+				"dobun":$("#s_meslot").val()				
+			},
 		    placeholder:"조회된 데이터가 없습니다.",
 		    paginationSize:20,
 		    ajaxResponse:function(url, params, response){
@@ -287,6 +297,13 @@
 	}
 	
 	function setWorkDetailEditDataSave(){
+		if(!confirm("작업데이터를 저장하시겠습니까?")){
+			return false;
+		}
+
+		console.log("수정완료");
+		
+	
 		var workData = new FormData($("#workEditForm")[0]);
 		$.ajax({
 			url:"/transys/work/workDetail/editDataSave",
@@ -300,6 +317,7 @@
 				opener.getProduct();				
 			}
 		});
+		
 	}
 	
 	</script>

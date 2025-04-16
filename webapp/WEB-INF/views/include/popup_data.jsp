@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>TM 열처리 데이터 관리</title>
+<title>열처리 1~4호기</title>
 <style>
 body{
 	margin-top: 10%;

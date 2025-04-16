@@ -6,6 +6,7 @@
 	<meta charset="utf-8"/>
     <title>Menu</title>
 	<jsp:include page="pluginpage.jsp"/>
+	<jsp:include page="inOutPopup.jsp"/>
 <style>
 
 #topMenu {            
@@ -46,6 +47,7 @@
 ul{
 	padding-top: 0px;
 }
+
 </style>
 </head>
 <body>
@@ -59,27 +61,36 @@ ul{
 			<li><a class="menuLink" href="/transys/ccf/ccf03_04">침탄3,4호기</a></li>
 
 			
-			<li><a class="menuLink" href="/transys/cm/cm01">공통 1호기</a></li>
-			
+			<li><a class="menuLink" href="/transys/cm/cm01">공통 1호기</a></li>			
 	
 			
-			<li><a class="menuLink" href="/transys/popup_data"  style="width: 250px;" >MENU</a></li>
+			<li><a class="menuLink" href="/transys/popup_data"  style="" >MENU</a></li>
 			
 			
-			<li><a id="inOutList" class="menuLink"  style="width: 250px;" >입출고이력</a></li>
+			<li><a id="inOutList" class="menuLink" style="cursor:pointer;" >입출고이력</a></li>
+			
+			<li><a class="menuLink" href="/transys/alarm/alarmList">경보이력</a></li>
 		</ul>
 	</nav>
 <script>
 
 $("#inOutList").on("click",function(e){
-	var width = window.screen.width;
-	var height = 400;
+	console.log("asd");
+	$(".inOutModal").css("display","flex");
+	
+/*	
+	var width = window.screen.width-250;
+	var height = 800;
 	
 	var popupx = 0;
 	var popupy = 300;
 	
 	openWin = window.open('/transys/work/workInOutPopup', '', 'status=no, width='+width+', height='+height+', menubar=1, left='+popupx+',top='+ popupy+', screenX='+popupx+', screenY='+popupy);
-	
+*/	
+});
+
+$(".inOutModalClose").on("click", function(){
+	$(".inOutModal").css("display","none");
 });
 
 </script>	

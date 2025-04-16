@@ -48,119 +48,121 @@
        <div class="t-group-3">
     <img class="t-ccf-1" src="/transys/image/ccf01_02/ccf-10.png" />
       <div class="t-ccf-1-text">침탄로 7호기</div>
+<!--      <div class="t-ccf-1-ship"></div>
+     <div class="b-ccf-1-ship-text">1호기 출고요청</div> -->
       <!-- <img class="t-tong-0" src="/transys/image/ccf01_02/tong-00.png" />
       <div class="t-v-0-tong-1"></div>
       <div class="t-v-0-tong-2"></div>
       <div class="t-v-0-tong-3"></div> -->
-      <img class="t-tong-1" src="/transys/image/ccf01_02/tong-10.png" />
+      <img class="t-tong-1" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-1-tong-1"></div>
       <div class="t-v-1-tong-2"></div>
       <div class="t-v-1-tong-3"></div>
-      <img class="t-tong-2" src="/transys/image/ccf01_02/tong-20.png" />
+      <img class="t-tong-2" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-2-tong-1"></div>
       <div class="t-v-2-tong-2"></div>
       <div class="t-v-2-tong-3"></div>
-      <img class="t-tong-3" src="/transys/image/ccf01_02/tong-30.png" />
+      <img class="t-tong-3" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-3-tong-1"></div>
       <div class="t-v-3-tong-2"></div>
       <div class="t-v-3-tong-3"></div>
-      <img class="t-tong-4" src="/transys/image/ccf01_02/tong-40.png" />
+      <img class="t-tong-4" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-4-tong-1"></div>
       <div class="t-v-4-tong-2"></div>
       <div class="t-v-4-tong-3"></div>
-      <img class="t-tong-5" src="/transys/image/ccf01_02/tong-50.png" />
+      <img class="t-tong-5" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-5-tong-1"></div>
       <div class="t-v-5-tong-2"></div>
       <div class="t-v-5-tong-3"></div>
-      <img class="t-tong-6" src="/transys/image/ccf01_02/tong-60.png" />
+      <img class="t-tong-6" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-6-tong-1"></div>
       <div class="t-v-6-tong-2"></div>
       <div class="t-v-6-tong-3"></div>
-      <img class="t-tong-7" src="/transys/image/ccf01_02/tong-70.png" />
+      <img class="t-tong-7" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-7-tong-1"></div>
       <div class="t-v-7-tong-2"></div>
       <div class="t-v-7-tong-3"></div>
-      <img class="t-tong-8" src="/transys/image/ccf01_02/tong-80.png" />
+      <img class="t-tong-8" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-8-tong-1"></div>
       <div class="t-v-8-tong-2"></div>
       <div class="t-v-8-tong-3"></div>
-      <img class="t-tong-9" src="/transys/image/ccf01_02/tong-90.png" />
+      <img class="t-tong-9" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-9-tong-1"></div>
       <div class="t-v-9-tong-2"></div>
       <div class="t-v-9-tong-3"></div>
-      <img class="t-tong-10" src="/transys/image/ccf01_02/tong-100.png" />
+      <img class="t-tong-10" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-10-tong-1"></div>
       <div class="t-v-10-tong-2"></div>
       <div class="t-v-10-tong-3"></div>
-      <img class="t-tong-11" src="/transys/image/ccf01_02/tong-110.png" />
+      <img class="t-tong-11" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-11-tong-1"></div>
       <div class="t-v-11-tong-2"></div>
       <div class="t-v-11-tong-3"></div>
-      <img class="t-tong-12" src="/transys/image/ccf01_02/tong-120.png" />
+      <img class="t-tong-12" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-12-tong-1"></div>
       <div class="t-v-12-tong-2"></div>
       <div class="t-v-12-tong-3"></div>
-      <img class="t-tong-13" src="/transys/image/ccf01_02/tong-130.png" />
+      <img class="t-tong-13" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-13-tong-1"></div>
       <div class="t-v-13-tong-2"></div>
       <div class="t-v-13-tong-3"></div>
-      <img class="t-tong-14" src="/transys/image/ccf01_02/tong-140.png" />
+      <img class="t-tong-14" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-14-tong-1"></div>
       <div class="t-v-14-tong-2"></div>
       <div class="t-v-14-tong-3"></div>
-      <img class="t-tong-15" src="/transys/image/ccf01_02/tong-150.png" />
+      <img class="t-tong-15" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-15-tong-1"></div>
       <div class="t-v-15-tong-2"></div>
       <div class="t-v-15-tong-3"></div>
-      <img class="t-tong-16" src="/transys/image/ccf01_02/tong-160.png" />
+      <img class="t-tong-16" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-16-tong-1"></div>
       <div class="t-v-16-tong-2"></div>
       <div class="t-v-16-tong-3"></div>
-      <img class="t-tong-17" src="/transys/image/ccf01_02/tong-170.png" />
+      <img class="t-tong-17" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-17-tong-1"></div>
       <div class="t-v-17-tong-2"></div>
       <div class="t-v-17-tong-3"></div>
-      <img class="t-tong-18" src="/transys/image/ccf01_02/tong-180.png" />
+      <img class="t-tong-18" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-18-tong-1"></div>
       <div class="t-v-18-tong-2"></div>
       <div class="t-v-18-tong-3"></div>
-      <img class="t-tong-19" src="/transys/image/ccf01_02/tong-190.png" />
+      <img class="t-tong-19" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-19-tong-1"></div>
       <div class="t-v-19-tong-2"></div>
       <div class="t-v-19-tong-3"></div>
-      <img class="t-tong-20" src="/transys/image/ccf01_02/tong-200.png" />
+      <img class="t-tong-20" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-20-tong-1"></div>
       <div class="t-v-20-tong-2"></div>
       <div class="t-v-20-tong-3"></div>
-      <img class="t-tong-21" src="/transys/image/ccf01_02/tong-210.png" />
+      <img class="t-tong-21" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-21-tong-1"></div>
       <div class="t-v-21-tong-2"></div>
       <div class="t-v-21-tong-3"></div>
-      <img class="t-tong-22" src="/transys/image/ccf01_02/tong-220.png" />
+      <img class="t-tong-22" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-22-tong-1"></div>
       <div class="t-v-22-tong-2"></div>
       <div class="t-v-22-tong-3"></div>
-      <!-- <img class="t-tong-23" src="/transys/image/ccf01_02/tong-230.png" />
+      <img class="t-tong-23" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-23-tong-1"></div>
       <div class="t-v-23-tong-2"></div>
-      <div class="t-v-23-tong-3"></div> -->
-      <img class="t-tong-24" src="/transys/image/ccf01_02/tong-240.png" />
+      <div class="t-v-23-tong-3"></div>
+      <img class="t-tong-24" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-24-tong-1"></div>
       <div class="t-v-24-tong-2"></div>
       <div class="t-v-24-tong-3"></div>
-      <img class="t-tong-25" src="/transys/image/ccf01_02/tong-250.png" />
+      <img class="t-tong-25" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-25-tong-1"></div>
       <div class="t-v-25-tong-2"></div>
       <div class="t-v-25-tong-3"></div>
-      <img class="t-tong-26" src="/transys/image/ccf01_02/tong-260.png" />
+      <img class="t-tong-26" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-26-tong-1"></div>
       <div class="t-v-26-tong-2"></div>
       <div class="t-v-26-tong-3"></div>
-      <img class="t-tong-27" src="/transys/image/ccf01_02/tong-270.png" />
+      <img class="t-tong-27" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-27-tong-1"></div>
       <div class="t-v-27-tong-2"></div>
       <div class="t-v-27-tong-3"></div>
-      <img class="t-tong-28" src="/transys/image/ccf01_02/tong-280.png" />
+      <img class="t-tong-28" src="/transys/image/ccf01_02/tong.png" />
       <div class="t-v-28-tong-1"></div>
       <div class="t-v-28-tong-2"></div>
       <div class="t-v-28-tong-3"></div>
@@ -254,10 +256,18 @@
       <img class="t-con-on-28" src="/transys/image/ccf01_02/con-on-280.png" />
       <img class="t-con-off-29" src="/transys/image/ccf01_02/con-off-290.png" />
       <img class="t-con-on-29" src="/transys/image/ccf01_02/con-on-290.png" />
-      <img class="t-agi-1" src="/transys/image/ccf01_02/agi-10.png" />
-      <img class="t-agi-2" src="/transys/image/ccf01_02/agi-20.png" />
-      <img class="t-agi-3" src="/transys/image/ccf01_02/agi-30.png" />
-      <img class="t-agi-4" src="/transys/image/ccf01_02/agi-40.png" />
+      <!-- <img class="t-con-off-30" src="/transys/image/ccf01_02/con-off-280.png" />
+      <img class="t-con-on-30" src="/transys/image/ccf01_02/con-on-280.png" />
+      <img class="t-con-off-31" src="/transys/image/ccf01_02/con-off-290.png" />
+      <img class="t-con-on-31" src="/transys/image/ccf01_02/con-on-290.png" /> -->
+      <div class="t-background-1"></div>
+      <div class="t-moter-1"></div>
+      <div class="t-agi-1"></div>
+      <img class="t-agi-2" src="/transys/image/ccf01_02/t-agi-20.svg" />
+      <img class="t-agi-3" src="/transys/image/ccf01_02/t-agi-30.svg" />
+      <div class="t-agi-4"></div>
+      <img class="t-agi-5" src="/transys/image/ccf01_02/t-agi-20.svg" />
+      <img class="t-agi-6" src="/transys/image/ccf01_02/t-agi-30.svg" />
       <img class="t-lamp-green-1" src="/transys/image/ccf01_02/lamp-green-10.png" />
       <img class="t-pen-rol-1" src="/transys/image/ccf01_02/pen-rol-10.png" />
       <img class="t-lamp-green-2" src="/transys/image/ccf01_02/lamp-green-20.png" />
@@ -324,20 +334,20 @@
       <div class="t-q-1-sp"></div>
       <div class="t-q-2-pv"></div>
       <div class="t-q-2-sp"></div>
-      <div class="t-salt-q-text">QUECHING</div>
+      <div class="t-salt-q-text">퀜칭</div>
       <div class="t-salt-q-pv"></div>
       <div class="t-salt-q-sp"></div>
-      <div class="t-salt-d-text">DRAIN</div>
+      <div class="t-salt-d-text">드레인</div>
       <div class="t-salt-d-pv"></div>
       <div class="t-salt-d-sp"></div>
+      <div class="cover-1"></div>
+      <div class="cover-2"></div>
       <div class="sensor-pen-1"></div>
 	  <div class="sensor-pen-2"></div>
 	  <div class="sensor-pen-3"></div>
 	  <div class="sensor-pen-4"></div>
 	  <div class="sensor-pen-5"></div>
 	  <div class="sensor-pen-6"></div>
-	  <div class="cover-1"></div>
-      <div class="cover-2"></div>
   </div>
 </div>
 <script>

@@ -49,19 +49,19 @@ public class PlcWriteServiceImpl implements PlcWriteService{
 				
 				
 				logger.info("PLCWRITE(14호기) : {}",desc.toString());
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.CYCLENO", plcWrite.getCycleno());
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.PUMBUN", Short.parseShort(plcWrite.getPumbun()));
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.AGITATE_RPM", plcWrite.getAgitate_rpm());
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.DEVICECODE", Short.parseShort(plcWrite.getDevicecode()));
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.PRD_GB", resetValue);
+				opcData.setOpcData("Transys.PLCWRITE.CM01.CYCLENO", plcWrite.getCycleno());
+				opcData.setOpcData("Transys.PLCWRITE.CM01.PUMBUN", Short.parseShort(plcWrite.getPumbun()));
+				opcData.setOpcData("Transys.PLCWRITE.CM01.AGITATE_RPM", plcWrite.getAgitate_rpm());
+				opcData.setOpcData("Transys.PLCWRITE.CM01.DEVICECODE", Short.parseShort(plcWrite.getDevicecode()));
+				opcData.setOpcData("Transys.PLCWRITE.CM01.PRD_GB", resetValue);
 				
 				Thread.sleep(500);
 	
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.CYCLENO", plcWrite.getCycleno());
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.PUMBUN", Short.parseShort(plcWrite.getPumbun()));
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.AGITATE_RPM", plcWrite.getAgitate_rpm());
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.DEVICECODE", Short.parseShort(plcWrite.getDevicecode()));
-				opcData.setOpcData("Transys14.PLCWRITE.CM01.PRD_GB", resetValue);
+				opcData.setOpcData("Transys.PLCWRITE.CM01.CYCLENO", plcWrite.getCycleno());
+				opcData.setOpcData("Transys.PLCWRITE.CM01.PUMBUN", Short.parseShort(plcWrite.getPumbun()));
+				opcData.setOpcData("Transys.PLCWRITE.CM01.AGITATE_RPM", plcWrite.getAgitate_rpm());
+				opcData.setOpcData("Transys.PLCWRITE.CM01.DEVICECODE", Short.parseShort(plcWrite.getDevicecode()));
+				opcData.setOpcData("Transys.PLCWRITE.CM01.PRD_GB", resetValue);
 
 				//DB값 업데이트 (t_waitlist)
 				plcWriteDao.setPlcWriteDataUpdate(plcWrite);
@@ -97,7 +97,7 @@ public class PlcWriteServiceImpl implements PlcWriteService{
 		OpcDataMap opcData = new OpcDataMap();
 		StringBuffer desc = new StringBuffer();
 		//창고출고가능요구 1이면
-		Map<String, Object> outputMap = opcData.getOpcData("Transys14.PLCWRITE.CM01.OUTPUT_CHK");	//DB18.X41.5
+		Map<String, Object> outputMap = opcData.getOpcData("Transys.PLCWRITE.CM01.OUTPUT_CHK");	//DB18.X41.5
 		
 		output_chk = outputMap.get("value").toString();
 //		desc.append("창고출고가능요구 신호 : "+output_chk);

@@ -1,3358 +1,3568 @@
-.textName{
-  color: #000000;
-  text-align: left;
-  font-size: 40px;
-  font-weight: 700;
-  position: absolute;
-  left: 102px;
-  top: 123px;
-}
-.wash-1 {
-  width: 68px;
-  height: 32px;
-  position: absolute;
-  left: 1410px;
-  top: 128px;
-  object-fit: cover;
-}
-.wash-2 {
-  width: 68px;
-  height: 32px;
-  position: absolute;
-  left: 1497px;
-  top: 128px;
-  object-fit: cover;
-}
-.wash-3 {
-  width: 68px;
-  height: 32px;
-  position: absolute;
-  left: 1411px;
-  top: 366px;
-  object-fit: cover;
-}
-.wash-4 {
-  width: 68px;
-  height: 32px;
-  position: absolute;
-  left: 1499px;
-  top: 366px;
-  object-fit: cover;
-}
+
 ._3-3-1 {
-  width: 1788px;
-  height: 492px;
+  width: 1917px;
+  height: 550px;
   position: absolute;
-  left: 86px;
-  top: 63px;
+  left: 7px;
+  top: 103px;
   object-fit: cover;
 }
 .background-1 {
   background: #ffffff;
-  width: 66px;
-  height: 107px;
+  width: 76px;
+  height: 120px;
   position: absolute;
-  left: 545px;
-  top: 222px;
+  left: 477px;
+  top: 281px;
 }
 .background-2 {
   background: #ffffff;
-  width: 69px;
-  height: 88px;
+  width: 76px;
+  height: 97px;
   position: absolute;
-  left: 755px;
-  top: 243px;
+  left: 716px;
+  top: 306px;
 }
 .background-3 {
   background: #ffffff;
-  width: 69px;
-  height: 57px;
+  width: 77px;
+  height: 67px;
   position: absolute;
-  left: 1254px;
-  top: 390px;
+  left: 1274px;
+  top: 468px;
 }
 .background-4 {
   background: #ffffff;
-  width: 151px;
-  height: 70px;
+  width: 168px;
+  height: 77px;
   position: absolute;
-  left: 1254px;
-  top: 235px;
+  left: 1274px;
+  top: 297px;
 }
 .background-5 {
   background: #ffffff;
-  width: 73px;
-  height: 70px;
+  width: 80px;
+  height: 78px;
   position: absolute;
-  left: 1254px;
-  top: 282px;
+  left: 1274px;
+  top: 348px;
 }
 .elevator-1 {
-  width: 103px;
-  height: 200px;
+  width: 115px;
+  height: 224px;
   position: absolute;
-  left: 524px;
-  top: 131px;
+  left: 456px;
+  top: 179px;
   object-fit: cover;
 }
 .elevator-on-1 {
-  width: 20px;
-  height: 105px;
+  width: 21px;
+  height: 116px;
   position: absolute;
-  left: 521px;
-  top: 191px;
+  left: 452px;
+  top: 247px;
   object-fit: cover;
 }
 .elevator-on-2 {
-  width: 20px;
-  height: 105px;
+  width: 22px;
+  height: 116px;
   position: absolute;
-  left: 636px;
-  top: 191px;
+  left: 582px;
+  top: 247px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
 }
 .elevator-off-1 {
-  width: 20px;
-  height: 105px;
+  width: 21px;
+  height: 116px;
   position: absolute;
-  left: 521px;
-  top: 191px;
+  left: 452px;
+  top: 247px;
   object-fit: cover;
 }
 .elevator-off-2 {
-  width: 20px;
-  height: 105px;
+  width: 22px;
+  height: 116px;
   position: absolute;
-  left: 636px;
-  top: 191px;
+  left: 582px;
+  top: 247px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
 }
 .elevator-2 {
-  width: 103px;
-  height: 200px;
+  width: 116px;
+  height: 224px;
   position: absolute;
-  left: 726px;
-  top: 133px;
+  left: 681px;
+  top: 181px;
   object-fit: cover;
 }
 .elevator-on-3 {
-  width: 20px;
-  height: 105px;
+  width: 24px;
+  height: 118px;
   position: absolute;
-  left: 723px;
-  top: 193px;
+  left: 678px;
+  top: 248px;
   object-fit: cover;
 }
 .elevator-on-4 {
-  width: 20px;
-  height: 105px;
+  width: 24px;
+  height: 118px;
   position: absolute;
-  left: 838px;
-  top: 193px;
+  left: 808px;
+  top: 248px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
 }
 .elevator-off-3 {
-  width: 20px;
-  height: 105px;
+  width: 24px;
+  height: 118px;
   position: absolute;
-  left: 723px;
-  top: 193px;
+  left: 678px;
+  top: 248px;
   object-fit: cover;
 }
 .elevator-off-4 {
-  width: 20px;
-  height: 105px;
+  width: 24px;
+  height: 118px;
   position: absolute;
-  left: 838px;
-  top: 193px;
+  left: 808px;
+  top: 248px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
   object-fit: cover;
 }
 .tong-0 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 134px;
-  top: 292px;
+  left: 19px;
+  top: 359px;
   object-fit: cover;
 }
 .v-0-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 135px;
-  top: 293px;
+  left: 20px;
+  top: 360px;
 }
 .v-0-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 158px;
-  top: 293px;
+  left: 46px;
+  top: 360px;
 }
 .v-0-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 146px;
-  top: 313px;
+  left: 32px;
+  top: 383px;
 }
 .tong-1 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 200px;
-  top: 292px;
+  left: 93px;
+  top: 359px;
   object-fit: cover;
 }
 .v-1-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 201px;
-  top: 293px;
+  left: 94px;
+  top: 360px;
 }
 .v-1-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 224px;
-  top: 293px;
+  left: 119px;
+  top: 360px;
 }
 .v-1-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 212px;
-  top: 313px;
+  left: 107px;
+  top: 383px;
 }
 .tong-2 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 248px;
-  top: 292px;
+  left: 146px;
+  top: 359px;
   object-fit: cover;
 }
 .v-2-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 20px;
   position: absolute;
-  left: 249px;
-  top: 293px;
+  left: 147px;
+  top: 360px;
 }
 .v-2-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 272px;
-  top: 293px;
+  left: 175px;
+  top: 360px;
 }
 .v-2-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 260px;
-  top: 313px;
+  left: 162px;
+  top: 383px;
 }
 .tong-3 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 296px;
-  top: 292px;
+  left: 201px;
+  top: 359px;
   object-fit: cover;
 }
 .v-3-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 20px;
   position: absolute;
-  left: 297px;
-  top: 293px;
+  left: 202px;
+  top: 360px;
 }
 .v-3-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 320px;
-  top: 293px;
+  left: 228px;
+  top: 360px;
 }
 .v-3-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 308px;
-  top: 313px;
+  left: 216px;
+  top: 383px;
 }
 .tong-4 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 361px;
-  top: 292px;
+  left: 274px;
+  top: 359px;
   object-fit: cover;
 }
 .v-4-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 362px;
-  top: 293px;
+  left: 275px;
+  top: 360px;
 }
 .v-4-tong-2 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 385px;
-  top: 293px;
+  left: 301px;
+  top: 360px;
 }
 .v-4-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 373px;
-  top: 313px;
+  left: 288px;
+  top: 383px;
 }
 .tong-5 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 437px;
-  top: 292px;
+  left: 357px;
+  top: 359px;
   object-fit: cover;
 }
 .v-5-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 20px;
   position: absolute;
-  left: 438px;
-  top: 293px;
+  left: 358px;
+  top: 360px;
 }
 .v-5-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 461px;
-  top: 293px;
+  left: 385px;
+  top: 360px;
 }
 .v-5-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 449px;
-  top: 313px;
+  left: 372px;
+  top: 383px;
 }
 .tong-6 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 490px;
-  top: 292px;
+  left: 418px;
+  top: 359px;
   object-fit: cover;
 }
 .v-6-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 491px;
-  top: 293px;
+  left: 419px;
+  top: 360px;
 }
 .v-6-tong-2 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 514px;
-  top: 293px;
+  left: 445px;
+  top: 360px;
 }
 .v-6-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 502px;
-  top: 313px;
-}
-.shor-open-1 {
-  width: 124px;
-  height: 81px;
-  position: absolute;
-  left: 514px;
-  top: 248px;
-  object-fit: cover;
-}
-.shor-door-1 {
-  width: 64px;
-  height: 81px;
-  position: absolute;
-  left: 544px;
-  top: 248px;
-  object-fit: cover;
-}
-.shor-open-2 {
-  width: 124px;
-  height: 81px;
-  position: absolute;
-  left: 729px;
-  top: 248px;
-  object-fit: cover;
-}
-.shor-door-2 {
-  width: 64px;
-  height: 81px;
-  position: absolute;
-  left: 759px;
-  top: 248px;
-  object-fit: cover;
+  left: 433px;
+  top: 383px;
 }
 .tong-7 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 568px;
-  top: 291px;
+  left: 508px;
+  top: 358px;
   object-fit: cover;
 }
 .v-7-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 569px;
-  top: 292px;
+  left: 509px;
+  top: 359px;
 }
 .v-7-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 592px;
-  top: 292px;
+  left: 533px;
+  top: 359px;
 }
 .v-7-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 581px;
-  top: 312px;
+  left: 519px;
+  top: 382px;
 }
 .tong-8 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 42px;
   position: absolute;
-  left: 568px;
-  top: 230px;
+  left: 508px;
+  top: 304px;
   object-fit: cover;
 }
 .v-8-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 18px;
   position: absolute;
-  left: 569px;
-  top: 230px;
+  left: 509px;
+  top: 305px;
 }
 .v-8-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 18px;
   position: absolute;
-  left: 592px;
-  top: 230px;
+  left: 533px;
+  top: 305px;
 }
 .v-8-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 581px;
-  top: 252px;
+  left: 519px;
+  top: 326px;
 }
-
 .tong-9 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 663px;
-  top: 292px;
+  left: 611px;
+  top: 359px;
   object-fit: cover;
 }
 .v-9-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 664px;
-  top: 293px;
+  left: 612px;
+  top: 360px;
 }
 .v-9-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 687px;
-  top: 293px;
+  left: 639px;
+  top: 360px;
 }
 .v-9-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 675px;
-  top: 313px;
+  left: 625px;
+  top: 383px;
 }
 .tong-10 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 771px;
-  top: 291px;
+  left: 733px;
+  top: 359px;
   object-fit: cover;
 }
 .v-10-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 772px;
-  top: 292px;
+  left: 734px;
+  top: 360px;
 }
 .v-10-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 795px;
-  top: 292px;
+  left: 759px;
+  top: 360px;
 }
 .v-10-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 783px;
-  top: 312px;
+  left: 746px;
+  top: 383px;
 }
 .tong-11 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 42px;
   position: absolute;
-  left: 771px;
-  top: 230px;
+  left: 733px;
+  top: 305px;
   object-fit: cover;
 }
 .v-11-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 18px;
   position: absolute;
-  left: 772px;
-  top: 230px;
+  left: 734px;
+  top: 306px;
 }
 .v-11-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 18px;
   position: absolute;
-  left: 795px;
-  top: 230px;
+  left: 759px;
+  top: 306px;
 }
 .v-11-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 783px;
-  top: 252px;
+  left: 746px;
+  top: 327px;
 }
-
 .tong-12 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 844px;
-  top: 293px;
+  left: 815px;
+  top: 360px;
   object-fit: cover;
 }
 .v-12-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 845px;
-  top: 294px;
+  left: 816px;
+  top: 361px;
 }
 .v-12-tong-2 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 868px;
-  top: 294px;
+  left: 842px;
+  top: 361px;
 }
 .v-12-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 856px;
-  top: 314px;
+  left: 828px;
+  top: 384px;
 }
 .tong-13 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 892px;
-  top: 293px;
+  left: 869px;
+  top: 360px;
   object-fit: cover;
 }
 .v-13-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 13px;
+  height: 20px;
   position: absolute;
-  left: 893px;
-  top: 294px;
+  left: 871px;
+  top: 361px;
 }
 .v-13-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 916px;
-  top: 294px;
+  left: 894px;
+  top: 361px;
 }
 .v-13-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 904px;
-  top: 314px;
+  left: 881px;
+  top: 384px;
 }
 .tong-14 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 942px;
-  top: 293px;
+  left: 925px;
+  top: 360px;
   object-fit: cover;
 }
 .v-14-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 943px;
-  top: 294px;
+  left: 926px;
+  top: 361px;
 }
 .v-14-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 966px;
-  top: 294px;
+  left: 951px;
+  top: 361px;
 }
 .v-14-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 954px;
-  top: 314px;
+  left: 937px;
+  top: 384px;
 }
 .tong-15 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1009px;
-  top: 292px;
+  left: 999px;
+  top: 359px;
   object-fit: cover;
 }
 .v-15-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 1010px;
-  top: 293px;
+  left: 1000px;
+  top: 360px;
 }
 .v-15-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 1033px;
-  top: 293px;
+  left: 1027px;
+  top: 360px;
 }
 .v-15-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 19px;
   position: absolute;
-  left: 1021px;
-  top: 313px;
+  left: 1011px;
+  top: 383px;
 }
 .tong-16 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1048px;
-  top: 292px;
+  left: 1044px;
+  top: 359px;
   object-fit: cover;
 }
 .v-16-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 1049px;
-  top: 293px;
+  left: 1045px;
+  top: 360px;
 }
 .v-16-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 1072px;
-  top: 293px;
+  left: 1069px;
+  top: 360px;
 }
 .v-16-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1060px;
-  top: 313px;
+  left: 1056px;
+  top: 383px;
 }
 .tong-17 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1087px;
-  top: 292px;
+  left: 1086px;
+  top: 359px;
   object-fit: cover;
 }
 .v-17-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
   left: 1088px;
-  top: 293px;
+  top: 360px;
 }
 .v-17-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 20px;
   position: absolute;
-  left: 1111px;
-  top: 293px;
+  left: 1114px;
+  top: 360px;
 }
 .v-17-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 19px;
   position: absolute;
   left: 1099px;
-  top: 313px;
+  top: 383px;
 }
 .tong-18 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1126px;
-  top: 292px;
+  left: 1132px;
+  top: 359px;
   object-fit: cover;
 }
 .v-18-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 1127px;
-  top: 293px;
+  left: 1133px;
+  top: 360px;
 }
 .v-18-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 20px;
   position: absolute;
-  left: 1150px;
-  top: 293px;
+  left: 1157px;
+  top: 360px;
 }
 .v-18-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1138px;
-  top: 313px;
+  left: 1144px;
+  top: 383px;
 }
 .tong-19 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1165px;
-  top: 292px;
+  left: 1173px;
+  top: 359px;
   object-fit: cover;
 }
 .v-19-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 20px;
   position: absolute;
-  left: 1166px;
-  top: 293px;
+  left: 1174px;
+  top: 360px;
 }
 .v-19-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 20px;
   position: absolute;
-  left: 1189px;
-  top: 293px;
+  left: 1201px;
+  top: 360px;
 }
 .v-19-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 1177px;
-  top: 313px;
+  left: 1189px;
+  top: 383px;
 }
 .tong-20 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1204px;
-  top: 292px;
+  left: 1218px;
+  top: 359px;
   object-fit: cover;
 }
 .v-20-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 20px;
   position: absolute;
-  left: 1205px;
-  top: 293px;
+  left: 1219px;
+  top: 360px;
 }
 .v-20-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 20px;
   position: absolute;
-  left: 1228px;
-  top: 293px;
+  left: 1244px;
+  top: 360px;
 }
 .v-20-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1216px;
-  top: 313px;
+  left: 1230px;
+  top: 383px;
 }
 .tong-21 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1269px;
-  top: 171px;
+  left: 1291px;
+  top: 224px;
   object-fit: cover;
 }
 .v-21-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
-  position: absolute;
-  left: 1270px;
-  top: 172px;
-}
-.v-21-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
   left: 1293px;
-  top: 172px;
+  top: 225px;
+}
+.v-21-tong-2 {
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 14px;
+  height: 19px;
+  position: absolute;
+  left: 1319px;
+  top: 225px;
 }
 .v-21-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 1281px;
-  top: 192px;
+  left: 1304px;
+  top: 247px;
 }
 .tong-22 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1344px;
-  top: 171px;
+  left: 1375px;
+  top: 224px;
   object-fit: cover;
 }
 .v-22-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1345px;
-  top: 172px;
+  left: 1376px;
+  top: 225px;
 }
 .v-22-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1368px;
-  top: 172px;
+  left: 1402px;
+  top: 225px;
 }
 .v-22-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1356px;
-  top: 192px;
+  left: 1388px;
+  top: 247px;
 }
 .tong-23 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1428px;
-  top: 171px;
+  left: 1469px;
+  top: 224px;
   object-fit: cover;
 }
 .v-23-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1429px;
-  top: 172px;
+  left: 1470px;
+  top: 225px;
 }
 .v-23-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1452px;
-  top: 172px;
+  left: 1496px;
+  top: 225px;
 }
 .v-23-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1440px;
-  top: 192px;
+  left: 1483px;
+  top: 247px;
 }
 .tong-24 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1510px;
-  top: 171px;
+  left: 1561px;
+  top: 224px;
   object-fit: cover;
 }
 .v-24-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1511px;
-  top: 172px;
+  left: 1562px;
+  top: 225px;
 }
 .v-24-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1534px;
-  top: 172px;
+  left: 1589px;
+  top: 225px;
 }
 .v-24-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1522px;
-  top: 192px;
+  left: 1575px;
+  top: 247px;
 }
 .tong-25 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1600px;
-  top: 171px;
+  left: 1662px;
+  top: 224px;
   object-fit: cover;
 }
 .v-25-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1601px;
-  top: 172px;
+  left: 1663px;
+  top: 225px;
 }
 .v-25-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1624px;
-  top: 172px;
+  left: 1687px;
+  top: 225px;
 }
 .v-25-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 19px;
   position: absolute;
-  left: 1612px;
-  top: 192px;
+  left: 1675px;
+  top: 247px;
 }
 .tong-26 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1698px;
-  top: 168px;
+  left: 1771px;
+  top: 221px;
   object-fit: cover;
 }
 .v-26-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1699px;
-  top: 169px;
+  left: 1772px;
+  top: 222px;
 }
 .v-26-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1722px;
-  top: 169px;
+  left: 1800px;
+  top: 222px;
 }
 .v-26-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 19px;
   position: absolute;
-  left: 1710px;
-  top: 189px;
+  left: 1784px;
+  top: 244px;
 }
 .tong-27 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 43px;
   position: absolute;
-  left: 1776px;
-  top: 168px;
+  left: 1859px;
+  top: 221px;
   object-fit: cover;
 }
 .v-27-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1777px;
-  top: 169px;
+  left: 1860px;
+  top: 222px;
 }
 .v-27-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 1800px;
-  top: 169px;
+  left: 1885px;
+  top: 222px;
 }
 .v-27-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 19px;
   position: absolute;
-  left: 1788px;
-  top: 189px;
-}
-.wahser-1 {
-  width: 66px;
-  height: 49px;
-  position: absolute;
-  left: 1413px;
-  top: 128px;
-  object-fit: cover;
+  left: 1873px;
+  top: 244px;
 }
 .tong-28 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 134px;
-  top: 391px;
+  left: 19px;
+  top: 469px;
   object-fit: cover;
 }
 .v-28-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 135px;
-  top: 392px;
+  left: 20px;
+  top: 470px;
 }
 .v-28-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 158px;
-  top: 392px;
+  left: 46px;
+  top: 470px;
 }
 .v-28-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
   height: 17px;
   position: absolute;
-  left: 146px;
-  top: 412px;
+  left: 32px;
+  top: 495px;
 }
 .tong-29 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 200px;
-  top: 391px;
+  left: 93px;
+  top: 469px;
   object-fit: cover;
 }
 .v-29-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 22px;
   position: absolute;
-  left: 201px;
-  top: 392px;
+  left: 94px;
+  top: 470px;
 }
 .v-29-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 224px;
-  top: 392px;
+  left: 119px;
+  top: 470px;
 }
 .v-29-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 212px;
-  top: 412px;
+  left: 107px;
+  top: 495px;
 }
 .tong-30 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 248px;
-  top: 391px;
+  left: 146px;
+  top: 469px;
   object-fit: cover;
 }
 .v-30-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 22px;
   position: absolute;
-  left: 249px;
-  top: 392px;
+  left: 147px;
+  top: 470px;
 }
 .v-30-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 22px;
   position: absolute;
-  left: 272px;
-  top: 392px;
+  left: 175px;
+  top: 470px;
 }
 .v-30-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
   height: 17px;
   position: absolute;
-  left: 260px;
-  top: 412px;
+  left: 162px;
+  top: 495px;
 }
 .tong-31 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 296px;
-  top: 391px;
+  left: 201px;
+  top: 469px;
   object-fit: cover;
 }
 .v-31-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 22px;
   position: absolute;
-  left: 297px;
-  top: 392px;
+  left: 202px;
+  top: 470px;
 }
 .v-31-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 320px;
-  top: 392px;
+  left: 228px;
+  top: 470px;
 }
 .v-31-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 308px;
-  top: 412px;
+  left: 216px;
+  top: 495px;
 }
 .tong-32 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 556px;
-  top: 390px;
+  left: 494px;
+  top: 468px;
   object-fit: cover;
 }
 .v-32-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 557px;
-  top: 391px;
+  left: 495px;
+  top: 469px;
 }
 .v-32-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 22px;
   position: absolute;
-  left: 580px;
-  top: 391px;
+  left: 518px;
+  top: 469px;
 }
 .v-32-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 13px;
   height: 17px;
   position: absolute;
-  left: 568px;
-  top: 411px;
+  left: 507px;
+  top: 494px;
 }
 .tong-33 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 663px;
-  top: 390px;
+  left: 611px;
+  top: 468px;
   object-fit: cover;
 }
 .v-33-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 22px;
   position: absolute;
-  left: 664px;
-  top: 391px;
+  left: 612px;
+  top: 469px;
 }
 .v-33-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 687px;
-  top: 391px;
+  left: 639px;
+  top: 469px;
 }
 .v-33-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 675px;
-  top: 411px;
+  left: 625px;
+  top: 494px;
 }
 .tong-34 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 844px;
-  top: 390px;
+  left: 815px;
+  top: 468px;
   object-fit: cover;
 }
 .v-34-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 845px;
-  top: 391px;
+  left: 816px;
+  top: 469px;
 }
 .v-34-tong-2 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 22px;
   position: absolute;
-  left: 868px;
-  top: 391px;
+  left: 842px;
+  top: 469px;
 }
 .v-34-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 856px;
-  top: 411px;
+  left: 828px;
+  top: 494px;
 }
 .tong-35 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 942px;
-  top: 390px;
+  left: 925px;
+  top: 468px;
   object-fit: cover;
 }
 .v-35-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 943px;
-  top: 391px;
+  left: 926px;
+  top: 469px;
 }
 .v-35-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 22px;
   position: absolute;
-  left: 966px;
-  top: 391px;
+  left: 951px;
+  top: 469px;
 }
 .v-35-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
   height: 17px;
   position: absolute;
-  left: 954px;
-  top: 411px;
+  left: 937px;
+  top: 494px;
 }
 .tong-36 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1007px;
-  top: 392px;
+  left: 997px;
+  top: 470px;
   object-fit: cover;
 }
 .v-36-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 21px;
   position: absolute;
-  left: 1008px;
-  top: 393px;
+  left: 998px;
+  top: 472px;
 }
 .v-36-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1031px;
-  top: 393px;
+  left: 1025px;
+  top: 472px;
 }
 .v-36-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 18px;
   position: absolute;
-  left: 1019px;
-  top: 413px;
+  left: 1010px;
+  top: 496px;
 }
 .tong-37 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1047px;
-  top: 392px;
+  left: 1043px;
+  top: 470px;
   object-fit: cover;
 }
 .v-37-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 21px;
   position: absolute;
-  left: 1048px;
-  top: 393px;
+  left: 1044px;
+  top: 472px;
 }
 .v-37-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1071px;
-  top: 393px;
+  left: 1068px;
+  top: 472px;
 }
 .v-37-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 18px;
   position: absolute;
-  left: 1059px;
-  top: 413px;
+  left: 1055px;
+  top: 496px;
 }
 .tong-38 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1087px;
-  top: 392px;
+  left: 1086px;
+  top: 470px;
   object-fit: cover;
 }
 .v-38-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 21px;
   position: absolute;
   left: 1088px;
-  top: 393px;
+  top: 472px;
 }
 .v-38-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 21px;
   position: absolute;
-  left: 1111px;
-  top: 393px;
+  left: 1114px;
+  top: 472px;
 }
 .v-38-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 18px;
   position: absolute;
   left: 1099px;
-  top: 413px;
+  top: 496px;
 }
 .tong-39 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1127px;
-  top: 392px;
+  left: 1133px;
+  top: 470px;
   object-fit: cover;
 }
 .v-39-tong-1 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 21px;
   position: absolute;
-  left: 1128px;
-  top: 393px;
+  left: 1134px;
+  top: 472px;
 }
 .v-39-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 21px;
   position: absolute;
-  left: 1151px;
-  top: 393px;
+  left: 1158px;
+  top: 472px;
 }
 .v-39-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 18px;
   position: absolute;
-  left: 1139px;
-  top: 413px;
+  left: 1145px;
+  top: 496px;
 }
 .tong-40 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1167px;
-  top: 392px;
+  left: 1177px;
+  top: 470px;
   object-fit: cover;
 }
 .v-40-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1168px;
-  top: 393px;
+  left: 1178px;
+  top: 472px;
 }
 .v-40-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1191px;
-  top: 393px;
+  left: 1203px;
+  top: 472px;
 }
 .v-40-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 18px;
   position: absolute;
-  left: 1179px;
-  top: 413px;
+  left: 1191px;
+  top: 496px;
 }
 .tong-41 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 45px;
   position: absolute;
-  left: 1207px;
-  top: 392px;
+  left: 1221px;
+  top: 470px;
   object-fit: cover;
 }
 .v-41-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1208px;
-  top: 393px;
+  left: 1222px;
+  top: 472px;
 }
 .v-41-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 19px;
+  height: 21px;
   position: absolute;
-  left: 1231px;
-  top: 393px;
+  left: 1247px;
+  top: 472px;
 }
 .v-41-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 18px;
   position: absolute;
-  left: 1219px;
-  top: 413px;
+  left: 1233px;
+  top: 496px;
 }
 .tong-42 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1269px;
-  top: 408px;
+  left: 1291px;
+  top: 491px;
   object-fit: cover;
 }
 .v-42-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
-  position: absolute;
-  left: 1270px;
-  top: 409px;
-}
-.v-42-tong-2 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
   height: 17px;
   position: absolute;
   left: 1293px;
-  top: 409px;
+  top: 492px;
 }
-.v-42-tong-3 {
-  background: #d9d9d9;
+.v-42-tong-2 {
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
   height: 17px;
   position: absolute;
-  left: 1281px;
-  top: 429px;
+  left: 1319px;
+  top: 492px;
+}
+.v-42-tong-3 {
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 21px;
+  position: absolute;
+  left: 1304px;
+  top: 513px;
 }
 .tong-43 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1344px;
-  top: 408px;
+  left: 1375px;
+  top: 491px;
   object-fit: cover;
 }
 .v-43-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
   height: 17px;
   position: absolute;
-  left: 1345px;
-  top: 409px;
+  left: 1376px;
+  top: 492px;
 }
 .v-43-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
   height: 17px;
   position: absolute;
-  left: 1368px;
-  top: 409px;
+  left: 1402px;
+  top: 492px;
 }
 .v-43-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 21px;
   position: absolute;
-  left: 1356px;
-  top: 429px;
+  left: 1388px;
+  top: 513px;
 }
 .tong-44 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1428px;
-  top: 409px;
+  left: 1469px;
+  top: 492px;
   object-fit: cover;
 }
 .v-44-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 1429px;
-  top: 410px;
+  left: 1470px;
+  top: 493px;
 }
 .v-44-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 1452px;
-  top: 410px;
+  left: 1496px;
+  top: 493px;
 }
 .v-44-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 21px;
   position: absolute;
-  left: 1440px;
-  top: 430px;
+  left: 1483px;
+  top: 514px;
 }
 .tong-45 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1510px;
-  top: 409px;
+  left: 1561px;
+  top: 492px;
   object-fit: cover;
 }
 .v-45-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 1511px;
-  top: 410px;
+  left: 1562px;
+  top: 493px;
 }
 .v-45-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
   height: 17px;
   position: absolute;
-  left: 1534px;
-  top: 410px;
+  left: 1589px;
+  top: 493px;
 }
 .v-45-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 21px;
   position: absolute;
-  left: 1522px;
-  top: 430px;
+  left: 1575px;
+  top: 514px;
 }
 .tong-46 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1600px;
-  top: 409px;
+  left: 1662px;
+  top: 492px;
   object-fit: cover;
 }
 .v-46-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
   height: 17px;
   position: absolute;
-  left: 1601px;
-  top: 410px;
+  left: 1663px;
+  top: 493px;
 }
 .v-46-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
   height: 17px;
   position: absolute;
-  left: 1624px;
-  top: 410px;
+  left: 1687px;
+  top: 493px;
 }
 .v-46-tong-3 {
-  background: #d9d9d9;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
   width: 14px;
-  height: 17px;
+  height: 21px;
   position: absolute;
-  left: 1612px;
-  top: 430px;
+  left: 1675px;
+  top: 514px;
 }
 .tong-47 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1698px;
-  top: 406px;
+  left: 1771px;
+  top: 488px;
   object-fit: cover;
 }
 .v-47-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1699px;
-  top: 407px;
+  left: 1772px;
+  top: 489px;
 }
 .v-47-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1722px;
-  top: 407px;
+  left: 1800px;
+  top: 489px;
 }
 .v-47-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 18px;
+  height: 21px;
   position: absolute;
-  left: 1710px;
-  top: 427px;
+  left: 1784px;
+  top: 510px;
 }
 .tong-48 {
-  width: 39px;
-  height: 39px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  left: 1776px;
-  top: 406px;
+  left: 1859px;
+  top: 488px;
   object-fit: cover;
 }
 .v-48-tong-1 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 16px;
+  height: 19px;
   position: absolute;
-  left: 1777px;
-  top: 407px;
+  left: 1860px;
+  top: 489px;
 }
 .v-48-tong-2 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 17px;
+  height: 19px;
   position: absolute;
-  left: 1800px;
-  top: 407px;
+  left: 1885px;
+  top: 489px;
 }
 .v-48-tong-3 {
-  background: #d9d9d9;
-  width: 14px;
-  height: 17px;
+  color:red;
+  font-size:14.5px;
+  font-weight : bold;
+  width: 15px;
+  height: 21px;
   position: absolute;
-  left: 1788px;
-  top: 427px;
+  left: 1873px;
+  top: 510px;
 }
 .con-off-1 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 134px;
-  top: 325px;
+  left: 19px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-1 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 134px;
-  top: 325px;
+  left: 19px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-2 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 165px;
-  top: 325px;
+  left: 55px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-2 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 165px;
-  top: 325px;
+  left: 55px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-3 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 200px;
-  top: 325px;
+  left: 93px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-3 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 200px;
-  top: 325px;
+  left: 93px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-4 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 231px;
-  top: 325px;
+  left: 126px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-4 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 231px;
-  top: 325px;
+  left: 126px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-5 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 248px;
-  top: 325px;
+  left: 146px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-5 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 248px;
-  top: 325px;
+  left: 146px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-6 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 279px;
-  top: 325px;
+  left: 182px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-6 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 279px;
-  top: 325px;
+  left: 182px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-7 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 296px;
-  top: 325px;
+  left: 201px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-7 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 296px;
-  top: 325px;
+  left: 201px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-8 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 327px;
-  top: 325px;
+  left: 236px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-8 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 327px;
-  top: 325px;
+  left: 236px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-9 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 361px;
-  top: 325px;
+  left: 274px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-9 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 361px;
-  top: 325px;
+  left: 274px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-10 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 392px;
-  top: 325px;
+  left: 308px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-10 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 392px;
-  top: 325px;
+  left: 308px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-11 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 437px;
-  top: 326px;
+  left: 357px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-11 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 437px;
-  top: 326px;
+  left: 357px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-12 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 468px;
-  top: 326px;
+  left: 393px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-12 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 468px;
-  top: 326px;
+  left: 393px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-13 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 490px;
-  top: 326px;
+  left: 418px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-13 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 490px;
-  top: 326px;
+  left: 418px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-14 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 521px;
-  top: 326px;
+  left: 452px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-14 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 521px;
-  top: 326px;
+  left: 452px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-15 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 557px;
-  top: 325px;
+  left: 508px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-15 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 557px;
-  top: 325px;
+  left: 508px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-16 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 588px;
-  top: 325px;
+  left: 541px;
+  top: 397px;
   object-fit: cover;
 }
 .con-on-16 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 588px;
-  top: 325px;
+  left: 541px;
+  top: 397px;
   object-fit: cover;
 }
 .con-off-17 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 557px;
-  top: 295px;
+  left: 508px;
+  top: 340px;
   object-fit: cover;
 }
 .con-on-17 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 557px;
-  top: 295px;
+  left: 508px;
+  top: 340px;
   object-fit: cover;
 }
 .con-off-18 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 588px;
-  top: 295px;
+  left: 541px;
+  top: 340px;
   object-fit: cover;
 }
 .con-on-18 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 588px;
-  top: 295px;
+  left: 541px;
+  top: 340px;
   object-fit: cover;
 }
-
 .con-off-19 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 663px;
-  top: 326px;
+  left: 611px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-19 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 663px;
-  top: 326px;
+  left: 611px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-20 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 694px;
-  top: 326px;
+  left: 647px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-20 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 694px;
-  top: 326px;
+  left: 647px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-21 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 771px;
-  top: 325px;
+  left: 733px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-21 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 771px;
-  top: 325px;
+  left: 733px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-22 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 802px;
-  top: 325px;
+  left: 768px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-22 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 802px;
-  top: 325px;
+  left: 768px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-23 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 771px;
-  top: 295px;
+  left: 733px;
+  top: 342px;
   object-fit: cover;
 }
 .con-on-23 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 771px;
-  top: 295px;
+  left: 733px;
+  top: 342px;
   object-fit: cover;
 }
 .con-off-24 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 802px;
-  top: 295px;
+  left: 768px;
+  top: 342px;
   object-fit: cover;
 }
 .con-on-24 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 802px;
-  top: 295px;
+  left: 768px;
+  top: 342px;
   object-fit: cover;
 }
-
 .con-off-25 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 844px;
-  top: 327px;
+  left: 815px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-25 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 844px;
-  top: 327px;
+  left: 815px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-26 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 875px;
-  top: 327px;
+  left: 850px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-26 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 875px;
-  top: 327px;
+  left: 850px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-27 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 892px;
-  top: 327px;
+  left: 869px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-27 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 892px;
-  top: 327px;
+  left: 869px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-28 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 923px;
-  top: 327px;
+  left: 903px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-28 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 923px;
-  top: 327px;
+  left: 903px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-29 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 942px;
-  top: 327px;
+  left: 925px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-29 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 942px;
-  top: 327px;
+  left: 925px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-30 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 973px;
-  top: 327px;
+  left: 958px;
+  top: 399px;
   object-fit: cover;
 }
 .con-on-30 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 973px;
-  top: 327px;
+  left: 958px;
+  top: 399px;
   object-fit: cover;
 }
 .con-off-31 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1009px;
-  top: 326px;
+  left: 999px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-31 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1009px;
-  top: 326px;
+  left: 999px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-32 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1040px;
-  top: 326px;
+  left: 1036px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-32 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1040px;
-  top: 326px;
+  left: 1036px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-33 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1048px;
-  top: 326px;
+  left: 1044px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-33 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1048px;
-  top: 326px;
+  left: 1044px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-34 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1079px;
-  top: 326px;
+  left: 1078px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-34 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1079px;
-  top: 326px;
+  left: 1078px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-35 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1087px;
-  top: 326px;
+  left: 1086px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-35 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1087px;
-  top: 326px;
+  left: 1086px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-36 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1118px;
-  top: 326px;
+  left: 1122px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-36 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1118px;
-  top: 326px;
+  left: 1122px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-37 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1126px;
-  top: 326px;
+  left: 1132px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-37 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1126px;
-  top: 326px;
+  left: 1132px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-38 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1157px;
-  top: 326px;
+  left: 1165px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-38 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1157px;
-  top: 326px;
+  left: 1165px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-39 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1165px;
-  top: 326px;
+  left: 1173px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-39 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1165px;
-  top: 326px;
+  left: 1173px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-40 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1196px;
-  top: 326px;
+  left: 1209px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-40 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1196px;
-  top: 326px;
+  left: 1209px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-41 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1204px;
-  top: 326px;
+  left: 1218px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-41 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1204px;
-  top: 326px;
+  left: 1218px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-42 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1235px;
-  top: 326px;
+  left: 1254px;
+  top: 398px;
   object-fit: cover;
 }
 .con-on-42 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1235px;
-  top: 326px;
+  left: 1254px;
+  top: 398px;
   object-fit: cover;
 }
 .con-off-43 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1269px;
-  top: 206px;
+  left: 1291px;
+  top: 263px;
   object-fit: cover;
 }
 .con-on-43 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1269px;
-  top: 205px;
+  left: 1291px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-44 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1300px;
-  top: 205px;
+  left: 1325px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-44 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1300px;
-  top: 205px;
+  left: 1325px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-45 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1344px;
-  top: 205px;
+  left: 1375px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-45 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1344px;
-  top: 205px;
+  left: 1375px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-46 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1375px;
-  top: 205px;
+  left: 1410px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-46 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1375px;
-  top: 205px;
+  left: 1410px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-47 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1428px;
-  top: 205px;
+  left: 1469px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-47 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1428px;
-  top: 205px;
+  left: 1469px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-48 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1459px;
-  top: 205px;
+  left: 1503px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-48 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1459px;
-  top: 205px;
+  left: 1503px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-49 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1510px;
-  top: 205px;
+  left: 1561px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-49 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1510px;
-  top: 205px;
+  left: 1561px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-50 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1541px;
-  top: 205px;
+  left: 1595px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-50 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1541px;
-  top: 205px;
+  left: 1595px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-51 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1600px;
-  top: 205px;
+  left: 1662px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-51 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1600px;
-  top: 205px;
+  left: 1662px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-52 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1631px;
-  top: 205px;
+  left: 1695px;
+  top: 262px;
   object-fit: cover;
 }
 .con-on-52 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1631px;
-  top: 205px;
+  left: 1695px;
+  top: 262px;
   object-fit: cover;
 }
 .con-off-53 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1698px;
-  top: 202px;
+  left: 1771px;
+  top: 259px;
   object-fit: cover;
 }
 .con-on-53 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1698px;
-  top: 202px;
+  left: 1771px;
+  top: 259px;
   object-fit: cover;
 }
 .con-off-54 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1729px;
-  top: 202px;
+  left: 1808px;
+  top: 259px;
   object-fit: cover;
 }
 .con-on-54 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1729px;
-  top: 202px;
+  left: 1808px;
+  top: 259px;
   object-fit: cover;
 }
 .con-off-55 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1776px;
-  top: 202px;
+  left: 1859px;
+  top: 259px;
   object-fit: cover;
 }
 .con-on-55 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1776px;
-  top: 202px;
+  left: 1859px;
+  top: 259px;
   object-fit: cover;
 }
 .con-off-56 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1807px;
-  top: 202px;
+  left: 1893px;
+  top: 259px;
   object-fit: cover;
 }
 .con-on-56 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1807px;
-  top: 202px;
+  left: 1893px;
+  top: 259px;
   object-fit: cover;
 }
 .con-off-57 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 134px;
-  top: 425px;
+  left: 19px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-57 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 134px;
-  top: 425px;
+  left: 19px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-58 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 165px;
-  top: 425px;
+  left: 55px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-58 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 165px;
-  top: 425px;
+  left: 55px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-59 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 200px;
-  top: 425px;
+  left: 93px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-59 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 200px;
-  top: 425px;
+  left: 93px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-542 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 231px;
-  top: 425px;
+  left: 126px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-542 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 231px;
-  top: 425px;
+  left: 126px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-532 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 248px;
-  top: 425px;
+  left: 146px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-532 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 248px;
-  top: 425px;
+  left: 146px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-543 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 279px;
-  top: 425px;
+  left: 182px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-543 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 279px;
-  top: 425px;
+  left: 182px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-533 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 296px;
-  top: 425px;
+  left: 201px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-533 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 296px;
-  top: 425px;
+  left: 201px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-544 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 327px;
-  top: 425px;
+  left: 236px;
+  top: 509px;
   object-fit: cover;
 }
 .con-on-544 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 327px;
-  top: 425px;
+  left: 236px;
+  top: 509px;
   object-fit: cover;
 }
 .con-off-534 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 556px;
-  top: 424px;
+  left: 494px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-534 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 556px;
-  top: 424px;
+  left: 494px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-545 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 587px;
-  top: 424px;
+  left: 526px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-545 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 587px;
-  top: 424px;
+  left: 526px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-535 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 663px;
-  top: 424px;
+  left: 611px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-535 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 663px;
-  top: 424px;
+  left: 611px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-546 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 694px;
-  top: 424px;
+  left: 647px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-546 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 694px;
-  top: 424px;
+  left: 647px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-536 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 844px;
-  top: 424px;
+  left: 815px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-536 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 844px;
-  top: 424px;
+  left: 815px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-547 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 875px;
-  top: 424px;
+  left: 850px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-547 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 875px;
-  top: 424px;
+  left: 850px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-537 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 942px;
-  top: 424px;
+  left: 925px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-537 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 942px;
-  top: 424px;
+  left: 925px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-548 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 973px;
-  top: 424px;
+  left: 958px;
+  top: 508px;
   object-fit: cover;
 }
 .con-on-548 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 973px;
-  top: 424px;
+  left: 958px;
+  top: 508px;
   object-fit: cover;
 }
 .con-off-538 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1007px;
-  top: 426px;
+  left: 997px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-538 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1007px;
-  top: 426px;
+  left: 997px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-549 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1038px;
-  top: 426px;
+  left: 1033px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-549 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1038px;
-  top: 426px;
+  left: 1033px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-539 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1047px;
-  top: 426px;
+  left: 1043px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-539 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1047px;
-  top: 426px;
+  left: 1043px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5410 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1078px;
-  top: 426px;
+  left: 1077px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5410 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1078px;
-  top: 426px;
+  left: 1077px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5310 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1087px;
-  top: 426px;
+  left: 1086px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5310 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1087px;
-  top: 426px;
+  left: 1086px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5411 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1118px;
-  top: 426px;
+  left: 1122px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5411 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1118px;
-  top: 426px;
+  left: 1122px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5311 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1127px;
-  top: 426px;
+  left: 1133px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5311 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1127px;
-  top: 426px;
+  left: 1133px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5412 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1158px;
-  top: 426px;
+  left: 1166px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5412 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1158px;
-  top: 426px;
+  left: 1166px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5312 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1167px;
-  top: 426px;
+  left: 1177px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5312 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1167px;
-  top: 426px;
+  left: 1177px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5413 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1198px;
-  top: 426px;
+  left: 1212px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5413 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1198px;
-  top: 426px;
+  left: 1212px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5313 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1207px;
-  top: 426px;
+  left: 1221px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5313 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1207px;
-  top: 426px;
+  left: 1221px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5414 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1238px;
-  top: 426px;
+  left: 1257px;
+  top: 510px;
   object-fit: cover;
 }
 .con-on-5414 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1238px;
-  top: 426px;
+  left: 1257px;
+  top: 510px;
   object-fit: cover;
 }
 .con-off-5314 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1269px;
-  top: 442px;
+  left: 1291px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5314 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1269px;
-  top: 442px;
+  left: 1291px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5415 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1300px;
-  top: 442px;
+  left: 1325px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5415 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1300px;
-  top: 442px;
+  left: 1325px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5315 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1344px;
-  top: 442px;
+  left: 1375px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5315 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1344px;
-  top: 442px;
+  left: 1375px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5416 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1375px;
-  top: 442px;
+  left: 1410px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5416 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1375px;
-  top: 442px;
+  left: 1410px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5316 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1428px;
-  top: 442px;
+  left: 1469px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5316 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1428px;
-  top: 442px;
+  left: 1469px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5417 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1459px;
-  top: 442px;
+  left: 1503px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5417 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1459px;
-  top: 442px;
+  left: 1503px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5317 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1510px;
-  top: 442px;
+  left: 1561px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5317 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1510px;
-  top: 442px;
+  left: 1561px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5418 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1541px;
-  top: 442px;
+  left: 1595px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5418 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1541px;
-  top: 442px;
+  left: 1595px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5318 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1600px;
-  top: 442px;
+  left: 1662px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5318 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1600px;
-  top: 442px;
+  left: 1662px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5419 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1631px;
-  top: 442px;
+  left: 1695px;
+  top: 529px;
   object-fit: cover;
 }
 .con-on-5419 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1631px;
-  top: 442px;
+  left: 1695px;
+  top: 529px;
   object-fit: cover;
 }
 .con-off-5319 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1698px;
-  top: 440px;
+  left: 1771px;
+  top: 525px;
   object-fit: cover;
 }
 .con-on-5319 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1698px;
-  top: 440px;
+  left: 1771px;
+  top: 525px;
   object-fit: cover;
 }
 .con-off-5420 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1729px;
-  top: 440px;
+  left: 1808px;
+  top: 525px;
   object-fit: cover;
 }
 .con-on-5420 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1729px;
-  top: 440px;
+  left: 1808px;
+  top: 525px;
   object-fit: cover;
 }
 .con-off-5320 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1776px;
-  top: 440px;
+  left: 1859px;
+  top: 525px;
   object-fit: cover;
 }
 .con-on-5320 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1776px;
-  top: 440px;
+  left: 1859px;
+  top: 525px;
   object-fit: cover;
 }
 .con-off-5421 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1807px;
-  top: 440px;
+  left: 1893px;
+  top: 525px;
   object-fit: cover;
 }
 .con-on-5421 {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   position: absolute;
-  left: 1807px;
-  top: 440px;
+  left: 1893px;
+  top: 525px;
   object-fit: cover;
 }
 .door-red-1 {
@@ -3360,11 +3570,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 69px;
+  width: 12px;
+  height: 77px;
   position: absolute;
-  left: 435px;
-  top: 191px;
+  left: 355px;
+  top: 247px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3373,11 +3583,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 82px;
+  width: 12px;
+  height: 91px;
   position: absolute;
-  left: 435px;
-  top: 249px;
+  left: 355px;
+  top: 312px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3387,10 +3597,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 69px;
+  height: 77px;
   position: absolute;
-  left: 488px;
-  top: 191px;
+  left: 415px;
+  top: 247px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3400,10 +3610,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 82px;
+  height: 91px;
   position: absolute;
-  left: 488px;
-  top: 249px;
+  left: 415px;
+  top: 312px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3412,11 +3622,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 106px;
+  width: 12px;
+  height: 117px;
   position: absolute;
-  left: 1009px;
-  top: 160px;
+  left: 999px;
+  top: 212px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3425,11 +3635,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 111px;
+  width: 12px;
+  height: 124px;
   position: absolute;
-  left: 1009px;
-  top: 227px;
+  left: 999px;
+  top: 287px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3439,10 +3649,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 106px;
+  height: 117px;
   position: absolute;
-  left: 1254px;
-  top: 160px;
+  left: 1274px;
+  top: 212px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3452,10 +3662,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 111px;
+  height: 124px;
   position: absolute;
-  left: 1254px;
-  top: 227px;
+  left: 1274px;
+  top: 287px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3464,11 +3674,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 13px;
+  height: 94px;
   position: absolute;
-  left: 1409px;
-  top: 70px;
+  left: 1446px;
+  top: 111px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3477,11 +3687,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 13px;
+  height: 99px;
   position: absolute;
-  left: 1409px;
-  top: 123px;
+  left: 1446px;
+  top: 170px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3491,10 +3701,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 84px;
+  height: 94px;
   position: absolute;
-  left: 1494px;
-  top: 70px;
+  left: 1542px;
+  top: 111px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3504,10 +3714,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 88px;
+  height: 99px;
   position: absolute;
-  left: 1494px;
-  top: 123px;
+  left: 1542px;
+  top: 170px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3516,11 +3726,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 12px;
+  height: 94px;
   position: absolute;
-  left: 1583px;
-  top: 70px;
+  left: 1642px;
+  top: 111px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3529,11 +3739,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 12px;
+  height: 99px;
   position: absolute;
-  left: 1583px;
-  top: 123px;
+  left: 1642px;
+  top: 170px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3542,11 +3752,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 14px;
+  height: 94px;
   position: absolute;
-  left: 1664px;
-  top: 70px;
+  left: 1734px;
+  top: 111px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3555,11 +3765,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 14px;
+  height: 99px;
   position: absolute;
-  left: 1664px;
-  top: 123px;
+  left: 1734px;
+  top: 170px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3568,11 +3778,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 13px;
+  height: 93px;
   position: absolute;
-  left: 1409px;
-  top: 308px;
+  left: 1446px;
+  top: 377px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3581,11 +3791,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 13px;
+  height: 101px;
   position: absolute;
-  left: 1409px;
-  top: 361px;
+  left: 1446px;
+  top: 436px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3595,10 +3805,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 84px;
+  height: 93px;
   position: absolute;
-  left: 1494px;
-  top: 308px;
+  left: 1542px;
+  top: 377px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3608,10 +3818,10 @@
   border-color: #000000;
   border-width: 0.5px;
   width: 11px;
-  height: 88px;
+  height: 101px;
   position: absolute;
-  left: 1494px;
-  top: 361px;
+  left: 1542px;
+  top: 436px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3620,11 +3830,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 12px;
+  height: 93px;
   position: absolute;
-  left: 1583px;
-  top: 308px;
+  left: 1642px;
+  top: 377px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3633,11 +3843,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 12px;
+  height: 101px;
   position: absolute;
-  left: 1583px;
-  top: 361px;
+  left: 1642px;
+  top: 436px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3646,11 +3856,11 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 84px;
+  width: 14px;
+  height: 93px;
   position: absolute;
-  left: 1664px;
-  top: 308px;
+  left: 1734px;
+  top: 377px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3659,113 +3869,60 @@
   border-style: solid;
   border-color: #000000;
   border-width: 0.5px;
-  width: 11px;
-  height: 88px;
+  width: 14px;
+  height: 101px;
   position: absolute;
-  left: 1664px;
-  top: 361px;
+  left: 1734px;
+  top: 436px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
-.door-red-13 {
-  background: #ff0000;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.5px;
-  width: 11px;
-  height: 73px;
-  position: absolute;
-  left: 555px;
-  top: 256px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.door-red-14 {
-  background: #ff0000;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.5px;
-  width: 11px;
-  height: 73px;
-  position: absolute;
-  left: 609px;
-  top: 256px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.door-red-15 {
-  background: #ff0000;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.5px;
-  width: 11px;
-  height: 73px;
-  position: absolute;
-  left: 769px;
-  top: 258px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.door-red-16 {
-  background: #ff0000;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 0.5px;
-  width: 11px;
-  height: 73px;
-  position: absolute;
-  left: 824px;
-  top: 258px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-
 .lamp-green-1 {
-  width: 45px;
-  height: 90px;
+  width: 44px;
+  height: 102px;
   position: absolute;
-  left: 1041px;
-  top: 137px;
+  left: 1037px;
+  top: 185px;
   object-fit: cover;
 }
 .pen-rol-1 {
-  width: 42px;
-  height: 32px;
+  width: 44px;
+  height: 37px;
   position: absolute;
-  left: 1043px;
-  top: 207px;
+  left: 1038px;
+  top: 264px;
   object-fit: cover;
 }
 .lamp-green-2 {
-  width: 45px;
-  height: 90px;
+  width: 51px;
+  height: 102px;
   position: absolute;
-  left: 1104px;
-  top: 137px;
+  left: 1105px;
+  top: 185px;
   object-fit: cover;
 }
 .pen-rol-2 {
-  width: 42px;
-  height: 32px;
+  width: 47px;
+  height: 37px;
   position: absolute;
-  left: 1106px;
-  top: 207px;
+  left: 1108px;
+  top: 264px;
   object-fit: cover;
 }
 .lamp-green-3 {
-  width: 45px;
-  height: 90px;
+  width: 51px;
+  height: 102px;
   position: absolute;
-  left: 1164px;
-  top: 137px;
+  left: 1172px;
+  top: 185px;
   object-fit: cover;
 }
 .pen-rol-3 {
-  width: 42px;
-  height: 32px;
+  width: 48px;
+  height: 37px;
   position: absolute;
-  left: 1166px;
-  top: 207px;
+  left: 1174px;
+  top: 264px;
   object-fit: cover;
 }
 .process-data-box {
@@ -3774,10 +3931,10 @@
   border-color: #000000;
   border-width: 2px;
   width: 1223px;
-  height: 201px;
+  height: 106px;
   position: absolute;
   left: 1352px;
-  top: 563px;
+  top: 658px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3791,7 +3948,7 @@
   height: 24px;
   position: absolute;
   left: 251px;
-  top: 634px;
+  top: 727px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3805,7 +3962,7 @@
   height: 24px;
   position: absolute;
   left: 251px;
-  top: 607px;
+  top: 700px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
@@ -3817,7 +3974,7 @@
   font-weight: 700;
   position: absolute;
   left: 145px;
-  top: 636px;
+  top: 729px;
 }
 .process-pv-text {
   color: #ffffff;
@@ -3827,280 +3984,7 @@
   font-weight: 700;
   position: absolute;
   left: 145px;
-  top: 610px;
-}
-.process-sp-box2 {
-  background: #123478;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 111px;
-  height: 24px;
-  position: absolute;
-  left: 251px;
-  top: 727px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.process-pv-box2 {
-  background: #004ade;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 111px;
-  height: 24px;
-  position: absolute;
-  left: 251px;
-  top: 700px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.process-sp-text2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 145px;
-  top: 729px;
-}
-.process-pv-text2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  position: absolute;
-  left: 145px;
   top: 703px;
-}
-.pro-box-1 {
-  background: #000000;
-  border-radius: 2px;
-  width: 96px;
-  height: 21px;
-  position: absolute;
-  left: 350px;
-  top: 576px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.pro-text-1 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 271px;
-  top: 578px;
-}
-.crack-pv-2 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 254px;
-  top: 607px;
-}
-.crack-sp-2 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 254px;
-  top: 634px;
-}
-.pro-box-2 {
-  background: #000000;
-  border-radius: 2px;
-  width: 96px;
-  height: 21px;
-  position: absolute;
-  left: 449px;
-  top: 576px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.pro-text-2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 371px;
-  top: 578px;
-}
-.crack-pv-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 353px;
-  top: 607px;
-}
-.crack-sp-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 353px;
-  top: 634px;
-}
-.pro-box-3 {
-  background: #000000;
-  border-radius: 2px;
-  width: 96px;
-  height: 21px;
-  position: absolute;
-  left: 548px;
-  top: 576px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.pro-text-3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 477px;
-  top: 578px;
-}
-.hit-pv-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 452px;
-  top: 607px;
-}
-.hit-sp-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 452px;
-  top: 634px;
-}
-.pro-box-4 {
-  background: #000000;
-  border-radius: 2px;
-  width: 96px;
-  height: 21px;
-  position: absolute;
-  left: 647px;
-  top: 576px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.pro-text-4 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 569px;
-  top: 578px;
-}
-.rinse-pv-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 551px;
-  top: 607px;
-}
-.rinse-sp-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 551px;
-  top: 634px;
-}
-.pro-box-5 {
-  background: #000000;
-  border-radius: 2px;
-  width: 96px;
-  height: 21px;
-  position: absolute;
-  left: 746px;
-  top: 576px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(-1, 1);
-}
-.pro-text-5 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 677px;
-  top: 578px;
-}
-.dip-pv-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 650px;
-  top: 607px;
-}
-.dip-sp-1 {
-  background: #ffffff;
-  border-radius: 1px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px;
-  width: 96px;
-  height: 24px;
-  position: absolute;
-  left: 650px;
-  top: 634px;
 }
 .pro-box-6 {
   background: #000000;
@@ -4597,27 +4481,71 @@
   left: 1244px;
   top: 700px;
 }
-.sensor-pen-1 {
-  background: #ff0000;
-  width: 39px;
-  height: 9px;
+.rectangle-2 {
+  background: #a8a5a5;
+  width: 44px;
+  height: 11px;
   position: absolute;
-  left: 1044px;
-  top: 227px;
+  left: 1040px;
+  top: 287px;
 }
-.sensor-pen-2 {
-  background: #ff0000;
-  width: 39px;
-  height: 9px;
+.rectangle-3 {
+  background: #a8a5a5;
+  width: 43px;
+  height: 11px;
   position: absolute;
-  left: 1107px;
-  top: 227px;
+  left: 1109px;
+  top: 287px;
 }
-.sensor-pen-3 {
-  background: #ff0000;
-  width: 39px;
-  height: 9px;
+.rectangle-4 {
+  background: #a8a5a5;
+  width: 43px;
+  height: 11px;
   position: absolute;
-  left: 1167px;
-  top: 227px;
+  left: 1177px;
+  top: 287px;
+}
+.wash-1 {
+  width: 79px;
+  height: 37px;
+  position: absolute;
+  left: 1447px;
+  top: 175px;
+  object-fit: cover;
+}
+.wash-2 {
+  width: 76px;
+  height: 37px;
+  position: absolute;
+  left: 1546px;
+  top: 175px;
+  object-fit: cover;
+}
+.wash-3 {
+  width: 79px;
+  height: 36px;
+  position: absolute;
+  left: 1448px;
+  top: 441px;
+  object-fit: cover;
+}
+.wash-4 {
+  width: 76px;
+  height: 36px;
+  position: absolute;
+  left: 1548px;
+  top: 441px;
+  object-fit: cover;
+}
+
+
+.textName{
+color: #000000;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  position: absolute;
+  left: 25px;
+  top: 130px;
 }

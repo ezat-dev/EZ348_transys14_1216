@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>처리품등록</title>
+<title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
 
@@ -212,7 +212,7 @@
                     	<div class="row_data" style="display:inline-block; width:800px;">
 					<div class="row_top">
 					    <button id="searchBtn" onclick="fetchData();">조회</button>
-					    <button id="addBtn">입력</button>
+					    <button id="addBtn">추가</button>
 					    <button id="modifyBtn">수정</button>               
 					    <button id="deleteBtn">삭제</button>
 					    <button id="excelBtn">엑셀</button>

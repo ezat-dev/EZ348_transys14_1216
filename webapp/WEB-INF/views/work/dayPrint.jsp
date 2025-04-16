@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>작업실적</title>
+    <title>열처리 1~4호기</title>
 <jsp:include page="../include/pluginpage.jsp"/>
 
     <style>
@@ -183,7 +183,7 @@
         </div>
     </div>
 </div>
-
+<a style="display:none;" id="downLoadLink" href="#" download="#"></a>
 <script>
     // Tabulator 테이블 설정
     var tableData = []; 
@@ -408,7 +408,7 @@
 
         // 해당 날짜로 설정 (년-월-일 형식)
         $("#to_date").val(y + "-" + m + "-" + d);
-        $("#to_date").val("2025-01-22");
+
         // 페이지 로드 시 자동으로 검색 버튼 클릭
 //        $("#searchbtn").trigger("click"); // 로드되면 자동으로 검색 실행
         getWorkDataPrintList();
@@ -443,10 +443,26 @@
             dataType: "json",
             data:{"jsonData" : jsonData},
             success: function (result) {
-//                console.log(result);
+                console.log(result.data);
 
-        
-                alert("D:\\생산일지\\일간생산일지 저장 완료되었습니다.");
+				setTimeout(function(){
+					
+					var resultData = result.data;
+
+					var fileName = decodeURIComponent("일간생산일지/"+resultData);
+					
+					var downLoadUrl = "/printFile/"+fileName;
+					
+					console.log(downLoadUrl);
+					$("#downLoadLink").prop("href",downLoadUrl);
+					$("#downLoadLink").prop("download",fileName);
+					
+					$("#downLoadLink")[0].click();
+				},300);
+				
+//				window.location.href = downLoadUrl;
+				
+//                alert("D:\\생산일지\\일간생산일지 저장 완료되었습니다.");
             },
             error: function (xhr, status, error) {
                

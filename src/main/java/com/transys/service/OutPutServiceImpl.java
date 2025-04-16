@@ -75,13 +75,13 @@ public class OutPutServiceImpl implements OutPutService{
 		//각 설비별 출고요청가능 신호 받기
 		OpcDataMap opcData = new OpcDataMap();
 		//창고출고가능요구 1이면
-		Map<String, Object> hogi1Map = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI1");
-		Map<String, Object> hogi2Map = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI2");
-		Map<String, Object> hogi3Map = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI3");
-		Map<String, Object> hogi4Map = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI4");
+		Map<String, Object> hogi1Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI1");
+		Map<String, Object> hogi2Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI2");
+		Map<String, Object> hogi3Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI3");
+		Map<String, Object> hogi4Map = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI4");
 		
 		//창고 출고요청취소 신호
-		Map<String, Object> outputCancelMap = opcData.getOpcData("Transys14.OUTPUT.CM01.OUTPUT_CANCEL");
+		Map<String, Object> outputCancelMap = opcData.getOpcData("Transys.OUTPUT.CM01.OUTPUT_CANCEL");
 		Thread.sleep(300);
 		
 		hogi1 = hogi1Map.get("value").toString();
@@ -91,10 +91,10 @@ public class OutPutServiceImpl implements OutPutService{
 		outputCancel = outputCancelMap.get("value").toString();
 
 		//
-		Map<String, Object> hogi1PrdMap = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI1_PRD");
-		Map<String, Object> hogi2PrdMap = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI2_PRD");
-		Map<String, Object> hogi3PrdMap = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI3_PRD");
-		Map<String, Object> hogi4PrdMap = opcData.getOpcData("Transys14.OUTPUT.CM01.HOGI4_PRD");
+		Map<String, Object> hogi1PrdMap = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI1_PRD");
+		Map<String, Object> hogi2PrdMap = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI2_PRD");
+		Map<String, Object> hogi3PrdMap = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI3_PRD");
+		Map<String, Object> hogi4PrdMap = opcData.getOpcData("Transys.OUTPUT.CM01.HOGI4_PRD");
 		Thread.sleep(300);
 		
 		hogi1Prd = hogi1PrdMap.get("value").toString();
@@ -106,7 +106,7 @@ public class OutPutServiceImpl implements OutPutService{
 		desc.append("hogi1 : "+hogi1+"// hogi2 : "+hogi2+"// hogi3 : "+hogi3+"// hogi4 : "+hogi4);
 		desc.append("hogi1Prd : "+hogi1Prd+"// hogi2Prd : "+hogi2Prd+"// hogi3Prd : "+hogi3Prd+"// hogi4Prd : "+hogi4Prd);
 		
-		Map<String, Object> outContinueMap = opcData.getOpcData("Transys14.PLCWRITE.CM01.DEVICECODE");
+		Map<String, Object> outContinueMap = opcData.getOpcData("Transys.PLCWRITE.CM01.DEVICECODE");
 		
 		outContinue = Integer.parseInt(outContinueMap.get("value").toString());
 		desc.append("outContinue : "+outContinue+"// ");
@@ -116,7 +116,7 @@ public class OutPutServiceImpl implements OutPutService{
 		//출고요청취소 신호 들어올경우
 		if("true".equals(outputCancel)) {
 			outPutDao.outputCancel();
-			opcData.setOpcData("Transys14.OUTPUT.CM01.OUTPUT_CANCEL", false);
+			opcData.setOpcData("Transys.OUTPUT.CM01.OUTPUT_CANCEL", false);
 		}
 		
 		//1호기
