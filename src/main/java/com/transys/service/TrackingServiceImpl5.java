@@ -63,44 +63,46 @@ public class TrackingServiceImpl5 implements TrackingService5{
 			if(!"0000".equals(tracking.getPumbun()) && tracking.getPumbun() != null && prdChk != 0) {
 				Tracking trackingReturn = trackingDao.trackingLocationReturn(tracking);
 				
-				
-				desc.append("설비 : "+tracking.getDevicecode()+"// ");
-				desc.append("품번 : "+tracking.getPumbun()+"// ");
-				desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
-				desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
-				desc.append("OPC태그 : "+setDataDir);	
-				
-				logger.info("TRACKING(14호기) : {}",desc.toString());					
-				//트래킹 실행
-				trackingDao.ccf1Tracking01(tracking);
-				//지연시간 0.3초
-				Thread.sleep(300);
-				
-				
-				//트래킹처리 후 PRD_CHK_01 0으로 변경
-				opcDataMap.setOpcData(setDataDir+".PRD_CHK", resetValue);
+				if(trackingReturn != null) {
+					desc.append("설비 : "+tracking.getDevicecode()+"// ");
+					desc.append("품번 : "+tracking.getPumbun()+"// ");
+					desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
+					desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
+					desc.append("OPC태그 : "+setDataDir);	
+					
+					logger.info("TRACKING(14호기) : {}",desc.toString());					
+					//트래킹 실행
+					trackingDao.ccf1Tracking01(tracking);
+					//지연시간 0.3초
+					Thread.sleep(300);
+					
+					
+					//트래킹처리 후 PRD_CHK_01 0으로 변경
+					opcDataMap.setOpcData(setDataDir+".PRD_CHK", resetValue);
+				}
 			}
 		}else {
 			if(!"0000".equals(tracking.getPumbun()) && tracking.getPumbun() != null && prdChk != 0) {
 				tracking.setCurLocation(12);
 				Tracking trackingReturn = trackingDao.trackingLocationReturn(tracking);
 				
-				
-				desc.append("설비 : "+tracking.getDevicecode()+"// ");
-				desc.append("품번 : "+tracking.getPumbun()+"// ");
-				desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
-				desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
-				desc.append("OPC태그 : "+setDataDir);
-				
-				logger.info("TRACKING(14호기) : {}",desc.toString());					
-				//트래킹 실행
-				trackingDao.ccf1Tracking01(tracking);
-				//지연시간 0.3초
-				Thread.sleep(300);
-				
-				
-				//트래킹처리 후 PRD_CHK_01 0으로 변경
-				opcDataMap.setOpcData(setDataDir+".PRD_CHK", resetValue);
+				if(trackingReturn != null) {
+					desc.append("설비 : "+tracking.getDevicecode()+"// ");
+					desc.append("품번 : "+tracking.getPumbun()+"// ");
+					desc.append("이동위치 : "+tracking.getCurLocation()+"// ");
+					desc.append("현재위치 : "+trackingReturn.getCurLocation()+"// ");
+					desc.append("OPC태그 : "+setDataDir);
+					
+					logger.info("TRACKING(14호기) : {}",desc.toString());					
+					//트래킹 실행
+					trackingDao.ccf1Tracking01(tracking);
+					//지연시간 0.3초
+					Thread.sleep(300);
+					
+					
+					//트래킹처리 후 PRD_CHK_01 0으로 변경
+					opcDataMap.setOpcData(setDataDir+".PRD_CHK", resetValue);
+				}
 			}			
 		}
 		

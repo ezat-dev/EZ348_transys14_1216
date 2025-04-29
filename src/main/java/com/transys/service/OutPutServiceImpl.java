@@ -117,6 +117,10 @@ public class OutPutServiceImpl implements OutPutService{
 		if("true".equals(outputCancel)) {
 			outPutDao.outputCancel();
 			opcData.setOpcData("Transys.OUTPUT.CM01.OUTPUT_CANCEL", false);
+			MainController.outPutChk1 = false;
+			MainController.outPutChk2 = false;
+			MainController.outPutChk3 = false;
+			MainController.outPutChk4 = false;
 		}
 		
 		//1호기

@@ -18,6 +18,7 @@
 
 	<task:annotation-driven executor="executor" scheduler="scheduler" proxy-target-class="false"/>
 	<bean id="commProcessor" class="com.transys.async.CommProcessor"/>
+	
 	<bean id="plcWriteProcessor" class="com.transys.async.PlcWriteProcessor"/>
 	<bean id="mchInputProcessor" class="com.transys.async.MchInputProcessor"/>
  	<bean id="outPutProcessor" class="com.transys.async.OutPutProcessor"/>
@@ -27,6 +28,7 @@
 	<bean id="trackingProcessor3" class="com.transys.async.TrackingProcessor3"/>
 	<bean id="trackingProcessor4" class="com.transys.async.TrackingProcessor4"/>
 	<bean id="trackingProcessor5" class="com.transys.async.TrackingProcessor5"/> 
+
 	<task:scheduler id="scheduler" pool-size="4" />
 	<task:executor id="executor" keep-alive="10" pool-size="10-20"
 		queue-capacity="10" rejection-policy="ABORT" />
@@ -53,6 +55,15 @@
 		<property name="username" value="user_db" /> 
 		<property name="password" value="octosys"/>
 	</bean>
+	
+	<!-- 백업DB(MSSQL)-->
+	<bean id="dataSourceEZ" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> 
+		<property name="url" value="jdbc:sqlserver://192.168.0.103:1433;DataBaseName=HTSERVERDB14;" /> 
+		<property name="username" value="sa" /> 
+		<property name="password" value="ezat6695"/>
+	</bean>
+	
  
 	<!-- 창고DB(Oracle) -->
 	<bean id="dataSourceOracle" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
@@ -65,7 +76,7 @@
 	<!-- 알람DB(SQLite) -->
 	<bean id="dataSourceSQLite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="org.sqlite.JDBC" /> 
-		<property name="url" value="jdbc:sqlite:Y:\Alarm\Transys_AlarmData.db" />
+		<property name="url" value="jdbc:sqlite://192.168.0.102\Autonics\SCADAMaster\Project\Transys14\Transys\Data\Alarm\Transys_AlarmData.db" />
 	</bean>
 
 	<tx:annotation-driven/>
@@ -82,6 +93,21 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
+	
+
+	<!-- MSSQLDB EZ -->	
+	 <bean id="sqlSessionFactoryEZ" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceEZ" />
+		<property name="configLocation" value="classpath:mybatis/config/mybatis-context.xml"></property>
+	 </bean>
+	 <bean id="sessionEZ" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactoryEZ" />
+	 </bean>
+		 
+	<bean id="transactionManagerEZ" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
 	
 	<!-- Oralcle -->
 	 <bean id="sqlSessionFactoryOracle" class="org.mybatis.spring.SqlSessionFactoryBean">

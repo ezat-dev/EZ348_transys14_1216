@@ -18,7 +18,7 @@
 
 	<task:annotation-driven executor="executor" scheduler="scheduler" proxy-target-class="false"/>
 	<bean id="commProcessor" class="com.transys.async.CommProcessor"/>
-<!-- 	
+	
 	<bean id="plcWriteProcessor" class="com.transys.async.PlcWriteProcessor"/>
 	<bean id="mchInputProcessor" class="com.transys.async.MchInputProcessor"/>
  	<bean id="outPutProcessor" class="com.transys.async.OutPutProcessor"/>
@@ -28,7 +28,7 @@
 	<bean id="trackingProcessor3" class="com.transys.async.TrackingProcessor3"/>
 	<bean id="trackingProcessor4" class="com.transys.async.TrackingProcessor4"/>
 	<bean id="trackingProcessor5" class="com.transys.async.TrackingProcessor5"/> 
- -->	
+
 	<task:scheduler id="scheduler" pool-size="4" />
 	<task:executor id="executor" keep-alive="10" pool-size="10-20"
 		queue-capacity="10" rejection-policy="ABORT" />
@@ -76,7 +76,7 @@
 	<!-- 알람DB(SQLite) -->
 	<bean id="dataSourceSQLite" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
 		<property name="driverClassName" value="org.sqlite.JDBC" /> 
-		<property name="url" value="jdbc:sqlite://192.168.0.101\Autonics\SCADAMaster\Project\Transys14\Transys\Data\Alarm\Transys_AlarmData.db" />
+		<property name="url" value="jdbc:sqlite://192.168.0.102\Autonics\SCADAMaster\Project\Transys14\Transys\Data\Alarm\Transys_AlarmData.db" />
 	</bean>
 
 	<tx:annotation-driven/>

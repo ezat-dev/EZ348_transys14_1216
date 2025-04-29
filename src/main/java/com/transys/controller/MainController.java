@@ -21,8 +21,8 @@ import com.transys.util.OpcDataMap;
 public class MainController {
 	
 	//오토닉스 서버 IP
-	public static final String MAIN_IP = "192.168.0.101";
-	public static final String SUB_IP = "192.168.0.101";
+	public static final String MAIN_IP = "192.168.0.102";
+	public static final String SUB_IP = "192.168.0.102";
 	public static final int PORT = 5660;
 	
 	public static OpcUaClient client = null;
@@ -44,10 +44,10 @@ public class MainController {
 	
 	//2025-03-20 추가
 	//MSSQL 기존서버 IP(OCTOSYS)
-	public static final String MSSQL_OCTO_IP = "192.168.0.53";
+	public static final String MSSQL_OCTO_IP = "192.168.0.103";
 //	public static final String MSSQL_OCTO_IP = "192.168.1.61";
 	//MSSQL 신규서버 IP(EZ)
-	public static final String MSSQL_EZ_IP = "192.168.0.103";
+	public static final String MSSQL_EZ_IP = "192.168.0.104";
 //	public static final String MSSQL_EZ_IP = "192.168.1.62";
 	//false : OCTOSYS, true : EZ
 	public static boolean mssqlSearchChk = false;

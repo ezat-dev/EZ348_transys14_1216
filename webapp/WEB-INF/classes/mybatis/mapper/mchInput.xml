@@ -12,6 +12,12 @@
 		AND A.CUR_LOCATION >= 9
 		<!--AND C.PLC = '1'-->
 		ORDER BY A.ENDTIME DESC
+		
+		<!-- 2025-03-05 추가 마지막 출고이력 -->
+		UPDATE t_inout SET pumbun = #{pumbun}, tdatetime = CONVERT(CHAR(19), GETDATE(), 120)
+		WHERE 1=1
+		AND devicecode = #{devicecode}
+		AND gb = 'IN'		
 	</select>
 	
 	<update id="setMchDataUpdateWaitList" parameterType="mchInput">
